@@ -6,23 +6,27 @@
 </head>
 <body>
     <form method="POST" action="https://request-inspector.glitch.me/">
-        <label for="username">Username</label>
-        <input id="username" name="username" type="text" placeholder="Username">
-        <br>
-        <label for="email">Email</label>
-        <input id="email" name="email" type="text" placeholder="Email address">
-        <br>
-        <label for="pw">Password</label>
-        <input id="pw" name="password" type="password" placeholder="Password">
-        <br>
-        <label for="bio" id="bio">Bio</label><br>
-        <textarea name="bio" placeholder="Tell us about yourself."></textarea>
-        <br>
-    <h2>How did you hear about us?</h2>
-        <input type="radio" value="billboard"> Billboard<br>
-        <input type="radio" value="radio"> Radio Advertisement<br>
-        <input type="radio" value="internet"> Internet Advertisement<br>
-        <input type="radio" value="other"> Other<br>
+        <section>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" placeholder="Username">
+            <br>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text" placeholder="Email address">
+            <br>
+            <label for="pw">Password</label>
+            <input id="pw" name="password" type="password" placeholder="Password">
+        </section>
+        <section>
+            <label for="bio" id="bio">Bio</label><br>
+            <textarea name="bio" placeholder="Tell us about yourself."></textarea>
+        </section>
+        <section>
+            <p><h2>How did you hear about us?</h2></p>
+            <input name="hear" type="radio" value="billboard" id="billboard"> Billboard<br>
+            <input type="radio" value="radio" name="hear" id="radio_ad"> Radio Advertisement<br>
+            <input type="radio" value="internet" name="hear" id="internet"> Internet Advertisement<br>
+            <input type="radio" value="other" name="hear" id="other"> Other
+        </section>
     <h2>What web browser do you use?</h2>
         <select name="dropdown">
             <option value="edge">Edge</option>
