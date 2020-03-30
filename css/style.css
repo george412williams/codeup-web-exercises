@@ -1,6 +1,49 @@
 .fancy-header {
-    color: blue;
+    color: mediumblue;
     text-decoration: underline;
+    text-align: center;
+}
+main h2 {
+    color: brown;
+    text-decoration: underline;
+    list-style: upper-roman;
+}
+main h2:hover {
+    font-size: 32px;
+    color: chartreuse;
+}
+body {
+    background: darkkhaki;
+    background-image: url("../img/pexels-photo-pages.jpeg");
+    background-size: contain;
+    font-family: "American Typewriter", sans-serif;
+}
+main ul {
+    list-style: circle;
+}
+main ol {
+    list-style: upper-latin;
+}
+table {
+    font-size: 2em;
+}
+table tr {
+    color: midnightblue;
+}
+table td {
+    color: goldenrod;
+    font-size: .75em;
+}
+table tr th {
+    text-align: center;
+}
+body footer a:hover {
+    font-size: 2em;
+    color: blueviolet;
+}
+body footer a:visited {
+    color: red;
+}
 /*
 comments here
  */
