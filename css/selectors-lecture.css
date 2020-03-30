@@ -235,6 +235,9 @@ h1 {
      px units good for accuracy but not very accessible
      em scale well but can compound in size
      rem is fixes compounding problem
+
+     1em = 16px; compounding: previous em settings can roll down
+     rem scales differently,
 */
 
 body {
