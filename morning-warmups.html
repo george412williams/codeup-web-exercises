@@ -6,7 +6,7 @@
 </head>
 <body>
 
-
+<!--  March 31 warm up
 <script>
 
     "use strict";
@@ -33,6 +33,47 @@
     console.log(isAtLeastEightLong("cat")); //false
     console.log(isAtLeastEightLong("justinreich")); //true
 
+</script> -->
+<!-- April 1 warm up
+Write a function, twoMoreAwayFromZero that takes in a number input and returns a number two more away from zero than the original input. Negative number inputs will be reduced by two and positive numbers and zero will be increased by two.
+Examples:
+-->
+<script>
+
+    twoMoreAwayFromZero(2) will return 4
+    twoMoreAwayFromZero(0) will return 2
+    twoMoreAwayFromZero(0.5) will return 2.5
+    twoMoreAwayFromZero(-2) will return -4
+    twoMoreAwayFromZero(-3.5) will return -5.5
+
+
+    function addTwo(num) {
+        return num + 2;
+    }
+
+    function twoMoreAwayFromZero(num) {
+        if (num >= 0) {
+            return num + 2;
+        } else {
+            return num - 2;
+        }
+    }
+    console.log(twoMoreAwayFromZero(2));
+    console.log(twoMoreAwayFromZero(0));
+    console.log(twoMoreAwayFromZero(0.5));
+    console.log(twoMoreAwayFromZero(-2));
+    console.log(twoMoreAwayFromZero(-3.5));
+    <!--
+
+    add .log to a script line to give console.log tag auto
+    make sure to know the specific requirements for things..
+    problem solving strategies differ, pencil/paper helpful for org,
+    rewriting problems into paragraph form, key words like function to
+    indicate, verbal learning outloud talking out, articulate to another,
+
+    -->
 </script>
+
 </body>
+
 </html>
