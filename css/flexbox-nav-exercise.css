@@ -1,8 +1,11 @@
 body {
-
+    font-family: ;
 }
 a {
     display: inline-block;
+    margin: 4px;
+    text-decoration: none;
+
 }
 nav {
     box-sizing: border-box;
@@ -10,12 +13,17 @@ nav {
     background: #848487;
     font-family: sans-serif;
     justify-content: space-between;
+    position: relative;
+
 }
 ul {
     list-style: none;
     padding: 5px;
     /*margin: 5px;*/
     display: flex;
+    text-decoration-color: black;
+    font-family: "Work_Sans", sans-serif;
+
 }
 ul:nth-of-type(1) {
     display: flex;
@@ -27,14 +35,14 @@ ul:nth-of-type(1) :hover {
 ul:nth-of-type(2) {
     display: flex;
     align-items: center;
+    text-decoration-color: black;
 }
 ul:nth-of-type(2) :hover {
-    background: blue;
+    text-decoration-color: blue;
 }
-/*nav a {*/
-/*    text-decoration: none;*/
-/*    color: white;*/
-/*    padding: 1em; !* increases clickable area of anchor tags on all sides by 1em *!*/
-/*}*/
-/*nav a:hover {*/
-/*    background: black;*/
+h1  {
+    position: absolute;
+    right: calc(100% / 2 - 30px);
+    font-family: "Montserrat", sans-serif;
+
+}
