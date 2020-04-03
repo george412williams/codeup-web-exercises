@@ -1,0 +1,40 @@
+body {
+
+}
+a {
+    display: inline-block;
+}
+nav {
+    box-sizing: border-box;
+    display: flex;
+    background: #848487;
+    font-family: sans-serif;
+    justify-content: space-between;
+}
+ul {
+    list-style: none;
+    padding: 5px;
+    /*margin: 5px;*/
+    display: flex;
+}
+ul:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+}
+ul:nth-of-type(1) :hover {
+    background: blue;
+}
+ul:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+}
+ul:nth-of-type(2) :hover {
+    background: blue;
+}
+/*nav a {*/
+/*    text-decoration: none;*/
+/*    color: white;*/
+/*    padding: 1em; !* increases clickable area of anchor tags on all sides by 1em *!*/
+/*}*/
+/*nav a:hover {*/
+/*    background: black;*/
