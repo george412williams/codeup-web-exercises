@@ -35,7 +35,7 @@ header {
 }
 nav {
     /* TODO: define the grid area of nav such that it takes up the second column of the second row  */
-    grid-area: 2 / 2 / 3 / -1;
+    grid-area: 2 / 2 / 3 / span 1;
 }
 
 main {
@@ -118,8 +118,7 @@ nav a:hover {
     border-radius: 10px;
     position: relative;
     /* TODO: add a property that causes a transition of the border from lightgrey to near black in .2 seconds */
-    transition: black;
-    transition-duration: 2s;
+    transition: border .2s;
 }
 
 .card:hover {
