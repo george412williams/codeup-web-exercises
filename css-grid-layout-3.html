@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid Layout 1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+
+        }
+        .container {
+            display: grid;
+            grid-gap: .25em;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            width: 700px;
+            height: 400px;
+        }
+        .container div {
+            display: flex;
+            font-size: x-large;
+            color: white;
+            padding: 4px;
+            background-color: rgb(255 215 0);
+        }
+        .one {
+            grid-area: 1 / 1 / 2 / -1;
+        }
+        .two {
+            grid-area: 2 / 1 / span 4 / span 1
+        }
+        .three {
+            grid-area: 2 / 2 / span 1 / span 1;
+        }
+        .four {
+            grid-column: span 2;
+        }
+        .five {
+            grid-column: span 2;
+        }
+        .six {
+            grid-column: span 1;
+        }
+        .seven {
+            grid-column: span 1;
+        }
+        .eight {
+            grid-column: span 1;
+        }
+        .nine {
+            grid-column: span 1;
+        }
+        .ten {
+            grid-column: span 3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div class="three">3</div>
+    <div class="four">4</div>
+    <div class="five">5</div>
+    <div class="six">6</div>
+    <div class="seven">7</div>
+    <div class="eight">8</div>
+    <div class="nine">9</div>
+    <div class="ten">10</div>
+</div>
+</body>
+</html>
