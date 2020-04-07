@@ -52,7 +52,6 @@ main {
 header ul {
     /* TODO: use flex box to horizontally line up all list items */
     display: flex;
-    flex-wrap: wrap;
 }
 
 header a {
