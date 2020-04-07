@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+body {
+
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+.heading {
+    color: white;
+    background-color: black;
+
+}
+.nav {
+
+}
+.main {
+    display: flex;
+
+
+}
