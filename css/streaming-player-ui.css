@@ -46,6 +46,7 @@ main {
     /* TODO: define main to contain three columns that together take up equally the full width of main and have a 1em gap between grid items */
     grid-gap: 1em;
     grid-template-columns: 1fr 1fr 1fr;
+    overflow: auto;
 }
 
 header ul {
