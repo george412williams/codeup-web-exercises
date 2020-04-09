@@ -9,60 +9,84 @@
 </head>
 <body>
 
-<!--<nav class="navbar">-->
-<!--    <a class="navbar-brand">Pizza Order</a>-->
-<!--</nav>-->
-
-<!--<div class="container">-->
-
-
-
-
-<!--</div>-->
-
-<!-- Just an image -->
-<nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-        Pizza world
-    </a>
-    <ul class="navbar-nav ml-auto d-fex flex-row">
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            Pizza world
+        </a>
+        <ul class="navbar-nav ml-auto d-fex flex-row">
+            <li class="nav-item">
+                <a href="#">Order Online</a>
+            </li>
         <li class="nav-item">
-            <a href="#">Order Online</a>
+            <a href="#">Menu</a>
         </li>
-    <li class="nav-item">
-        <a href="#">Menu</a>
-    </li>
-    </ul>
-    <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
-
-    </form>
-</nav>
-
-<div class="container">
-    <div class="jumbotron">
-        <div class="container-fluid">
-            <img src="img/pizza.png">
+        </ul>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
+        </form>
+    </nav>
+    <div class="container">
+        <div class="jumbotron" style="background-image: url(img/pizza.png)">
+            <h1>Welcome to Pizza World</h1>
         </div>
-    <h1 class="bg-1 ">Welcome to Pizza World</h1>
+        <h2>Build your own pizza!</h2>
+        <div role="tablist">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="nav-link active" >Size and crust</a>
+            </li>
+            <li class="nav-item">
+                <a href="nav-link">Cheese and Sauce</a>
+            </li>
+            <li class="nav-item">
+                <a href="nav-link">Toppings</a>
+            </li>
+        </ul>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Choose size and crust</h3>
+                <div class="card">Hand Tossed</div>
+
+                <div class="card">Crispy Thin</div>
+            </div>
+            <footer>
+                <button class="btn-primary rounded float-right">
+                    Next Step
+                </button>
+            </footer>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Choose Cheese and Sauce</h3>
+                <div class="card">Cheese</div>
+
+                <div class="card">Sauce</div>
+            </div>
+            <footer>
+                <button class="btn-primary rounded float-right">
+                    Next Step >
+                </button>
+                <button class="btn-primary rounded float-right">
+                    < Previous Step
+                </button>
+            </footer>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Choose Toppings</h3>
+                <div class="card">Choose Meats</div>
+
+                <div class="card">Choose Non-Meats</div>
+            </div>
+            <footer>
+                <button class="btn-primary rounded float-right">
+                    Checkout (icon)
+                </button>
+            </footer>
+        </div>
     </div>
-    <h2>Build your own pizza!
-
-    </h2>
-    <ul class="nav nav-tabs"></ul>
-        <li class="nav-item">
-            <a href="nav-link active">Size and crust</a>
-        </li>
-        <li class="nav-item">
-            <a href="nav-link">Cheese and Sauce</a>
-        </li>
-        <li class="nav-item">
-            <a href="nav-link">Toppings</a>
-        </li>
-</div>
-
-
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
