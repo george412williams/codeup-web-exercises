@@ -5,21 +5,21 @@
     <title>Order Pizza</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/custom.csscustom.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-
+<!--TODO navbar tweaks, jumbotron background, adjust the tab list, add card content, review radio buttons-->
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
             Pizza world
         </a>
-        <ul class="navbar-nav ml-auto d-fex flex-row">
+        <ul class="navbar-nav d-fex flex-row justify-content-">
             <li class="nav-item">
                 <a href="#">Order Online</a>
             </li>
-        <li class="nav-item">
-            <a href="#">Menu</a>
-        </li>
+            <li class="nav-item">
+                <a href="#">Menu</a>
+            </li>
         </ul>
         <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
@@ -28,7 +28,7 @@
     </nav>
     <div class="container">
         <div class="jumbotron" style="background-image: url(img/pizza.png)">
-            <h1>Welcome to Pizza World</h1>
+            <h1 class="text-secondary">Welcome to Pizza World</h1>
         </div>
         <h2>Build your own pizza!</h2>
         <div role="tablist">
@@ -50,6 +50,7 @@
                 <div class="card">Hand Tossed</div>
 
                 <div class="card">Crispy Thin</div>
+
             </div>
             <footer>
                 <button class="btn-primary rounded float-right">
@@ -63,6 +64,7 @@
                 <div class="card">Cheese</div>
 
                 <div class="card">Sauce</div>
+
             </div>
             <footer>
                 <button class="btn-primary rounded float-right">
@@ -79,6 +81,7 @@
                 <div class="card">Choose Meats</div>
 
                 <div class="card">Choose Non-Meats</div>
+
             </div>
             <footer>
                 <button class="btn-primary rounded float-right">
