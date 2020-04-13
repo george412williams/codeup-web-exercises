@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arsenal', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#flexbox-container {
+    background: ;
+    width: calc(100vw - 20px);
+    /*height: 500px;*/
+    border: darkslateblue solid 10px;
+    display: flex;
+    /*flex-direction: column;*/
+    /*justify-content: flex-start;*/
+    /*align-items: flex-start;*/
+    /*flex-wrap: ;*/
+    /*align-content: ;*/
+    /*
+    just - x axis   align ite - y axis
+    shows in top left corner, align w flex end
+    will show btm left corner and so on
+    flex-center puts all in horiz/vert centered
+    of that div/section as well as txt content
+    in the container
+    flex-direction: column; will stack
+    flex-wrap   by default is nowrap until defined
+    flex-wrap: wrap;  content defined by 'h1' will be
+                        respected
+    a reverse here reverses rows with respect to h1 width
+    so item1 will be btm left counting upward
+    : center;   centered but wraped
+    align-content: ...; for mult rows of content
+    : flex-start;
+    justifying content, justifying main items along main axis
+    aligning items, mving indiv along cross axis
+    aligning of content - just row aligning cross axis
+                            when you have mult rows
+    justify  modifies mian axis  x
+    align mods its cross axis, column's cross is x axis
+    counter to its y which is its main
+       can only use align-content with mult rows content
+
+    David - just does display: flex, started from there
+        then, talked about flex order, watch the green
+        highlighted div; set #important-item  order: with a
+        numeric value
+
+        #important-item {
+            order: 3;
+        }             orders that specific item to move
+
+        he adds another id #other-item to help track
+        movements  imp to 1 and other to 2, sent both back
+        to the end of the list and then ordered them after the
+        unordered divs. by default order set to 0.
+        good for singleton divs to move to spec places,
+        if needed for many, consider html restructure.
+
+        align-self: flex-end, start, center;
+            alignment here takes the stretch out of indiv items
+
+        flex-grow
+            #imp-item
+                flex-grow: 1;  took up remaining space for item
+                default set to 0, takes space defined
+                gives remaining space in container to this div
+                or evenly distributes btwn id'd items
+                item1 @ 1 and item2 @ 2 makes a 2:1 ratio, etc
+
+        set minimums to play with later
+
+    */
+}
+
+#important-item {
+    background: palegreen;
+    border-color: darkgreen;
+}
+
+.flex-item {
+    /*    */
+    background: rosybrown;
+    border: indianred;
+
+}
