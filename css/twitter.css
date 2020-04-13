@@ -34,13 +34,11 @@ a {
     list-style-type: none;
     padding: 0;
     margin: 0;
-
 }
 .nav-link {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
-
 }
 .nav-item {
     display: inline-block;
