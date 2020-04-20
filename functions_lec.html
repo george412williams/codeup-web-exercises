@@ -143,6 +143,7 @@
     // var globalVar = "Look, I'm Global!"; // declare a global variable
     //
     // function scopeExample() {
+    //     // alsways declare variable at the top of a function
     //     var localVar = "Look, I'm Local!"; // declare a local variable
     //     alert(localVar); // localVar is accessible here
     //     alert(globalVar); // globalVar is accessible here
@@ -219,7 +220,22 @@
     // other common higher order functions built in to JS: setInterval, setTimeout, map, filter, reduce, fetch
     ​
     ​
-    // =====  IIFE
+    // =====  IIFE ('iffy')
+
+    //mult scripts attched, and have a global var in ext doc and internal script
+        // the problem, the versions could clash
+        // to keep from the clash, wrap all of code ina function
+        // having it all together keeps from colliding, a special functioin expression:
+        // immidiately expressed:
+        // <script?
+            //(function() {
+                //"use strict";
+    //this goes at top
+    (function(){
+        "use strict";
+        //stuff goes here
+    // its ending part wraps everyting and goes at its bottom
+        })();
     ​
     ​
     ​

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Mini Problems</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+// instructor solutions
+
+    // function returnFive() {
+    //     return 5;
+    // }
+    //
+    // console.log(returnFive());
+    // or var result =  returnFive(); console.log(result, 5);
+
+
+    //
+
+
+    // function isFive(input) {
+    //     return 5 == input;
+    // }
+    // console.log(isFive(5),true);
+    // console.log(isFive(4), false);
+    // console.log(isFive('5'),true);
+
+
+    //
+
+
+    // function isShortWord(str) {
+    //     return str.length < 5;
+    // }
+    //should return true/false
+    //
+    //input followed by expected output is the syntax:
+    // console.log(isShortWord(), );
+    // //
+    // console.log(isShortWord('pancake'), false);
+    // console.log(isShortWord('cake'), true);
+    //console.log(isShortWord('fifty'), ? true or false expected); this is an edge case to see if you can break stuff
+
+
+    //
+
+
+    // function isSameLength(str1, str2) {
+    //     //we want return true if same length
+    //     //return the result from the comparison
+    //     return str1.length === str2.length;
+    // }
+    // console.log(isSameLength('me', 'us'), true);
+    // console.log(isSameLength('hello', 'goodbye'), false);
+
+
+    //
+
+    //instead of writing the function first, write the tests first
+    //test driven development
+    //write code after tests and work to get the tests to come out correct
+
+    console.log(getSmallerSegment('pancake', 3), 'pan');
+    console.log(getSmallerSegment('example', 2), 'ex');
+    console.log(getSmallerSegment('yesterday', 5), 'yest');
+    //
+    //if we define the function at least our tests can run
+    function getSmallerSegment(str, length) {
+        return str.substring(0, length).toLowerCase();
+    }
+    //now they should pass, although we didn't compensate for capitals
+    //so to lowercase: add gth).toLowerCase();
+
+
+
+
+
+</script>
+</body>
+</html>
