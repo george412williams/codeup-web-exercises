@@ -86,3 +86,7 @@ var  sayHello = fucntion () {
     // is possible to have mult parameters (num1, num2) {...
 
 // fucntion add (num1, num2) { return num1 + num2
+ //what would happen if you passed through more arguments than there are parameters?
+
+    // beh's normally by ignoring them, does not break
+
