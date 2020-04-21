@@ -19,24 +19,24 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+// var colorChoice = prompt("Please choose a color.");
+//
+// function analyzeColor(colorChoice) {
+//     if (colorChoice === "blue") {
+//         return "blue is the color of the sky";
+//     } else if (colorChoice === "red") {
+//         return "Strawberris are red";
+//     } else if (colorChoice === "cyan") {
+//         return "I don't know anything about cyan");
+//     } else {
+//         return "I know nothing about that color";
+//     }
+// }
+// console.log(analyzeColor("blue"), "blue is the color of the sky");
+// console.log(analyzeColor("red"), "Strawberries are red");
+// console.log(analyzeColor("cyan"), "I don't know anything about cyan");
+// console.log(analyzeColor("brown"), "I know nothing about that color");
 
-function analyzeColor(colorChoice) {
-    if (colorChoice === "blue") {
-        return "blue is the color of the sky";
-    } else if (colorChoice === "red") {
-        return "Strawberris are red";
-    } else if (colorChoice === "cyan") {
-        return "I don't know anything about cyan";
-    } else {
-        return "nobody cares";
-    }
-
-
-console.log(analyzeColor("blue"), "blue is the color of the sky");
-console.log(analyzeColor("red"), "Strawberries are red");
-console.log(analyzeColor("cyan"), "I don't know anything about cyan");
-console.log(analyzeColor("brown"), "nobody cares");
-}
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -51,12 +51,43 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
-
+// function analyzeColor(randomColor) {
+//     if (colorChoice === "blue") {
+//         return "blue is the color of the sky";
+//     } else if (colorChoice === "red") {
+//         return "Strawberris are red";
+//     } else if (colorChoice === "cyan") {
+//         return "I don't know anything about cyan");
+//     } else {
+//         return "I know nothing about that color";
+// }
+//
+// console.log(analyzeColor("blue"), "blue is the color of the sky");
+// console.log(analyzeColor("red"), "Strawberries are red");
+// console.log(analyzeColor("cyan"), "I don't know anything about cyan");
+// console.log(analyzeColor("brown"), "I know nothing about that color");
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+
+var colorChoice = prompt("Please choose a color.");
+
+switch (colorChoice) {
+    case "blue":
+        alert("blue is the color of the sky");
+        break;
+    case "red":
+        alert("Strawberries are red");
+        break;
+    case "cyan":
+        alert("I don't know anything about this color");
+        break;
+    default:
+        alert("I don't know anything about that color");
+        break;
+}
 
 /**
  * TODO:
