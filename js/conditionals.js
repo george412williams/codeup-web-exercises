@@ -176,10 +176,24 @@ function calculateTotal(userBill) {
  * HINT: The way we prompt for a value could be improved
  */
 
+//switch here?
+
 var desireNumber = confirm("Would you like to enter a number?");
 
-//console.log(desireNumer);
-
-function numberPicker(desireNumber) {
-    if
+function yourNumber() {
+    switch () {
+        case
+            alert();
+            break;
+        case
+            alert();
+            break;
+        case
+            alert();
+            break;
+        default:
+            alert();
+            break;
+    }
 }
+
