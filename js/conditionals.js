@@ -20,29 +20,24 @@
  * console.logging the function's return value
  */
 
-var input;
-
-function analyzeColor(input) {
-    if (input === "blue");
+function analyzeColor(colorChoice) {
+    if (colorChoice === "blue") {
         return "blue is the color of the sky";
-    } else if (input === "red") {
-        return "Strawberries are red";
-    } else if (input === "cyan") {
+    } else if (colorChoice === "red") {
+        return "Strawberris are red";
+    } else if (colorChoice === "cyan") {
         return "I don't know anything about cyan";
+    } else {
+        return "nobody cares";
     }
 
-var input;
 
-switch(input) {
-    case "blue":
-        alert("blue is the color of the sky");
-        break;
-    case "red":
-        alert("Strawberries are red");
-    case "cyan":
-        alert("I don't know anything about cyan");
-        break;
+console.log(analyzeColor("blue"), "blue is the color of the sky");
+console.log(analyzeColor("red"), "Strawberries are red");
+console.log(analyzeColor("cyan"), "I don't know anything about cyan");
+console.log(analyzeColor("brown"), "nobody cares");
 }
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
