@@ -96,7 +96,7 @@ switch (colorChoice) {
  * function to show it to the user.
  */
 
-var colorChoice = prompt("Please choose a color.");
+// var colorChoice = prompt("Please choose a color.");
 
 function analyzeColor(colorChoice) {
     alert("You have chosen " + colorChoice);
@@ -125,7 +125,7 @@ function analyzeColor(colorChoice) {
  * return value.
  */
 
-var luckyNumber = Math.floor((Math.random() * 10) + 1);
+// var luckyNumber = Math.floor((Math.random() * 10) + 1);
 
 function calculateTotal(luckyNumber) {
     if (luckyNumber === 0) {
@@ -151,9 +151,13 @@ function calculateTotal(luckyNumber) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
 
+var userBill = prompt("What was your total bill?");
 
+function calculateTotal(userBill) {
+    alert("Your lucky number was " + luckyNumber + "!");
+}
 
 /**
  * TODO:
@@ -171,3 +175,11 @@ function calculateTotal(luckyNumber) {
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var desireNumber = confirm("Would you like to enter a number?");
+
+//console.log(desireNumer);
+
+function numberPicker(desireNumber) {
+    if
+}
