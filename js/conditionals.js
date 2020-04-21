@@ -96,6 +96,13 @@ switch (colorChoice) {
  * function to show it to the user.
  */
 
+var colorChoice = prompt("Please choose a color.");
+
+function analyzeColor(colorChoice) {
+    alert("You have chosen " + colorChoice);
+}
+
+
 /* ########################################################################## */
 
 /**
