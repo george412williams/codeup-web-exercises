@@ -176,12 +176,16 @@ function calculateTotal(userBill) {
  * HINT: The way we prompt for a value could be improved
  */
 
-//switch here?
+//switch here? need the wrap the whole thing method here i think
 
 var desireNumber = confirm("Would you like to enter a number?");
 
+function yourNumber(desireNumber) {
+    if desireNumber === true;
+        return prompt("Please enter a number.")
+}
 function yourNumber() {
-    switch () {
+    switch (desireNumber) {
         case
             alert();
             break;
