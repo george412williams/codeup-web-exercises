@@ -9,7 +9,7 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello (name) {
-    return ("Hello " + name + "!");
+    return ("Hello, " + name + "!");
 }
 sayHello();
 /**
@@ -19,8 +19,9 @@ sayHello();
  *
  * console.log 'helloMessage' to check your work
  */
-sayHello(george);
-
+//sayHello(george);
+var helloMessage = sayHello('George');
+console.log(helloMessage, 'Hello, George!');
 
 /**
  * TODO:
@@ -28,7 +29,8 @@ sayHello(george);
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-
+vay myName;
+console.log(sayHello(myName));
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
@@ -51,6 +53,18 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+function isTwo(num) {
+    return num === 2;
+}
+
+console.log(isTwo(1), false);
+console.log(isTwo(2), true);
+console.log(isTwo(3), false);
+console.log(isTwo(random));
+console.log(random);
+// the two randoms, one is to id the random the other is for the boolean
+// random is defined above, you can sub in any numbers for the desired range
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -63,12 +77,40 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+function calculateTip(tipPercentage, bill) {
+    //take tipP and mult w bill
+    return tipPercentage * bill;
+}
+console.log(calculateTip(.2, 20), 4);
+console.log(calculateTip(.25, 20), 6.31);
+console.log(calculateTip(.15, 20), 5.03);
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+// can be scaled up for lgr apps, separation of concerns: user input sys separate from storage/mgnmt
+
+alert("Welcome to the calculate tip app!");
+
+var bill = prompt("What is your total bill?");
+var tip = prompt("How much would you like to tip? (enter 1-100 for the percent value)");
+var tipPercentage = tip / 100;
+
+alert("you will need to ftip $" + tipDollars);  //var tipDollars = calculateTip
+
+console.log(bill);
+console.log(tip);
+console.log(typeof bill);
+//come back as string, so good idea to convert to number:
+//console.log(calculateTip(10 / 100, 100));
+//console.log(calculateTip(tipPercentage, bill))toFixed(2);
+//or
+//add Number to the prompts to pump out numbers to work with
+
 
 /**
  * TODO:
@@ -84,3 +126,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount (price, discount) {
+    return price * discount;
+}
+console.log(applyDiscount());
+console.log(applyDiscount());
+console.log();
