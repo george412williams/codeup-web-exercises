@@ -125,6 +125,24 @@ function analyzeColor(colorChoice) {
  * return value.
  */
 
+var luckyNumber = Math.floor((Math.random() * 10) + 1);
+
+function calculateTotal(luckyNumber) {
+    if (luckyNumber === 0) {
+        return "no discount";
+    } else if (luckyNumber === 1) {
+        return "10% discount";
+    } else if (luckyNumber === 2) {
+        return "25% discounty";
+    } else if (luckyNumber === 3) {
+        return "35% discount";
+    } else if (luckyNumber === 4) {
+        return "50% discount";
+    } else {
+        return "Luck you, it's free!";
+    }
+}
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -134,6 +152,8 @@ function analyzeColor(colorChoice) {
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+
+
 
 /**
  * TODO:
