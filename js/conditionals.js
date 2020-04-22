@@ -193,20 +193,20 @@ var desireNumber = confirm("Would you like to enter a number?");
 
 function yourNumber(desireNumber) {
     if desireNumber === true;
-        return var userNumber = prompt("Please enter a number.");
+        return userNumber = prompt("Please enter a number.");
 }
 
 switch (userNumber) {
-    case (userNumber % 2 === 0);
+    case (userNumber % 2 === 0):
         alert("Your Number is even.");
         break;
-    case (userNumber % 2 >= 1);
+    case (userNumber % 2 >= 1):
         alert("Your number is odd.");
         break;
-    case (userNumber + 100);
+    case (userNumber + 100):
         alert("Did you know your number plus 100 is " + (userNumber + 100));
         break;
-    case (userNumber * -1);
+    case (userNumber * -1):
     default:
         alert("Next time choose a number.");
         break;
@@ -214,10 +214,10 @@ switch (userNumber) {
 
 function userNumber() {
     if //multiplied by -1 = positive;
-        then number is negative;
-    or
+        //then number is negative;
+    //or
     if //multiplied by -1 = negative;
-        then number is postivie;
+        //then number is postivie;
 }
 
 })();
