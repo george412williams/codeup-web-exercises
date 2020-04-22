@@ -190,9 +190,10 @@ function calculateTotal(userBill) {
 
 
 var desireNumber = confirm("Would you like to enter a number?");
+var userNumber;
 
 function yourNumber(desireNumber) {
-    if desireNumber === true;
+    if (desireNumber === true);
         return userNumber = prompt("Please enter a number.");
 }
 
@@ -206,18 +207,18 @@ switch (userNumber) {
     case (userNumber + 100):
         alert("Did you know your number plus 100 is " + (userNumber + 100));
         break;
-    case (userNumber * -1):
+    // case (userNumber * -1):
     default:
         alert("Next time choose a number.");
         break;
 }
 
-function userNumber() {
-    if //multiplied by -1 = positive;
-        //then number is negative;
-    //or
-    if //multiplied by -1 = negative;
-        //then number is postivie;
-}
+// function userNumber() {
+//     if //multiplied by -1 = positive;
+//         //then number is negative;
+//     //or
+//     if //multiplied by -1 = negative;
+//         //then number is postivie;
+// }
 
 })();
