@@ -117,7 +117,7 @@ function numberGame() {
     if (confirm("would you care to play a game with me?")) {
         //grab value user enters from prompt, so save it, assign to var:
         var userNum = parseFloat(prompt("gimme a number."));  //to get a number
-        if (typeof userNum === "number") {  //to check...
+        if (typeof userNum === "number") {  //to check, but needs a refactor? reverse isNaN so not to turn into NaN fromlike a word input
             alert(evenOrOdd(userNum));
             //alert(plusOneHundo(userNum));   instead use:
             alert(userNum + " pluse 100 is equal to: " + (userNum));
@@ -131,3 +131,6 @@ function numberGame() {
 }
 
 numberGame();    //calls function for use
+
+// to redirect to the sad path must refactor:
+// if (!NaN(userNum)) {
