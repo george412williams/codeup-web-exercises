@@ -1,5 +1,5 @@
 "use strict";
-
+// instructor walkthrough in js/conditionals-inst.js
 /* ########################################################################## */
 
 /**
@@ -136,7 +136,7 @@ function calculateTotal(luckyNumber) {
     } else if (luckyNumber === 1) {
         return "10% discount";
     } else if (luckyNumber === 2) {
-        return "25% discounty";
+        return "25% discount";
     } else if (luckyNumber === 3) {
         return "35% discount";
     } else if (luckyNumber === 4) {
