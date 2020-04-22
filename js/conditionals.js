@@ -178,26 +178,36 @@ function calculateTotal(userBill) {
 
 //switch here? need the wrap the whole thing method here i think
 
+// iffe function here? for these local vars? do the others need it to keep from interferringing?
+    // yes probably
+
 var desireNumber = confirm("Would you like to enter a number?");
 
 function yourNumber(desireNumber) {
     if desireNumber === true;
-        return prompt("Please enter a number.")
-}
-function yourNumber() {
-    switch (desireNumber) {
-        case
-            alert();
-            break;
-        case
-            alert();
-            break;
-        case
-            alert();
-            break;
-        default:
-            alert();
-            break;
-    }
+        return var userNumber = prompt("Please enter a number.");
 }
 
+switch (userNumber) {
+    case (userNumber % 2 === 0);
+        alert("Your Number is even.");
+        break;
+    case (userNumber % 2 >= 1);
+        alert("Your number is odd.");
+        break;
+    case (userNumber + 100);
+        alert("Did you know your number plus 100 is " + (userNumber + 100));
+        break;
+    case (userNumber * -1);
+    default:
+        alert("Next time choose a number.");
+        break;
+}
+
+function userNumber() {
+    if //multiplied by -1 = positive;
+        then number is negative;
+    or
+    if //multiplied by -1 = negative;
+        then number is postivie;
+}
