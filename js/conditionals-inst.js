@@ -91,3 +91,43 @@ var userBill = parseFloat(prompt("What was your bill?"));
 
 alert("Your lucky number is " + luckyNumber + ". Before discount, your bill was: $" + userBill.toFixed(2) + ". After discount, your final total today is: $" + calculateTotal(luckyNumber, userBill).toFixed(2));
 
+//TODO confirm number
+
+// lets start with funtion to handle the 3 concerns
+
+function evenOrOdd(num) {
+    return (num % 2 === 0) ? num + " is an even number" : num + " is an odd number";    //turnary method
+}
+//next concern
+
+function plusOneHundo(num) {
+    return num + 100;
+}
+
+function positiveOrNegative(num) {
+    if (num > 0) {
+        return num + " is a positive number";
+} else {
+        return num + " is a negative number";
+    }
+}
+//set up so it does not take an input, bc scope on its own doing it this way
+function numberGame() {
+    //set up conditional logic:
+    if (confirm("would you care to play a game with me?")) {
+        //grab value user enters from prompt, so save it, assign to var:
+        var userNum = parseFloat(prompt("gimme a number."));  //to get a number
+        if (typeof userNum === "number") {  //to check...
+            alert(evenOrOdd(userNum));
+            //alert(plusOneHundo(userNum));   instead use:
+            alert(userNum + " pluse 100 is equal to: " + (userNum));
+            alert(positiveOrNegative(userNum));   //bc string or value return,
+        } else {
+            alert("you're no fun");
+        }
+    } else {
+        alert("You're no fun...");
+    }
+}
+
+numberGame();    //calls function for use
