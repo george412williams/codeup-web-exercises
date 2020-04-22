@@ -43,6 +43,9 @@
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
+
+(function () {
+
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
@@ -88,21 +91,21 @@ switch (colorChoice) {
         alert("I don't know anything about that color");
         break;
 }
-
+})();
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
+(function () {
 // var colorChoice = prompt("Please choose a color.");
 
 function analyzeColor(colorChoice) {
     alert("You have chosen " + colorChoice);
 }
 
-
+})();
 /* ########################################################################## */
 
 /**
@@ -124,8 +127,8 @@ function analyzeColor(colorChoice) {
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-
-// var luckyNumber = Math.floor((Math.random() * 10) + 1);
+(function () {
+var luckyNumber = Math.floor((Math.random() * 10) + 1);
 
 function calculateTotal(luckyNumber) {
     if (luckyNumber === 0) {
@@ -142,7 +145,7 @@ function calculateTotal(luckyNumber) {
         return "Luck you, it's free!";
     }
 }
-
+})();
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -151,6 +154,7 @@ function calculateTotal(luckyNumber) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
+(function () {
 var luckyNumber = Math.floor(Math.random() * 6);
 
 var userBill = prompt("What was your total bill?");
@@ -158,7 +162,7 @@ var userBill = prompt("What was your total bill?");
 function calculateTotal(userBill) {
     alert("Your lucky number was " + luckyNumber + "!");
 }
-
+})();
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -180,6 +184,10 @@ function calculateTotal(userBill) {
 
 // iffe function here? for these local vars? do the others need it to keep from interferringing?
     // yes probably
+
+
+(function () {
+
 
 var desireNumber = confirm("Would you like to enter a number?");
 
@@ -211,3 +219,5 @@ function userNumber() {
     if //multiplied by -1 = negative;
         then number is postivie;
 }
+
+})();
