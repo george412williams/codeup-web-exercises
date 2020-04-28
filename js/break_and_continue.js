@@ -15,3 +15,8 @@ while (true) {
 
 // 3
 
+for (var userInput = prompt("Choose an odd number between 1 and 50"); userInput <= 49; ++userInput) {
+    if (input >= 1 && input <= 49 && input % 2 !==0) {
+        console.log();
+    }
+}
