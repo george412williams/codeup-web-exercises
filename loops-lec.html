@@ -78,31 +78,71 @@
     // !! make a loop to go from 20 to 50 in tens !!
     // how to make from scratch
 
+    // var i = 20;
+    // while (i <= 50) {
+    //     console.log (i);
+    //     i += 10;
+    // }
 
     //try to run in head first before run
 
     // !! write a program that will keep running until the user clicks ok !!
 
+    // var willContinue = true;
+    // while (willContinue) {
+    //     willContinue = confirm("Will you exit?");
+    // }
 
+    //what i want to happen is that it stops, currently won't so:
 
+    // var willContinue = true;
+    // while (willContinue) {
+    //     willContinue = !confirm("Will you exit?");
+    // }
 
-
-
-
-
-
+    //flipping true/false (w/!) can help logic flow better/correctly, try it on an HTML
+    //so, is true = false: false; watch to not negate the condition to run, like = false and then never runs in the first place (from a student question)
+    //two while conditions? a condition can be a complex one with multiple arguements:
+        //like the use of the pipes(or)  isAdmin || notLoggedIn
+        //checkUserAdminStatus() {
+            //}
+            // boolean returns, take it and while it
+            // while (checkUserAdminSttus() || checkUserLoginStatus()) {}
 
 
     // ================================ DO-WHILE LOOP
 
     /*
         While loop syntax:
+
             do {
                 do something no matter what...
             } while(conditionIsTrue;
+
         Used to execute a block and code at least once
         and repeat it until the condition is no longer true
         Diagram ***Curriculum***
+
+            do {
+                willContinue = !confirm("Will you exit?");
+            } while (willContinue);
+
+            ok exits, cancel loops it, does not matter what value its set to, does not need a value bc it's being set int he body of the kloop
+            demonstrates diff betwn while/do-while; can work with one w/o having to use the other, just a little diff behavior of one over the other
+
+            var i = 20;
+
+            while (i <= 50) {
+                console.log(i);
+                i += 10;
+            }
+
+            similar:
+
+            do {
+                console.log (i);
+                i += 10;
+            } while (i <= 50);
     */
 
     // basic example
@@ -128,6 +168,9 @@
     // ================================ FOR LOOP
 
     /*
+        we can solve the same while do while problem with a for loop
+        difficult if you try to check a certain condition with a for loop, stick with a while loop
+
         For loop diagram ***Curriculum***
         For loop syntax:
             for (initialization; test; iteration) {
@@ -142,6 +185,26 @@
     // for (var i = 0; i <= 10; i += 1) {
     //     console.log(i);
     // }
+    //logs out 1 thru 10, executes body before change the value of i
+    // same as this while loop:
+    // var = i;
+    // while (i <= 10) {
+        //console.log(i);
+        //i += 1;
+    //}
+    // var i = 0;
+    // do {
+        //console.log(i);
+        //i += 1;
+        //} while (i <= 10);
+
+    //for loop = set n of times
+    //while loop = go until condition met
+    //do while = same
+
+    //displayed this for his random student chooser:
+    //for (var i = 0; i < students.length; i += 1) { console.log (i);}
+    //example of how he would use for in this instance
 
 
     // with decrementer (display numbers 20 down to 10 in 1's)
@@ -150,9 +213,16 @@
     //     console.log(i);
     // }
 
+    //student chooser ex, try it:
+    // for (var i = 10; i.....
+
 
 
     // nested for loops
+
+    // starts to get into if there's another better way to do this
+    //outer loop set to run 11 times, inner set to twice
+    //try to follow the trace of the program
 
     // for (var i = 0; i <= 10; ++i) {
     //     console.log("Badgers, badgers, badgers, badgers");
