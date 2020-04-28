@@ -2,8 +2,12 @@
 
 // 2
 
-var i;
+var i = 1;
+var numberToStopAt = 65536;
 
-while (i) {
-    console.log(i)
+while (i => 1) {
+    console.log(i + i);
+    if (i === numberToStopAt) {
+        break;
+    }
 }
