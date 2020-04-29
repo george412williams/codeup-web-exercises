@@ -28,11 +28,11 @@
 
 // 4
 
-for (var x = 1; x < 10; x++) {
-    console.log(repeat(x, x));
-}
+// for (var x = 1; x < 10; x++) {
+//     console.log(x.toString().repeat(x));
+// }
 
-// // 5
-//
-// for (var d = 100; d >= 5; d - 5);
+// 5
+
+for (var d = 100; d >= 5; d - 5);
 
