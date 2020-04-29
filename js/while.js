@@ -10,7 +10,7 @@
     //     break;
     // }
     // console.log(i);
-}
+//}
 
 function doubleNumber() {
     var output = "";
@@ -57,18 +57,18 @@ var totalCones = Math.floor(Math.random() * 50) + 50;
 
 //maybe try this:
 
-do {
-    var conesSold = Math.floor(Math.random() * 5) + 1;
-        if conesSold <= ttl cones
-        output += buyCones cones slod
-        attlcones -+ buycones;
-        if ttlcone ====0
-        output += yahy sold all
-} else {
-    output += canno sell you buycones i only have ttle cones "..."
-} while (ttlcone >= 1);
+// do {
+//     var conesSold = Math.floor(Math.random() * 5) + 1;
+//         if conesSold <= ttl cones
+//         output += buyCones cones slod
+//         attlcones -+ buycones;
+//         if ttlcone ====0
+//         output += yahy sold all
+// } else {
+//     output += canno sell you buycones i only have ttle cones "..."
+// } while (ttlcone >= 1);
 
-console.log(output);
+//console.log(output);
 
 
 
