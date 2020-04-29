@@ -3,13 +3,15 @@
 // FOR LOOPS
 
 // 2
+
 var num = 7;
 
 for (var i = 1; i <= 10; i += 1) {
+    num += num + " x " + i + " = " + (num * i);
     console.log(num + " x " + i + " = " + (num * i));
 }
 
-// function showMultiplicationTable(num) {
+// function showMultiplicationTable() {
 //     for (var i = 1; i <= 10; i += 1) {
 //         console.log(num + " x " + i + " = " + (num * i));
 //     }
@@ -17,7 +19,6 @@ for (var i = 1; i <= 10; i += 1) {
 
 // 3
 
-// need to add in that it repeats only for 10 numbers
 for (var n = 20; n <= 200; n + Math.floor(Math.random() * 181)) {
     if (n % 2 === 0) {
         console.log(n + "is even");
