@@ -76,6 +76,8 @@
 
    //used method from last attempt
 document.getElementById('planets-list').innerHTML = returnList(planetsArray);
+// she then made a function out of it
+
 })();
 
 

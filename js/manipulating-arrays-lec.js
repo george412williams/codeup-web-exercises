@@ -226,3 +226,11 @@ console.log(newSubmarine);
 // GIT merging remember can happen from the terminal or github
 
 // the ganymede git has the make a list out of it function
+
+//read splicing arrays bc splicing is one of the most useful methods
+//didn't cover now bc is a bigger concept
+//look at it now tho
+//useful for instru during interview process, technical part
+//sent application to build js app, add stuff to list, remove stuff from list...
+//remove replace used splice big time
+
