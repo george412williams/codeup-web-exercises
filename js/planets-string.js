@@ -25,12 +25,14 @@
      */
 
     var planetsStringBreaks = planetsArray.join('<br>');
+    // to alphabetize a mixed type list
 
 // =====BONUS=====
 
     //pseudo:
     //new string in a ul
-    //var planetsStringList = planetsArray.join('<li>'
+    //var planetsStringList = planetsArray.join('<ul>','<li>','</li>','</ul>');
+
 
 
 })();

@@ -215,7 +215,7 @@ console.log(submarineArray);
 
 var newSubmarine = surbmarineArray.join('\n');
 console.log(newSubmarine);
-// does not console with a <b> on pc apparently because evaluates to HTML primarily, but does with \n
+// does not console with a <br> on pc apparently because evaluates to HTML primarily, but does with \n
 // could eventually target an element in HTML and change the inner HTML and join them with a break
 // in a bonus question in the exercies...
 // '\n' instead of <br>
