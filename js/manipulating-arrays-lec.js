@@ -141,7 +141,7 @@ var instructors = ['justin','david','sophie','vivian','casey','trant','daniel'];
 // TODO TOGETHER: Create a variable named ganymedeInstructors that stores an array list of
 // 'justin','david', and 'sophie'. Do this with the .slice method.
 
-var ganymedeInstructors = instrucotrs.slice(0, 3);
+var ganymedeInstructors = instructors.slice(0, 3);
 console.log(ganymedeInstructors);
 
 // TODO TOGETHER: Create a variable named fortunaInstructors that stores an array list of all

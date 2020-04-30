@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Test Review</title>
+</head>
+<body>
+
+
+
+
+<!--
+
+
+assessment link
+clone it
+intellij
+create new project
+create own branch as soon as hooked up
+do commits
+
+git branching: (for ass't in particular)
+  clone, new project intellij and paste
+  immedicately
+     git checkout -b my-branch
+  in my branch now
+  add and commit till push
+  push origin my-branch
+  for assessment you do not need to merge anything
+
+  for own repositories:
+   go to github
+   create pull request
+   from github merge the pull request
+   go back to terminal in intellij
+   checkout to master
+   git pull
+
+on branches
+
+    typically used for making features
+    new features get new branches
+    otherwise
+
+forks don't seem to count toward personal workflow maybe bc is not attributed to it being your work
+
+open or import
+intilej projects
+open
+
+functions
+
+    other prog paradigms similar that wrap into custom objects and classes
+    keeps things org'd
+    makes code reusable
+    in java force to objects and classes, not functions
+    most code is abstracted fxs to modules and so on
+    only way to keep code sep'd and usefule
+    wrapping in a function give yous more control intentional on when things take place in you js
+
+recalling a function inside of function
+
+    function returnName() {
+        return "Justin";
+    }
+    function returnGreeting() {
+        return "Hello " + returnName();
+    }
+    //could pass a fx as a fx's parameter
+    refactor
+
+    function returnGreeting(callback) {
+        return "Hello " + callback();
+    }
+
+
+    console.log(returnGreeting(returnName));   //without () is call back to the name and not what that fx returns
+    have to set a generic parameter only used as a method
+
+study
+
+    redoing
+    next level, take exercises and change them so they're different, play with them
+    keep that in mind since test is similar to last
+
+    function add(num1, num2) {
+        return num1 + num2;
+    }
+
+    fucntion doMath(callback, num1, num2) {
+        return callback;
+    }
+    callback is now a placehold for all the work another function can do
+    does not have a value, it's a bunch of machinery
+
+diff btwn passing the fx and the return value of a fx
+console.log(doMath(add, 2, 2));   will return what the machinery does
+console.log(doMath(add(), 2, 2));   will return add()'s value and not the machinery
+
+    //only fx invoked was doMath, not add, just passing definition, not return value
+
+forEach
+    when you won't need a fx inside a forEach
+it will look like:
+var someArray = [1,2,3];
+
+function logEachElement(element) {
+    console.log(element);
+}
+someArray.forEach(logEachElement);
+
+looking at a problem with a funciton look a the definition and what type of value you need
+it's probably a misuse of a var with a function
+
+
+
+=====check out this analogy=
+
+function logEachThing(parameter) {
+    return parameter(s) after doing something to them
+}
+
+manager task(things-to-use) {
+    employee-action do this with these things
+}
+
+hey console.write out what(this thing does(with these parameter unless it's assumed to be the whole thing));
+
+now lets say
+
+function concatNums(num1, num2) {
+    return "" + num1 + num2;
+}
+
+consol.log(doMath(concatNums, 2, 2));
+you'll see 22
+now calling doMath fx with a different named fx along with number argument
+"" turned the + into a concater and took the numbers as strings and not numbers to add
+
+what did my manager tell me to do to this thing?
+    refers to the
+
+building fxs on top of fxs is how you get higher orders
+
+can be useful to take out a callback and make a function out of it for use later that happens over and over
+
+.forEach()
+.map()
+.filter()
+.reduce()
+.setTimeout()
+
+these are already built-in functions built in with newer version of JS that increase its versatility
+
+make decisions inside of fxs using conditionals
+math operators and data types
+strings to nums vise versa
+string manipulations
+
+CREATE TOOLS!!!!! LIKE ALL THE TIME!
+
+-->
+
+<script>
+
+
+
+
+</script>
+
+
+</body>
+</html>
