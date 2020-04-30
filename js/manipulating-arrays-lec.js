@@ -95,54 +95,115 @@ console.log(activeCohorts);
 /* ***************************************************************
 * 					LOCATING ARRAY ELEMENTS
 *************************************************************** */
+// these methods return a number representing the index of the element
+
+// slide:
+// find specific items in an array we can use the indexOf and
 
 var fruit = ['apples','oranges','grapes','bananas','apples','oranges','grapes'];
 
-// TO DO TOGETHER: Find the first index of 'apples' in the array
-// TO DO TOGETHER: Find the last index of 'apples' in the array
+// TODO TOGETHER: Find the first index of 'apples' in the array
 
-// TO DO: If the last element in the fruits array is 'grapes', remove it from the list.
+fruit.indexOf('apples');
+// returns 0, its pos
+
+// TODO TOGETHER: Find the last index of 'apples' in the array
+
+fruit.lastIndexOf('apples');
+// returns 4
+
+//
+// TODO: If the last element in the fruits array is 'grapes', remove it from the list.
+
+// how to start? why not if
+if(fruits.lastIndexOf('grapes') === fruit.length - 1) {
+    fruit.pop();
+    // removed fruit with [] bc would reutrn the word grapes
+    // verbally: if the last index of grapes is at the end, remove the end thing that is that thing
+}
+console.log(fruit);
+
+// should return 6 bc last index of grapes is there
+
 // Console log your new array.
 
 
 /* ***************************************************************
 * 							SLICING
 *************************************************************** */
+// allows us to copy a ortion of out array
+// does not allow
+// looking at curriculum, copies everything starting at that index, second parameter allowed to issue a place to stop
+// var sllice = colors.slice(2, 4); does not include the 4th index, stops at it
 
 var instructors = ['justin','david','sophie','vivian','casey','trant','daniel'];
 
-// TO DO TOGETHER: Create a variable named ganymedeInstructors that stores an array list of
+// TODO TOGETHER: Create a variable named ganymedeInstructors that stores an array list of
 // 'justin','david', and 'sophie'. Do this with the .slice method.
 
-// TO DO TOGETHER: Create a variable named fortunaInstructors that stores an array list of all
+var ganymedeInstructors = instrucotrs.slice(0, 3);
+console.log(ganymedeInstructors);
+
+// TODO TOGETHER: Create a variable named fortunaInstructors that stores an array list of all
 // instructors starting from 'vivian' onward.
 
+var fortunaInstructors = instructors.slice(3);
+console.log(fortunaInstructors);
+console.log(instructors);
+//original array is untouched
+//this is how you can parse out and rename and use later stuff within an array
+
+//q: don't know length of array but want to remove last 4, can use thos earlier fxs to -1 or -4 as long as
+// it comes out as number to manipulate
+// here is important to remember what is returned or evaluates to
+// make list of things by how they are returned
 
 /* ***************************************************************
 * 							REVERSING
 *************************************************************** */
+// .revrese can be used to revers an array.
+// reverse original array
 
-// TO DO TOGETHER: Take the instructors array and reverse it.
+
+// TODO TOGETHER: Take the instructors array and reverse it.
 // What will the following console log display?
+
+instructors.reverse();
+// this should flip the array
 console.log(instructors);
 
 /* ***************************************************************
 * 							SORTING
 *************************************************************** */
+// will convert element in an array to their string equiv to and sort based on those values
+//similar to reverse and sort will modify and return ORIGINAL array
 
-// TO DO TOGETHER: Sort the instructors array.
+// TODO TOGETHER: Sort the instructors array.
 // Take a look at the results of the console log.
+
+var mySting = [5,6,'one',1,2,'3','4'];
+myString.sort();
+// 5,6,1,2 will be converted to string values
+// sorts as strings, output preserves their original data types as seen as the console output but is actually:
+// ['1','2','3','4','5','6','one'] sorted alphabetically where #s come first still, spaces count before 0
+// console output shows these in this order but as their data type
+// good for alphebetizing a list of elements
 console.log(instructors);
 
 /* ***************************************************************
 * 				CONVERTING BETWEEN STRINGS AND ARRAYS
 *************************************************************** */
+//.split allow us to turn string into an array
 
 var submarine = "We all live in a yellow submarine.";
 
-// TO DO TOGETHER: Split this string up into an array of elements
+// TODO TOGETHER: Split this string up into an array of elements
+
+
 // What will this console log display?
+submarine.split(' ');  // the space character is where we split everything
 console.log(submarine);
+//
 
 // TO DO: Now, join the array elements into a string. Each word should be in its own separate line.
 // Log your results.
