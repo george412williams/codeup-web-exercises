@@ -181,7 +181,7 @@ console.log(instructors);
 // TODO TOGETHER: Sort the instructors array.
 // Take a look at the results of the console log.
 
-var mySting = [5,6,'one',1,2,'3','4'];
+var myString = [5,6,'one',1,2,'3','4'];
 myString.sort();
 // 5,6,1,2 will be converted to string values
 // sorts as strings, output preserves their original data types as seen as the console output but is actually:
@@ -194,6 +194,7 @@ console.log(instructors);
 * 				CONVERTING BETWEEN STRINGS AND ARRAYS
 *************************************************************** */
 //.split allow us to turn string into an array
+// split/join returns new array/string
 
 var submarine = "We all live in a yellow submarine.";
 
@@ -201,9 +202,24 @@ var submarine = "We all live in a yellow submarine.";
 
 
 // What will this console log display?
-submarine.split(' ');  // the space character is where we split everything
+// submarine.split(' ');  // the space character is where we split everything
+var submarineArray = submarine.split(' ');
 console.log(submarine);
+console.log(submarineArray);
 //
 
-// TO DO: Now, join the array elements into a string. Each word should be in its own separate line.
+// TODO: Now, join the array elements into a string. Each word should be in its own separate line.
 // Log your results.
+
+// can join things with a space or anything that evaluates into HTML
+
+var newSubmarine = surbmarineArray.join('\n');
+console.log(newSubmarine);
+// does not console with a <b> because evaluates to HTML primarily, but does with \n
+// could eventually target an element in HTML and change the inner HTML and join them with a break
+// in a bonus question in the exercies...
+// '\n' instead of <br>
+// submarineArray.join('<br>'); was replaced
+// console.log(newSubmarine);
+
+// now look at exercise
