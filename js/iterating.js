@@ -65,14 +65,17 @@ names.forEach(function (name) {
 var numberArray = [1,2,3,4,5];
 
 function returnElement1(arr) {
+    //return arr[0];
     console.log(numberArray[0]);
     }
 
 function returnElement2(arr) {
+    //return arr[1];
     console.log(numberArray[1]);
 }
 
 function returnElement3(arr) {
+    //return arr[2];
     console.log(numberArray[2]);
 }
 
