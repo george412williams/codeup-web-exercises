@@ -116,7 +116,7 @@ fruit.lastIndexOf('apples');
 // TODO: If the last element in the fruits array is 'grapes', remove it from the list.
 
 // how to start? why not if
-if(fruits.lastIndexOf('grapes') === fruit.length - 1) {
+if(fruit.lastIndexOf('grapes') === fruit.length - 1) {
     fruit.pop();
     // removed fruit with [] bc would reutrn the word grapes
     // verbally: if the last index of grapes is at the end, remove the end thing that is that thing
