@@ -25,14 +25,39 @@
      */
 
     var planetsStringBreaks = planetsArray.join('<br>');
-    // to alphabetize a mixed type list
+    // to alphabetize a mixed type list (...using html elements?)
 
 // =====BONUS=====
 
     //pseudo:
-    //new string in a ul
-    //var planetsStringList = planetsArray.join('<ul>','<li>','</li>','</ul>');
+    //function that makes new string in a ul from an array
+    //var planetsStringList = '<ul>' + planetsArray.join('<ul>','<li>','</li>','</ul>');
 
+    //function planetsStringList(planet) {
+    //     for (var i = 0; i < planet.planetsArray.length; i++) {
+    //         var list = planet.planetsArray[i];
+    //     }
+    //}
+
+    //===try a forEach?====
+
+    //planetsArray.forEach(function (planet) {
+    //     var ul = document.createElement('ul');
+    //     var li = document.createElement('li');
+    //     // looking up the following line for meaning
+    //     var text = document.createTextNode(planet);
+    //     li.appendChild(text);
+    //     document.getElementById("planetsListArray").appendChild(li);
+    //});
+
+    //====== try w loop?=====
+
+    for (i = 0; i < planetsArray.length; i++) {
+        var li = document.createElement("li");
+        var text = document.createTextNode(planetsArray[i]);
+        li.appendChild(text);
+        document.getElementById("myUl").appendChild(li);
+    }
 
 
 })();
