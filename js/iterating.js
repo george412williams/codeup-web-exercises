@@ -74,9 +74,13 @@ function returnElement2(arr) {
     console.log(numberArray[1]);
 }
 
-function returnElement3(arr) {
-    //return arr[2];
-    console.log(numberArray[2]);
+function returnElementLast(arr) {
+    //return arr[arr.length - 1];
+    console.log(numberArray[5]);
 }
+
+console.log(returnElement1(numberArray));
+console.log(returnElement2(numberArray));
+console.log(returnElementLast(numberArray));
 
 })();
