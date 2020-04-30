@@ -26,6 +26,7 @@
 
     var planetsStringBreaks = planetsArray.join('<br>');
     // to alphabetize a mixed type list (...using html elements?)
+    // rendering strings in html in js
 
 // =====BONUS=====
 
@@ -56,8 +57,26 @@
         var li = document.createElement("li");
         var text = document.createTextNode(planetsArray[i]);
         li.appendChild(text);
-        document.getElementById("myUl").appendChild(li);
+        document.getElementById("planets-list").appendChild(li);
     }
 
+// instru approach
+// in the html imagine how it looks
+    //spliting/joining, can add li tags between ea element, but need
+    //to find a way to wrap
+    //start by creating a string
 
+    var planetsList = "<ul>";
+    //want to get ea one into a list, using a forEach
+        planetsArray.forEach(function (planet) {
+            //add opening closing li tags
+            planetsList += "<li>" + planet + "</li>";
+        });
+        //concatonates
+
+   //used method from last attempt
+document.getElementById('planets-list').innerHTML = returnList(planetsArray);
 })();
+
+
+

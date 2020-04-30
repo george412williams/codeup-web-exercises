@@ -224,3 +224,5 @@ console.log(newSubmarine);
 
 // now look at exercise
 // GIT merging remember can happen from the terminal or github
+
+// the ganymede git has the make a list out of it function
