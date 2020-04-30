@@ -191,11 +191,30 @@ Write a function that returns the number 7 check on firefox-->
 
 //create an array of your fav tv show, using a foreach loop, log each one.
 
-var favShows = ['Firefly','The Simpsons','Cowboy Beepop','The Mandalorian','Black Mirror','Painting with Bob Ross']
+var favShows = ['Firefly','The Simpsons','Cowboy Beepop','The Mandalorian','Black Mirror','Painting with Bob Ross'];
 
 favShows.forEach(function (show) {
     console.log('Of my favorite TV Shows, they include ' + show + '.');
 })
+
+// a question elicited a function that pulls certain types of info from an array:
+    // also found in daily notes
+
+function separateValues(arr) {
+    // empty bucket to catch values
+    var numberArray = [];
+    arr.forEach(function(element) {
+        //so iterating thru...
+        if(typeof(element) === "number") {
+            //element will be added to numberArray if type is number
+            numberArray.push(element);
+            //so go through ea element and push through fx
+        }
+    });
+    return numberArray;
+}
+console.log();
+
 </script>
 
 </body>
