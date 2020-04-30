@@ -1,5 +1,12 @@
 "use strict";
+
+// Slide 1 Adding Elements to an array
+    // .push and .unshift
+    // push adds item to end
+    // unshift add item to beginning
+
 console.log("Let's manipulate some arrays");
+
 /* ***************************************************************
 * 						MANIPULATING ARRAYS
 *************************************************************** */
@@ -12,28 +19,77 @@ console.log("Let's manipulate some arrays");
 *************************************************************** */
 // .push adds elements to the end of an array
 // .unshift adds elements to the beginning of an array
+// these methods return the new length of the array
+// modifies original array
 
 var numStrings = ['three','four','five','six','seven'];
 
-// TO DO TOGETHER: Use the .push method to add the next String in the sequence.
-// TO DO TOGETHER: Use the .unshift method to add 'two' before 'three'.
+// TODO TOGETHER: Use the .push method to add the next String in the sequence.
 
-// TO DO: Use the .push method to add 'nine' and 'ten'.
-// TO DO: Use .unshift to add 'zero' and 'one'. Can this be done with one statement?
+numStrings.push('eight');
+
+// TODO TOGETHER: Use the .unshift method to add 'two' before 'three'.
+
+numStrings.unshift('two');
+console.log(numStrings);
+// inspect console reveals add items and length modified
+
+numStrings.push('eight');
+numStrings.unshift('two');
+//add .log between closing ) and ; to creat a log
+console.log(numStrings.push('eight'));;
+console.log(numStrings.unshift('two'));;
+// gives 6 and 7 respectively because the second console had not been run to read the correct pos and length we wanted
+
+// TODO: Use the .push method to add 'nine' and 'ten'.
+
+numStrings.push('nine');
+numStrings.push('ten');
+// or
+numStrings.push('nine','ten');
+// what does the method return?
+console.log(numStrings.push('nine', 'ten'));;
+// me i thought two numbers
+// twas 9
+// to call the array, call original array
+
+// TODO: Use .unshift to add 'zero' and 'one'. Can this be done with one statement?
+
+console.log(numStrings.unshift('zero', 'one'));;
+console.log(numStrings);
+
 // Console log your results.
+
 
 /* ***************************************************************
 * 						REMOVING ELEMENTS
 *************************************************************** */
+// These methods don't return the new length of the array, returns the element
+// modifies original array
 
 var activeCohorts = ['deimos','europa','fortuna','ganymede','ada','bayes'];
 
-// TO DO TOGETHER: Use the .pop method to remove the last cohort in the list.
-// TO DO TOGETHER: Use the .shift method to remove the first cohort in the list.
-// What do we get when we log the return of these methods?
+// TODO TOGETHER: Use the .pop method to remove the last cohort in the list.
 
-// TO DO: Use a combination of .pop and .shift methods until only 'fortuna' and 'ganymede' are
+console.log(activeCohorts.pop());;
+console.log(activeCohorts);
+// don't pass anying in pop bc just removing, nothing to replace
+
+// TODO TOGETHER: Use the .shift method to remove the first cohort in the list.
+// also can store what you removed:
+var deimos = activeCohorts.shift();
+
+console.log(activeCohorts.shift());;
+console.log(activeCohorts);;
+
+// What do we get when we log the return of these methods?
+// removes deimos and returns deimos
+
+// TODO: Use a combination of .pop and .shift methods until only 'fortuna' and 'ganymede' are
 // left in the array. Log the updated array.
+
+console.log(activeCohorts.pop());
+console.log(activeCohorts);
 
 
 /* ***************************************************************
