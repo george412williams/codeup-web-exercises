@@ -67,7 +67,7 @@ Examples:
     console.log(twoMoreAwayFromZero(0.5));
     console.log(twoMoreAwayFromZero(-2));
     console.log(twoMoreAwayFromZero(-3.5));
-    <!--
+
 
     add .log to a script line to give console.log tag auto
     make sure to know the specific requirements for things..
@@ -168,23 +168,53 @@ Write a function that returns the number 7 check on firefox-->
 <!--Apr 12-->
 <!-- takes in two numbers and returns the larger number-->
 <script>
-    function isLargerNumber(num > bum) {
-        if (num > num){
-            return num
+//     function isLargerNumber(num > bum) {
+//         if (num > num){
+//             return num
+//         }
+//     }
+//
+//     console.log(isLargerNumber())
+//
+// function largerOfTwoNums(n1,n2) {
+//     if (n1 >= n2) {
+//         return n1;
+// } else {
+//         return n2;
+//     }
+// }
+//
+//     console.log(isLargerNumber(3, 33);
+
+
+// 4/30 Arrays
+
+//create an array of your fav tv show, using a foreach loop, log each one.
+
+var favShows = ['Firefly','The Simpsons','Cowboy Beepop','The Mandalorian','Black Mirror','Painting with Bob Ross'];
+
+favShows.forEach(function (show) {
+    console.log('Of my favorite TV Shows, they include ' + show + '.');
+})
+
+// a question elicited a function that pulls certain types of info from an array:
+    // also found in daily notes
+
+function separateValues(arr) {
+    // empty bucket to catch values
+    var numberArray = [];
+    arr.forEach(function(element) {
+        //so iterating thru...
+        if(typeof(element) === "number") {
+            //element will be added to numberArray if type is number
+            numberArray.push(element);
+            //so go through ea element and push through fx
         }
-    }
-
-    console.log(isLargerNumber())
-
-function largerOfTwoNums(n1,n2) {
-    if (n1 >= n2) {
-        return n1;
-} else {
-        return n2;
-    }
+    });
+    return numberArray;
 }
+console.log();
 
-    console.log(isLargerNumber(3, 33);
 </script>
 
 </body>
