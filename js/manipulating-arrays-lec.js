@@ -223,3 +223,4 @@ console.log(newSubmarine);
 // console.log(newSubmarine);
 
 // now look at exercise
+// GIT merging remember can happen from the terminal or github
