@@ -97,6 +97,44 @@ var person = {
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+var books = [
+        {
+        title: ,
+        author: {
+            firstName: ,
+            lastName: ,
+        }
+        },
+        {
+        title:,
+        author: {
+            firstName:,
+            lastName:,
+        }
+        },
+        {
+        title:,
+        author: {
+            firstName:,
+            lastName:,
+        }
+        },
+        {
+        title:,
+        author: {
+            firstName:,
+            lastName:,
+        }
+        },
+        {
+        title:,
+        author: {
+            firstName:,
+            lastName:,
+        }
+        }
+    ];
+
 
     /**
      * TODO:
