@@ -19,9 +19,9 @@ var person = {
         return "Hello from " + this.firstName + " " + this.lastName + "!";
     }
         };
-    //sayHello = function () {
-        //return "Hello from " + this.firstName + " " + this.lastName;
-    //};
+    person.sayHello = function () {
+        return "Hello from " + this.firstName + " " + this.lastName;
+    };
 
     console.log(person.sayHello());
     /**
