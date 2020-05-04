@@ -54,7 +54,7 @@ var person = {
         {name: 'Cameron', amount: 180,
             discountPrice(){
                 if (this.amount > 200) {
-                    this.amount - (this.amount * .12);
+                    return "Your amount is $" + (this.amount - (this.amount * .12)) + "saving you $" + (this.amount * .12);
                 } else {
                     return "Your amount is $" + this.amount + ". You do not qualify for the discount."
                 }
@@ -63,7 +63,7 @@ var person = {
         {name: 'Ryan', amount: 250,
             discountPrice(){
                 if (this.amount > 200) {
-                    this.amount - (this.amount * .12);
+                    return "Your amount is $" + (this.amount - (this.amount * .12)) + "saving you $" + (this.amount * .12);
                 } else {
                     return "Your amount is $" + this.amount + ". You do not qualify for the discount."
                 }
@@ -72,7 +72,7 @@ var person = {
         {name: 'George', amount: 320,
             discountPrice(){
                 if (this.amount > 200) {
-                    this.amount - (this.amount * .12);
+                    return "Your amount is $" + (this.amount - (this.amount * .12)) + "saving you $" + (this.amount * .12);
                 } else {
                     return "Your amount is $" + this.amount + ". You do not qualify for the discount."
                 }
@@ -82,7 +82,7 @@ var person = {
 
 
     shoppers.forEach(function (shopper) {
-        console.log(shopper.discountPrice())
+        console.log(shopper.discountPrice());
     });
 
     /** TODO:
@@ -175,7 +175,7 @@ var books = [
     for(var i = 0; i < books.length; i++) {
         console.log("Book # " + i);
         console.log("Title: " + books[i].title);
-        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
     console.log("---");
     }
 
