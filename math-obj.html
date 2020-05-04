@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math Object</title>
+</head>
+<body>
+
+    <h1>Math Object</h1>
+    <script>
+        //make use of math object to make maths easier
+        //math.random gives us by itself
+        console.log(Math.random());
+        // creating number btwn 0 and 1, often is never a 0 or 1
+        // 0 to 100?
+        console.log(Math.random() * (100));
+        // floor method, rounding method that of course rounds down
+        console.log(Math.floor(Math.random()) * ((100 + 1)));
+        // will never get 100 here from random, highest will be one less than max
+        //unless you do +1 to include it
+        //math.floor is minimum is included, add the +1 to make max inclusive
+        console.log(Math.floor(Math.random()) * ((100 - 50) + 50));
+        //you would then add on + 50, now get rando btwn 50 and 99; use (100 - 50 + 1) for 100
+        //in order to make it an inclusive maximum
+        console.log(Math.floor(Math.random()) * (51) + 50);
+        // the + 50 is what makes it 50 to 100 inclusively
+        console.log(Math.ceil(Math.random()) * (100 - 50) + 50);
+        //the reverse of floor, rounding does not happen until after the multiplication
+        //won't get 0 unless you get a number other than 0 such as 0.34542345, will round up regardless
+        //so Math.floor will be preferred
+
+        console.log(Math.ceil(4.9));
+        //if you want modularity:
+        console.log(Math.round(4.4), 4);
+        console.log(Math.round(4.5), 5);
+
+
+
+    </script>
+
+</body>
+</html>
