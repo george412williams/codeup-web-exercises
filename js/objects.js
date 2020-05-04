@@ -85,6 +85,22 @@ var person = {
         console.log(shopper.discountPrice());
     });
 
+    //instructor:
+
+    /*
+    * function discountChecker(shoppers) {
+    *   shoppers.forEach(funciton(shopper) {
+    *       if (shopper.amount >= 200) {
+    *           console.log(shopper.name + " has spent $" + shopper.amount.toFixed(2) + " today. They qualify for a 12% discount, and therefor have a final total of $" + (shopper.amount - (shopper.amount * .12)).toFixed(2) + ".");
+    * } else {
+    *   console.log(shopper.name + ", thank you for shopping with us today. Your final total today is: $" + shopper.total + ". If you added " + (200 - shopper.amount).toFixed(2) + ", you could save 12% on your purchase today.:);
+    * }
+    * }
+    * }
+    *
+    *
+    * */
+
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
