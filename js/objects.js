@@ -210,5 +210,25 @@ var books = [
   // being able to access index makes forEach easier, define second parameter to bring in index
     // x = 0 , then can say x++ ... as another way
 
+
+// calls for 2, but gonna take in 3
+function createBook(title, fName, lName) {
+    return {
+        title: title,
+        author: {
+        firstName: fName,
+        lastName: lName
+        }
+    };
+}
+
+// refactoring involves var = newBook = {}...   arr[arr.length] = newBook; return arr;
+    // can use push
+    //arr.push(newBook); return arr;
+
+    //createBook("How Learning Works","Susan","Ambrose", books);
+    //loggingBooks(books);
+    //now displays list of 6 books
+
 })();
 
