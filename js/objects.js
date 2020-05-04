@@ -54,7 +54,7 @@ var person = {
         {name: 'Cameron', amount: 180,
             discountPrice(){
                 if (this.amount > 200) {
-                    return "Your amount is $" + (this.amount - (this.amount * .12)) + "saving you $" + (this.amount * .12);
+                    return "Your amount is $" + (this.amount - (this.amount * .12)) + " saving you $" + (this.amount * .12) + ".";
                 } else {
                     return "Your amount is $" + this.amount + ". You do not qualify for the discount."
                 }
@@ -63,7 +63,7 @@ var person = {
         {name: 'Ryan', amount: 250,
             discountPrice(){
                 if (this.amount > 200) {
-                    return "Your amount is $" + (this.amount - (this.amount * .12)) + "saving you $" + (this.amount * .12);
+                    return "Your amount is $" + (this.amount - (this.amount * .12)) + " saving you $" + (this.amount * .12) + ".";
                 } else {
                     return "Your amount is $" + this.amount + ". You do not qualify for the discount."
                 }
@@ -72,7 +72,7 @@ var person = {
         {name: 'George', amount: 320,
             discountPrice(){
                 if (this.amount > 200) {
-                    return "Your amount is $" + (this.amount - (this.amount * .12)) + "saving you $" + (this.amount * .12);
+                    return "Your amount is $" + (this.amount - (this.amount * .12)) + " saving you $" + (this.amount * .12) + ".";
                 } else {
                     return "Your amount is $" + this.amount + ". You do not qualify for the discount."
                 }
