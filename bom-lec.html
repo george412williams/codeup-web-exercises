@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM Lecture</title>
+    <script></script>
+</head>
+<body>
+    <h1>BOM</h1>
+
+    <script>
+        (function() {
+
+        var i = 1;
+        var pillow = "MyPillow";
+        var arr = [1,2,3];
+
+        //console.log(window);
+        // by having these vars in a IFFI is important to sensitive info
+        // cannot do:
+        // console.log(window.pillow); because pillow is not in window's scope
+            // consoling pillow will not produce anything in general also, console is assumed in the window global
+
+        // alert("Hi, register for my site!:);" +
+        // window.alert("You really should register for my site...");
+            // so if vars are outside, var is added to window object and is public, they open console
+            // and can see all global defined vars, dangerous, tools used against you...
+
+
+        // window obj hanging onto global vars and using the methods
+
+        // Writing code a set # of times that can run a certain # of times, multiple times: setMultiple
+
+        //set up an interval
+
+        //two arguements that go in
+        // - 1: callback function (handler)  //entire purpose to handle what happens every time
+        // - 2: the time. amount of time in milliseconds before the code runs again.
+        // no para for fx, but has conditional logic
+
+        // setInterval(function() {
+        //     var yesNo = confirm("Do you like websites chronicling the news surrounding the murder hornets?");
+        //     console.log(yesNo);
+        //     if (yesNo) {
+        //         alert("I know you just wanted to stop hearing about the murder hornets. I don't blame you, honestly.");
+        //             clearInterval();
+        //     }
+        // // want 3 seconds, so in ms...
+        // }, 3000);
+
+            // so every 3 seconds given the alert
+
+        // How to cleawr the interval ID?
+        // 1 - Set your setInterval method to a variable. This is bc the return of ur set interval method is an interval ID.
+            // so:
+
+        var intervalID = setInterval(function() {
+            var yesNo = confirm("Do you like websites chronicling the news surrounding the murder hornets?");
+            console.log(yesNo);
+            if (yesNo) {
+                alert("I know you just wanted to stop hearing about the murder hornets. I don't blame you, honestly.");
+                clearInterval();
+            }
+            // want 3 seconds, so in ms...
+        }, 3000);
+
+        // clearInterval not like a return, will run code after it, would only not run if you added return followed by console.log that will now log
+        // keep in mind 2 parameters for setInterval method
+            // can also pass a named fx, would just give name without () so it takes fx def and not value and the time in ms before first interval
+
+        function handler() {    // no argument
+            var yesNo = confirm("Do you like websites chronicling the news surrounding the murder hornets?");
+            console.log(yesNo);
+            if (yesNo) {
+                alert("I know you just wanted to stop hearing about the murder hornets. I don't blame you, honestly.");
+                clearInterval();
+        }
+        }
+            var intervalID = setInterval(handler, 3000);
+            console.log(intervalID);
+            //depending on set number of intervals, var is set to that variable   ?
+            // var murderHornetID = setInterval(handler, 3000); ...to show that you can name the IDs; console.log(murderHornetID);
+
+        //real world ex:
+
+            // var registerForMyWebzone = setInterval(function () {
+            //     if (confirm("Hey, register for my website's mailing list?")) {
+            //         // to annoyingly ask:
+            //         var userEmail = prompt("What is your email?");
+            //         clearInterval(registerForMyWebzone);
+            //     }
+            //     // to truly ask, annoy, set to 30s = 30000ms, but using 3s to see it happen
+            // }, 3000)
+
+            // banking example:...
+
+            // setTimeout
+
+            // similar to setInterval but only meant to happen once.
+
+            setTimeout(function () {
+                alert("CONGRATS! YOU WON!");
+            }, 9000);
+
+            function alertAdBlock() {
+                alert("Hey, stop using AdBlocker!");
+            }
+
+            // need the fx definition here
+            setTimeout(alertAdBlock, 4500);
+
+
+
+        })();
+    </script>
+
+
+</body>
+</html>
