@@ -192,9 +192,23 @@ var books = [
         console.log("Book # " + (i + 1));
         console.log("Title: " + books[i].title);
         console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
-    console.log("---");
+        console.log("---");
     }
 
+//instructor:
+
+// function loggingBooks(books) {
+//     for (var x = 0; x < books.length; x++); {
+//         console.log("Book #" + (x + 1) + "\n" + "Book title" + books[x].title) + "\n" + "Book author: " + books.[x].author.firstName + books.[x].author.lastName);
+//
+//     }
+// }
+
+// books.forEach(function(book, index)) {
+//         //...(index + 1)...
+//     }
+  // being able to access index makes forEach easier, define second parameter to bring in index
+    // x = 0 , then can say x++ ... as another way
 
 })();
 
