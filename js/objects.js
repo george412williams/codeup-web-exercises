@@ -173,8 +173,10 @@ var books = [
      */
 
     for(var i = 0; i < books.length; i++) {
+        console.log("Book # " + this.i);
         console.log("Title: " + books[i].title);
-        console.log(book.author.firstName + " " + book.author.lastName);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    console.log("---");
     }
 
 
