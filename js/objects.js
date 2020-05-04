@@ -108,7 +108,7 @@ var books = [
         {
         title: "Eon",
         author: {
-            firstName: "George",
+            firstName: "Greg",
             lastName: "Bear",
         }
         },
