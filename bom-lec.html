@@ -109,6 +109,40 @@
             // need the fx definition here
             setTimeout(alertAdBlock, 4500);
 
+            // q on DOM events, like starting an interval when something happens, ex: when event happens start/stop, clear the interv, wait for it again, if nothing happens at this certain time frame prompt this...
+            // q on like what NETFLIX does "are you still watching?"
+
+    //====LOCATION OBJECTS====
+
+            // something we can use to manipulate the page we are looking at
+
+            // commented out previous fxs
+
+            function alertAdBlock() {
+                alert("Hey");
+            }
+
+            window.location = "http://neopets.com";
+
+            //if you have an interaction we want user to have, after registration will redirect to like a profile page, if want to be logged in right after could take to main page within server, a relative pathway, to stay logged in for instance
+            //similar to an HTML anchor
+
+    //====LOCATION RELOAD====
+
+            //like an art app with freeform draw, you want to clear the drawing, can just reload page or
+
+            if(confirm("Did you make a boo-boo?")) {
+                location.reload();
+            }
+            // w/o arguement will load from the cache rather than server, can force clear cache and dl from server:
+
+            location.reload(true);
+            //deprication: something has been marked for removal in the future but yet removed, when developing code and see it marked want to see how you can replace that
+            // he's looking at why here...looks like page only allows refresh from server, not cache, going to dig here
+            // his answer will be in the slack
+
+
+
 
 
         })();
