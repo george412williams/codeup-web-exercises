@@ -13,25 +13,28 @@
 (function() {
     "use strict";
 
+    //var bomIntervalID = setInterval(updateTimer() {
     var detonationTimer = 5;
 
     // TODO: This function needs to be called once every second
-    var bomIntervalID = setInterval(function ()) {
+
+    var bomIntervalID = setInterval(function(){
+    //function updateTimer() {
         if (detonationTimer == 0) {
             alert('EXTERMINATE!');
             document.body.innerHTML = '';
         } else if (detonationTimer > 0) {
             document.getElementById('timer').innerHTML = detonationTimer;
         }
-        // var intervalID = setInterval(detonationTimer, 1000);
-        detonationTimer--;
-    }
+        else {
+            clearInterval();
+        }
+    }, 1000);
 
-    // TODO: When this function runs, it needs to
-    // cancel the interval/timeout for updateTimer()
-    function defuseTheBOM() {
-        if (detonationTimer)
-    }
+
+        detonationTimer--;
+
+
 
     // Don't modify anything below this line!
     //
