@@ -34,6 +34,26 @@
         console.log(Math.round(4.4), 4);
         console.log(Math.round(4.5), 5);
 
+    //EXPONENTS
+        //there has been a recent JS change here
+        //previously:
+        //we need to be thinking about our user base, as a preview diff people use diff browsers etc
+        //by running on older vers people can still use the net with this method:
+        console.log(Math.pow(4,2), 16);
+        //two arguments; first number to be raised, second is exponent
+
+        // the change, E20 (Echma script 20) expects the following:
+            console.log(4 ** 4);
+            //expect to see with firefox, opera, maybe edge, chrome, the upToDate platforms
+            //legacy hardware, want to keep in mind older computers
+    //SQRT
+        console.log(Math.sqrt(64)); console.log(Math.cbrt(99));
+    //CONSTANTS in Math
+        //Math.E, Math.PI
+
+
+
+
 
 
     </script>
