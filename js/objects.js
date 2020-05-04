@@ -99,38 +99,38 @@ var person = {
      */
 var books = [
         {
-        title: ,
+        title: "The Hitchhiker's Guide to the Galaxy",
         author: {
-            firstName: ,
-            lastName: ,
+            firstName: "Douglas",
+            lastName: "Adams",
         }
         },
         {
-        title:,
+        title: "Eon",
         author: {
-            firstName:,
-            lastName:,
+            firstName: "George",
+            lastName: "Bear",
         }
         },
         {
-        title:,
+        title: "I, Robot",
         author: {
-            firstName:,
-            lastName:,
+            firstName: "Isaac",
+            lastName: "Asimov",
         }
         },
         {
-        title:,
+        title: "Choke",
         author: {
-            firstName:,
-            lastName:,
+            firstName: "Chuck",
+            lastName: "Palinuik",
         }
         },
         {
-        title:,
+        title: "Animal Farm",
         author: {
-            firstName:,
-            lastName:,
+            firstName: "George",
+            lastName: "Orwell",
         }
         }
     ];
@@ -172,4 +172,11 @@ var books = [
      *   `showBookInfo` function.
      */
 
+    for(var i = 0; i < books.length; i++) {
+        console.log("Title: " + books[i].title);
+        console.log(book.author.firstName + " " + book.author.lastName);
+    }
+
+
 })();
+
