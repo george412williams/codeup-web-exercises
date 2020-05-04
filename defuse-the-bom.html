@@ -35,7 +35,9 @@
 // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
-        setTimeout(updateTimer, 1000);
+        if (defuser) {
+            clearInterval(intervalID);
+        }
     }
 
 
