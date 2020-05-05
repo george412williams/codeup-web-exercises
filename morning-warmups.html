@@ -191,47 +191,70 @@ Write a function that returns the number 7 check on firefox-->
 
 //create an array of your fav tv show, using a foreach loop, log each one.
 
-var favShows = ['Firefly','The Simpsons','Cowboy Beepop','The Mandalorian','Black Mirror','Painting with Bob Ross'];
+// var favShows = ['Firefly','The Simpsons','Cowboy Beepop','The Mandalorian','Black Mirror','Painting with Bob Ross'];
+//
+// favShows.forEach(function (show) {
+//     console.log('Of my favorite TV Shows, they include ' + show + '.');
+// })
+//
+// // a question elicited a function that pulls certain types of info from an array:
+//     // also found in daily notes
+//
+// function separateValues(arr) {
+//     // empty bucket to catch values
+//     var numberArray = [];
+//     arr.forEach(function(element) {
+//         //so iterating thru...
+//         if(typeof(element) === "number") {
+//             //element will be added to numberArray if type is number
+//             numberArray.push(element);
+//             //so go through ea element and push through fx
+//         }
+//     });
+//     return numberArray;
+// }
+// console.log();
+//
+// //5:01
+//
+// function fizzBuzzFx() {
+//     for (i = 1; i <= 50; i++);
+//         if (i % ===0 && i % 5 === 0)  {
+//             console.log("fizzbuzz")
+//         } else if (i % 3 === 0) {
+//             console.log("fizz");
+//         } else if (i % 5 === 0) {
+//             console.log("buzz");
+//         } else {
+//             console.log(i);
+//         }
+//     }
+//
+// console.log(fizzBuzzFx());
 
-favShows.forEach(function (show) {
-    console.log('Of my favorite TV Shows, they include ' + show + '.');
-})
+// 5:05
 
-// a question elicited a function that pulls certain types of info from an array:
-    // also found in daily notes
+/*
+* Create a function that takes in a array input and returns true if one of the elements is a number that matches the number of total elements in the array.
+Example input: [1]
+Example output: true
+Example input: ['bob', 3, false]
+Example output: true
+Example input: [{'a': 'hello'}, 10, true]
+Example output: false
+Example input: [5, {'a': 'hello'}, 30, true, null]
+Example output: true
+* */
 
-function separateValues(arr) {
-    // empty bucket to catch values
-    var numberArray = [];
-    arr.forEach(function(element) {
-        //so iterating thru...
-        if(typeof(element) === "number") {
-            //element will be added to numberArray if type is number
-            numberArray.push(element);
-            //so go through ea element and push through fx
-        }
-    });
-    return numberArray;
-}
-console.log();
-
-//5:01
-
-function fizzBuzzFx() {
-    for (i = 1; i <= 50; i++);
-        if (i % ===0 && i % 5 === 0)  {
-            console.log("fizzbuzz")
-        } else if (i % 3 === 0) {
-            console.log("fizz");
-        } else if (i % 5 === 0) {
-            console.log("buzz");
+function lengthNumber (arr) {
+    arr.forEach(function () {
+        if (element = arr.length) {
+            console.log(true);
         } else {
-            console.log(i);
+            console.log(false);
         }
-    }
-
-console.log(fizzBuzzFx());
-
+    })
+}
 
 </script>
 
