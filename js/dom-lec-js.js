@@ -109,6 +109,14 @@
     // var forms = document.forms;
     // console.log(forms['feedback-form'].feedback.value);
 
+    // within form can dig down to indiv inputs down to the name of that input
+    // in console:
+        //document.forms[0].username
+    // if there's specific info to get
+    // access through the value in the input:
+        //.username.value...
+    // target by ID also
+
 
 // ========== Accessing and modifying elements and properties
 
