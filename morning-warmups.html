@@ -245,16 +245,40 @@ Example output: false
 Example input: [5, {'a': 'hello'}, 30, true, null]
 Example output: true
 * */
+//pseudo
 
 function lengthNumber (arr) {
     arr.forEach(function () {
-        if (element = arr.length) {
+        if (i === arr.length) {
             console.log(true);
         } else {
             console.log(false);
         }
     })
 }
+
+//var arr1 = {[1]}
+//lengthNumber (arr1);
+
+//instru
+
+function checkForLengthInArr(arr) {
+    for (var i = 0; i< arr.length; i += 1) {
+        if (arr[i] === arr.length) {
+            return true;
+        }
+    }
+    return false
+}
+
+console.log(checkForLengthInArr([1])); //true
+console.log([5, {'a': 'hello'}, 30, true, null]); //true
+
+//rewrite for larger array that includes
+    //function checkForLength(arr) {
+
+//i.includes(7)
+    //false
 
 </script>
 
