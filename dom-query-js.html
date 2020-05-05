@@ -24,7 +24,10 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
-
+<button class="btn" id="btn1" type="button"></button>
+<button class="btn" id="btn2" type="button"></button>
+<button class="btn" id="btn3" type="button"></button>
+<button class="btn" id="btn4" type="button"></button>
 <script>
     (function() {
         "use strict";
@@ -72,6 +75,17 @@
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs[0].innerHTML = "<em>Mission Accomplished!</em>";
+
+        // ======= next exercise =======
+
+        var listener = function (event) {
+
+        };
+
+        var btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click', mainHeader);
+
+        document.getElementById('btn1').addEventListener('click', listener);
 
 
     })();
