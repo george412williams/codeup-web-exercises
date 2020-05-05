@@ -53,12 +53,25 @@
         // TODO: Set text color of li with dbid = 1 to blue
         var liDbid = document.querySelector("li:nth-child(1)");
         liDbid.style.color = "blue";
+        // instru used mine to solve first time, but is not as dynamic
+        // getAttribute will find it in a big list
+
+
+        // for (var i =0; i < listItems.length; i += 1) {
+        //      if (i % 2 === 0) {
+        //          listItems[i].style.color = "grey";
+        //}
+        //var dbid = listItems[i].getAttribute("data-dbid");
+        //if (dbid === "1") {  // === for specific, == works with type coersion still
+        //  listItems[i].style.color = "blue";
+        //}};
+        //
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraph = document.getElementsByClassName("sub-paragraph");
+        var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraph.innerHTML = "<em>Mission Accomplished!</em>";
+        subParagraphs[0].innerHTML = "<em>Mission Accomplished!</em>";
 
 
     })();
