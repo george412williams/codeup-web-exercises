@@ -79,10 +79,13 @@
 
 // querySelector()
 
-    // var headerTitle = document.querySelector('header h1');
-    // var headerTitle = document.querySelector('#main-title');
+    // var headerTitle = document.querySelector('header h1');  //anything you can put in CSS can go into this query method (again, older approach)
+    // var headerTitle = document.querySelector('#main-title');  //give same thing
     // console.log(headerTitle);
     //
+
+                // INSTR finds himself using this more than any other method (likes CSS)
+
     // var li = document.querySelector('li'); // only returns first matching
     // console.log(li);
     //
@@ -93,9 +96,12 @@
 // querySelectorAll()
 
     // var lis = document.querySelectorAll("li");
+    // similar also if used:
+    // var liCollection = document.getElementsByTagName('li');
     // console.log(lis);
+        //there are diffs, but not significant right now
 
-
+    //massive projects with alot of DOM manipulation, older versions have slightly better performance
 
 
 // ========== Direct access to form inputs
