@@ -192,8 +192,13 @@
     h2.style.color = "white";
 
     // if  you have this much control over html, u can make calc or game
+    h2.setAttribute("class", "blue-white"); // another targeted change
+    // pixel value changes for example will need to be strings bc html raw will not be read as JS, what's in the quotes here needs to be of the language it's going to
 
-
+    // is pos to style whole page with JS
+    // not good idea bc is not a good separation of concerns, not a replacement, just dynamic changes
+    // still HTML in html doc, CSS in its sheet, and the thing that makes it change in JS
+    // console logging is a good check to see if you getting back what you need
 
 
 })();
