@@ -21,11 +21,11 @@
         // getElementsByClassName   can have same class in mult places, will return the collection of them
         // bootstrap class of 'card'
 
-    var cards = document.getElementsByClassName('card');
-    console.log(cards); // see 4 elements with class of card an: HTMLCollection
-    console.log(cards[0]);
-    cards.pop(); // gives error bc no arr
-    var cardArr = Array.from(cards); // convert HTMLCollection and NodeList to Array
+    // var cards = document.getElementsByClassName('card');
+    // console.log(cards); // see 4 elements with class of card an: HTMLCollection
+    // console.log(cards[0]);
+    // cards.pop(); // gives error bc no arr
+    // var cardArr = Array.from(cards); // convert HTMLCollection and NodeList to Array
     // carsArr.pop();   // comment out prev consoles to see
 
         // get collection of those nodes, displays alot like an array but is not, so arr methods won't work,
@@ -115,15 +115,20 @@
 // get value of innerHTML
     //     var title = document.getElementById("main-title");
     //     console.log(title);
-    //
+    // from this node can see what current html is, node itself followed by actual inner.html, inner text looking at actual text ignoring the elements
+    // can change these as well, but can get current value by looking at inner.html
+
+    var body = document.getElementsByTagName('body');  // although one body tag, this is a Collection, need to know what index to look at:
+    console.log(body[0].innerHTML);  // .innerText is different in that you see the text in full
     //     console.log(title.innerHTML);
     //     console.log(title.innerText);
 
 // set value of innerHTML
-    //     title.innerHTML = "<em>Hi MOM!</em>";
+    //     title.innerHTML = "<em>Hi MOM!</em>";     // is now changed to this, em- is italics remember?
+
 
 // set value of innerText
-    //     title.innerText = "<em>Hi MOM!</em>";
+    //     title.innerText = "<em>Hi MOM!</em>";   // same value but with inner text, you will see the tags here; sees it as valid text, not html to run
 
 // append value to innerText (works the same with innerHTML)
     //     title.innerHTML += " ...and hi Mom!";
@@ -131,12 +136,17 @@
 
 // ========== Accessing and modifying attributes
 
+    // another reason why DOM is powerful
+    // can add/take classes/attributes
+    // anyting in HTML can be changed by JS
+
+
 // check if attribute exists
-    //     var cowboy = document.getElementById('cowboy');
-    //     console.log(cowboy.hasAttribute('data-1'));
+    //     var cowboy = document.getElementById('cowboy');  // in html is a paragraph, node here is stored in this var
+    //     console.log(cowboy.hasAttribute('data-1')); // data attribs are custome attribs you can add, can make any data- attrib, like data-height or data-genre
 
 // get an attribute value
-    //     console.log(cowboy.getAttribute('data-1'));
+    //     console.log(cowboy.getAttribute('data-1')); // when you want a attrib's value to play with
 
 // create a new attribute or change a value of an existing attribute
     //     cowboy.setAttribute('data-1', 'hello');
@@ -147,18 +157,42 @@
     //     cowboy.removeAttribute("data-test");
     //     console.log(cowboy);
 
+// helpful to locate attribs that need to be changed/ID'd
 
 // ========== Accessing and modifying styles
 
 // single style
-    //     var jumbotron = document.querySelector('.jumbotron');
-    //     jumbotron.style.display = "none";
+    //     var jumbotron = document.querySelector('.jumbotron');  //in html is a div wrapping an h1
+    //     jumbotron.style.display = "none";    //specific target, here it disappears
     //     jumbotron.style['font-family'] = "times";
+        // can either camalcase
+        //.fontFamily or ['font-family'] = "a-font-like-times";
 
 
 // ========== Add / Remove Elements
 
 // see curriculum links
+// to create own nodes to attach to the DOM
+    // but we have learned plenty of power right now
+    // game stuff will be learned in the next lesson, listening for events for change
+
+
+//===practice task
+    // make whole background color of the page
+
+    document.body.style.backgroundColor = 'red';
+    // the 'some list' to backgroundColor blue
+        // there are multiple h2's, can use nthChild or...selectorAll
+
+    var h2 = document.querySelectorAll('h2')[2];
+    //now how to change text
+    h2.innerText = "apple";
+
+    h2.style.backgroundColor = "blue";
+    h2.style.color = "white";
+
+    // if  you have this much control over html, u can make calc or game
+
 
 
 
