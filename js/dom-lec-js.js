@@ -126,8 +126,8 @@
     // from this node can see what current html is, node itself followed by actual inner.html, inner text looking at actual text ignoring the elements
     // can change these as well, but can get current value by looking at inner.html
 
-    var body = document.getElementsByTagName('body');  // although one body tag, this is a Collection, need to know what index to look at:
-    console.log(body[0].innerHTML);  // .innerText is different in that you see the text in full
+    // var body = document.getElementsByTagName('body');  // although one body tag, this is a Collection, need to know what index to look at:
+    // console.log(body[0].innerHTML);  // .innerText is different in that you see the text in full
     //     console.log(title.innerHTML);
     //     console.log(title.innerText);
 
@@ -188,19 +188,19 @@
 //===practice task
     // make whole background color of the page
 
-    document.body.style.backgroundColor = 'red';
+    //document.body.style.backgroundColor = 'red';
     // the 'some list' to backgroundColor blue
         // there are multiple h2's, can use nthChild or...selectorAll
 
-    var h2 = document.querySelectorAll('h2')[2];
-    //now how to change text
-    h2.innerText = "apple";
-
-    h2.style.backgroundColor = "blue";
-    h2.style.color = "white";
+    // var h2 = document.querySelectorAll('h2')[2];
+    // //now how to change text
+    // h2.innerText = "apple";
+    //
+    // h2.style.backgroundColor = "blue";
+    // h2.style.color = "white";
 
     // if  you have this much control over html, u can make calc or game
-    h2.setAttribute("class", "blue-white"); // another targeted change
+    //h2.setAttribute("class", "blue-white"); // another targeted change
     // pixel value changes for example will need to be strings bc html raw will not be read as JS, what's in the quotes here needs to be of the language it's going to
 
     // is pos to style whole page with JS
@@ -208,5 +208,106 @@
     // still HTML in html doc, CSS in its sheet, and the thing that makes it change in JS
     // console logging is a good check to see if you getting back what you need
 
+//==== DOM EVENTS ====
+    //Audience: "David, it sure seems like
+
+    //DOM Events allow us
+    // Today, we'll be covering how
+
+    // When using the addEventListener method, note the three parameters:
+    // document.getElementById("someID").addEventListener("type", function(){}, useCapture);
+        // the last one is not used much
+
+    //"type" - we're going to be talking about multiple different mouse events
+        // some keyboard events too
+
+    //handler - callback fx or fx definition called by the method
+
+    //boolean - for useCapture, optional, not using it here, adds events to DOM tree if set to true
+
+    // on page, did a double click method, changed header text and title of the doc, and changed img jupiter to mars
+
+    //viewing his code applied to a previous arrays exercise
+
+    //inside his listener, used this.innerText, referring to the element id in
+    // document.querySelector("#header").addEventListener("dblclick", function (){
+    //      document.title = "DOM Events in JavaScript";...
+
+
+    //inspecting mars pic, you see that an added attribute style="background-image: url..img/mars.jpg
+        //note that style has an image
+
+
+    // === keyup version ===   a keyboard even
+
+    //document.addEventListener("keyup", function (event)  {})
+        //event.preventDefault;
+        //console.log(event);
+        ...
+
+    // uses spacebar to switch btwn listener fx changes
+    //console shows characteristics of the keyboard even
+    //clarification: exercise is going to have mouse events, not keyboard, but wanted to show how keyboard can be specific
+    //q: combo of keys? (i'm thinking ctrl and alt)(will learn in jQuery)
+
+//=== changetron ===
+
+    //type: "change",   and = this.value to refer to the resulting field input
+    //changed text on the page by using the field to input it. the input changed the page, in a text ID'd element
+
+    // document.querySelector("#change-a-tron").addEventListener("change", )
+    //     document
+
+    //how to remove an eventlistener
+
+    // var pikaEvent = function () {
+    //         this.style.backgroundImage = 'url(img/screaming-detective-pik.gif")';
+    //         this.style.backgroundColor = 'palevioetred';
+    //         this.addEventListener("mouseout", function () )
+    // }
+
+    //the even he wants to review, but the specific functionality as well
+
+    //intricacies, not removing an event can be tricky
+    //to stop all events:
+
+        // if yu have an event to fire off one time, define that listener like any other function,
+        // if you want to remove, define that listener then pass it
+
+    //space changed the page
+    //click on little text fo pikachu even
+    //hover change pika, and remained showing removal was successful
+        // can bring back by using change-tron text to value of input, have to fire off changetron to do that
+
+    //essentially, took entire listener event, defined it to its own named fx, can do it also with fx definition:
+        //function littleEvent () {}     takes in no parameter
+            //document.getElementByID("little-text").inerHTMO = "...";
+
+    //then adding fx itself to the ID, when triggered removes even to prevent use, bc littleEvent has removeEventListener in it
+    //when you have a named fx and want to pass into another higher level funciton, need to pass the fx definition without the (), () will give value, not the machinery
+    //he then added the changetron event listener with click event littleEvent, which the only way then it can be activated, see previous
+
+    //we're adding on the ability to do the calculator, simon, interactions
+
+    //David's project:
+
+    //the recipe ball - click on the meatball for a dinner recipe, added animation with CSS
+    //we know how to activate DOM events, interactivity
+
+    //List of events:
+    //developer.mozilla.org/en-US/Web/Events
+
+    //git
+
+    //add
+    //commit
+    //push origin branch
+    //open pull request in git
+    //
+
+    //EXERCISE
+
+    //continue in last file, add 4 buttons to page with different fxality to each
+    //taking all previous changes and putting behind a click event on buttons
 
 })();
