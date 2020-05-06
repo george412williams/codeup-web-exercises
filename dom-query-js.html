@@ -31,6 +31,11 @@
 <script>
     (function() {
         "use strict";
+
+        function mainHeaderChange() {
+
+        }
+
         // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById("main-header");
 
@@ -69,23 +74,32 @@
         //  listItems[i].style.color = "blue";
         //}};
         //
-
+        function missionAccomplished() {
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs[0].innerHTML = "<em>Mission Accomplished!</em>";
+        }
+        document.getElementById("btn-4").addEventListener("click", missionAccomplished);
+
 
         // ======= next exercise =======
 
-        var listener = function (event) {
+        // var listener = function (event) {
+        //
+        // };
+        //
+        // var btn1 = document.getElementById('btn1');
+        // btn1.addEventListener('click', mainHeader);
+        //
+        // document.getElementById('btn1').addEventListener('click', listener);
 
-        };
+    // document.getElementByID("btn-3").addEventListenter("click", function () {
+        // ... if (dbid === "1") {
+                //...
 
-        var btn1 = document.getElementById('btn1');
-        btn1.addEventListener('click', mainHeader);
 
-        document.getElementById('btn1').addEventListener('click', listener);
 
 
     })();
