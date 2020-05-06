@@ -247,38 +247,64 @@ Example output: true
 * */
 //pseudo
 
-function lengthNumber (arr) {
-    arr.forEach(function () {
-        if (i === arr.length) {
-            console.log(true);
-        } else {
-            console.log(false);
-        }
-    })
-}
+// function lengthNumber (arr) {
+//     arr.forEach(function () {
+//         if (i === arr.length) {
+//             console.log(true);
+//         } else {
+//             console.log(false);
+//         }
+//     })
+// }
 
 //var arr1 = {[1]}
 //lengthNumber (arr1);
 
 //instru
 
-function checkForLengthInArr(arr) {
-    for (var i = 0; i< arr.length; i += 1) {
-        if (arr[i] === arr.length) {
-            return true;
-        }
-    }
-    return false
-}
-
-console.log(checkForLengthInArr([1])); //true
-console.log([5, {'a': 'hello'}, 30, true, null]); //true
+// function checkForLengthInArr(arr) {
+//     for (var i = 0; i< arr.length; i += 1) {
+//         if (arr[i] === arr.length) {
+//             return true;
+//         }
+//     }
+//     return false
+// }
+//
+// console.log(checkForLengthInArr([1])); //true
+// console.log([5, {'a': 'hello'}, 30, true, null]); //true
 
 //rewrite for larger array that includes
     //function checkForLength(arr) {
 
 //i.includes(7)
     //false
+
+//5:06
+
+// Write a javascript function that takes in a number and returns the number raised to the power of four. If any argument is passed into the function that is not a number, return false.
+
+function fourthPower(num) {
+    if (!isNaN(num)) {
+        return (num ** 4);
+    } else {
+        return false;
+    }
+}
+
+console.log(fourthPower(2));
+
+function raisedToThePowerOfFour(num) {
+    if (!isNaN(num)) {
+        return num ** 4;
+        //return Math.pow(num,4);
+} else {
+        return false;
+    }
+
+}
+
+console.log(raisedToThePowerOfFour(2));
 
 </script>
 

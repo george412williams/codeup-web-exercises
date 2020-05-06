@@ -1,5 +1,8 @@
-(function () {
-    "use strict";
+// (function () {
+"use strict";
+
+
+
 
 // ========== Retrieve elements by id, class, tag name
 
@@ -310,6 +313,6 @@
     //continue in last file, add 4 buttons to page with different fxality to each
     //taking all previous changes and putting behind a click event on buttons
 
-})();
+// })();
 
 // tomorrow, exercise walkthough after warm up, then to mapbox api
