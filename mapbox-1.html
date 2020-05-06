@@ -26,6 +26,66 @@
         map.setCenter([-98.58, 39.83]);
     }, 5000);
 
+    // markers
+
+    // in doc page, user interface on L, marker
+    // can pass in options: ... or nothing
+
+    var marker = new mapboxgl.Marker();
+    //will play out in console, but:
+    //need to say where it exists on map and
+
+    marker.setLngLat([-98.58, 39.83]);
+    marker.addTo(map);
+
+    //this method takes arr or obj coords
+    //create ojb, where it goes, where to attch to bc which map bro?
+
+    //console:
+    //marker
+    //marker.remove()     goes away
+    //marker.addTo(map)      comes back
+    //marker.isDraggable()  currently not draggable
+    //marker.setDraggable(true)    makes draggable
+
+    // when we create a marker obj its in a var
+    // var marker = new mapboxgl.Marker();
+    // then can recall like this:
+    //marker
+    //    .setLngLat({lng: 45.6, lat: 44.3});
+    //    .setLngLat({lng: #s, lat: #s});
+    //    .setLngLat({lng: #s, lat: #s});
+    //    .addTo(map);
+    //                      and can set mult markers at once
+
+    //when we invoke the setlnglat method,....and that's why we can chain on more methods:
+    //console.log(marker
+    //  .setLngLat({lng: #s, lat: #s})
+    //  .setLngLat({lng: #s, lat: #s})
+    //  );
+
+    //POPUPS
+
+    var popup = new mapboxgw.Popup();
+    popup.setHTML('<h3>City!</h3?');
+    marker.setPopup(popup);
+    //checked, default beh is invis, click on marker and is toggable as default
+    //can put lists, imgs, links, etc HTML baby
+
+    // EVENTS
+
+    // EXERCISE 2
+
+    // Create an HTML file called mapbox-2.html
+    //in this file, creat a mapbox map that shows DC and with a marker on the Lincoln Memorial
+    //add a popup to the Lincoln Memorial marker that contains the text "Lincoln Memorial"
+    //BONUS: when the marker is dragged and release, display the coordinates in an h1
+
+
+
+
+
+
 </script>
 </body>
 </html>
