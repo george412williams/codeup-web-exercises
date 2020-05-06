@@ -23,16 +23,16 @@
     geocode("16216 Nacogdoches Rd, San Antonio, TX 78247", mapboxKey).then(function(result) {
         console.log(result);
         map.setCenter(result);
-        map.setZoom(15);
+        map.setZoom(12);
     });
 
     var marker = new mapboxgl.Marker({});
 
     marker
-        .setLngLat([-98.35701, 29.58898]);
-        //.setLngLat(placeOne);
-        //.setLngLat(placeTwo);
-        //.setLngLat(placeTwo0:
+        .setLngLat([-98.35701, 29.58898])
+        //.setLngLat(placeOne)
+        //.setLngLat(placeTwo)
+        //.setLngLat(placeTwo0
         .addTo(map);
 
     var popup = new mapboxgl.Popup();
@@ -67,7 +67,7 @@
     ];
 
     favEateries.forEach(function (eaterie) {
-        eaterie.innerHTML = this.name + " located at " + this.address.street + " serves " + this.type + " type of food.";
+        console.log(eaterie.innerHTML = this.name + " located at " + this.street + " serves " + this.type + " type of food.");
     });
 
 
