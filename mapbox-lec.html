@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Mapbox Lecture</title>
+
+<!--following two lines are mapbox-->
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        #map {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+
 </head>
 <body>
 <!--
@@ -22,17 +32,47 @@ NOTES
 
 
 
+
+
+<!--REMEMBER: Scripts like these mapbox required go at the end of the body, along with like bootstrap's-->
 <div id='map' style='width: 400px; height: 300px;'></div>
+<script src="js/keys.js">
+    //when you need to redirect to the secret keys page
+</script>
 <script>
 
     //mapboxgl.accessToken = 'pk.eyJ1IjoiZ2VvcmdlNDEyd2lsbGlhbXMiLCJhIjoiY2s5dmRuY3FrMGJtaTNrb2wzMWoxZ3JkayJ9.-tWzmK8_UcIad6genvKtGQ';
-    //this will be deleted and replaced with file reference to file in .gitignore file
+    //this publicly available API will be deleted and
+    // replaced with file reference to file in .gitignore file
+    //then go up and add its src
     mapboxgl.accessToken = mapboxKey;
+    //so access to it can only happen on the site, not github where it could be compromized by bot easy
 
+    //this creates the map object
+    //can pass in an addition obj to configure
+    //container: and style: are base req'd attributes
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9'
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98, 29]
     });
+    //console map, is also an obj w many props and methods
+    //much we can do with it, instead of trying to see what each prop does:
+    //go to site documentation: https://docs.mapbox.com/mapbox-gl-js/api/
+    //skim, commF, here to see
+    //click examples to see ranging ones
+    //can add add't props: zoom:
+    //center: coords near SA
+    //want to change zoom after load, zoom out?
+    //consult the docs (bones)
+    //setZoom shows equiv to jumpTo({zoom: zoom}), a ? means the parameter is optional
+    //can do mult setZooms
+    //console map.setZoom(10), to see it wo code change, redraws it and so forth
+    //setCenter [coords], can specify coords with an obj:
+    //center: {lng: 22, lat: 30}
+    //W will be negative number, cortesian coordinate conversion, E and N will be pos and so on
+
 
 </script>
 <!--
