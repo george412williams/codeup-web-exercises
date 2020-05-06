@@ -29,7 +29,10 @@
     var marker = new mapboxgl.Marker({});
 
     marker
-        .setLngLat([-98.35701, 29.58898])
+        .setLngLat([-98.35701, 29.58898]);
+        //.setLngLat(placeOne);
+        //.setLngLat(placeTwo);
+        //.setLngLat(placeTwo0:
         .addTo(map);
 
     var popup = new mapboxgl.Popup();
@@ -39,25 +42,32 @@
     var favEateries = [
         {
         name: "placeOne",
-        address: "addyOne",
+        address: {
+            street: "addyOne",
+            coords: [21, 12]
+        },
         type: "fast",
         },
         {
         name: "placeTwo",
-        address: "addyTwo",
+        address: {
+            street: "addyTwo",
+            coords: [25, 14]
+        },
         type: "sit-down",
         },
         {
         name: "placeThree",
-        address: "addyThree",
+        address: {
+            street: "addyThree",
+            coords: [22, 20]
+        },
         type: "cafe",
         },
     ];
 
-    //var eaterieInfo = 1;
-
     favEateries.forEach(function (eaterie) {
-        eaterie.innerHTML = this.name + " located at " + this.address + " serves " + this.type + " type of food.";
+        eaterie.innerHTML = this.name + " located at " + this.address.street + " serves " + this.type + " type of food.";
     });
 
 
