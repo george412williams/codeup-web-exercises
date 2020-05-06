@@ -24,11 +24,16 @@ NOTES
 
 <div id='map' style='width: 400px; height: 300px;'></div>
 <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZ2VvcmdlNDEyd2lsbGlhbXMiLCJhIjoiY2s5dmRuY3FrMGJtaTNrb2wzMWoxZ3JkayJ9.-tWzmK8_UcIad6genvKtGQ';
+
+    //mapboxgl.accessToken = 'pk.eyJ1IjoiZ2VvcmdlNDEyd2lsbGlhbXMiLCJhIjoiY2s5dmRuY3FrMGJtaTNrb2wzMWoxZ3JkayJ9.-tWzmK8_UcIad6genvKtGQ';
+    //this will be deleted and replaced with file reference to file in .gitignore file
+    mapboxgl.accessToken = mapboxKey;
+
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9'
     });
+
 </script>
 <!--
 real work happening in this custom script
