@@ -37,7 +37,8 @@
     marker.setPopup(popup);
 
     function onDragEnd() {
-        marker.innerHTML = '<h1>38.99N 77.05W</h1>';
+        // popup.setHTML("<h1>38.99N 77.05W</h1>");
+        // marker.setPopup(popup);
     }
 
     marker.on('dragend', onDragEnd);
