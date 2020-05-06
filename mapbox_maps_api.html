@@ -37,15 +37,27 @@
     marker.setPopup(popup);
 
     var favEateries = [
-        placeOne,
-        placeTwo,
-        placeThree
+        {
+        name: "placeOne",
+        address: "addyOne",
+        type: "fast",
+        },
+        {
+        name: "placeTwo",
+        address: "addyTwo",
+        type: "sit-down",
+        },
+        {
+        name: "placeThree",
+        address: "addyThree",
+        type: "cafe",
+        },
     ];
 
-    var eaterieInfo =
+    var eaterieInfo = 1;
 
     favEateries.forEach(function (eaterie) {
-        eaterie.innerHTML = ""
+        eaterie.innerHTML = this.name + " located at " + this.address + " serves " + this.type + " type of food.";
     })
 
 
