@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Lecture</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<!--
+-there are a number of diff services mapbox offers, we will specifically use mapbox GL JS (using JS)
+-older mapbox JS, depricated
+-version change to date: changing specific length and script
+-curric code still jives, better to use still the mapbox documentation to copy/paste
+
+-went to site, documentation, quick start
+-copypaste those things and baby you got a map
+-will be using through a CDN rather than installing as a button suggested (look into the rel btwn install and CDN)
+-so get scripts in
+
+-->
+
+
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZ2VvcmdlNDEyd2lsbGlhbXMiLCJhIjoiY2s5dmRuY3FrMGJtaTNrb2wzMWoxZ3JkayJ9.-tWzmK8_UcIad6genvKtGQ';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9'
+    });
+</script>
+</body>
+</html>
