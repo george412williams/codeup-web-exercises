@@ -65,10 +65,71 @@
         type: "cafe",
         },
     ];
-
+    //needed popup like i originally thought
     favEateries.forEach(function (eaterie) {
-        console.log(eaterie.innerHTML = this.name + " located at " + this.street + " serves " + this.type + " type of food.");
+        console.log(eaterie.innerHTML = this.name + " located at " + this.address.street + " serves " + this.type + " type of food.");
     });
+
+    //Instruct solution walkthrough   ALSO in mapbox-lec.html
+
+    //added street addy as an added level
+    //thought proc: have map, centered btwn the 3 restaurants, array not doing anything currently
+    //forEach to create a marker and popup
+    //made new var and geocoded marker and popup
+    //made a list to go by:
+    //1. log name ea restaurant
+    //2. geocode, log coords of ea
+    //3. add markers for ea coord
+    //4. add popups to ea marker w html w name and msg
+
+    //restaurant.forEach(function(restaurant) {
+    //      console.log(restaurant.name);
+    //}
+
+    //so that was step 1
+    //now to geocode ea's phys addy, so put it into the forEach now
+
+    //restaurants.forEach(function(restaurant) {
+    //      geocode(restaurant.address, mapboxKey).then(function() {    //singular to point to one instead of the bunch
+    //          console.log.(coords);     //used coords in the same place of 'results' from earlier
+    //      });                                 //.then sending request to servers, geocode fires DTP request
+    //};                                        //to servers, signal has to travel, takes a second
+                                            //code runs before travel is done, so .then code waits for response
+    //gives 3 sets of coords to the corresponding array pieces
+
+    //step 3 marker
+
+    //restaurants.forEach(function(restaurant) {
+    //      geocode(restaurant.address, mapboxKey).then(function() {
+    //          // create marker using coords
+                //var marker = new mapboxgl.Marker()    //two things to display marker
+                    //.setLngLat(coords)            //no semicolons
+                    //.addTo(map);
+                //var poup = new mapboxgl.Popup()
+                    //.setHTML("<h3>" + restaurant.name + "</h3>" + "<p>" + restaurant.message + "</p>");
+                //marker.setPopup(poup);
+    //      });
+    //};
+
+    //q: how creating 3 markers from one loop
+    //a: bonus to add to markers, i suggested doing an addTo with index of new array addition
+    //   instru initially said new array objects would not run through the geocode
+    //   so new ones do not run through it
+
+    //on popup, instead of marker.popup had .popup and it jsut immediately popped up under marker section
+    //    under marker var definition... check it out, stud said immediate popup, instr said should be undefined
+
+    //My Q for later: dynamic arrays? adding to arrays after functions formed...he said it's complicated
+
+    //Student ver: gave copy
+
+
+
+
+
+
+
+
 
 
 </script>
