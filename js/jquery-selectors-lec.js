@@ -49,7 +49,7 @@ $('#container').css('color','blue');
 	// $('.some-class');
 
 	// TODO TOGETHER: Change the font size of all the .main-headings
-
+$('.main-headings').css('font-size','4em');
 
 	// TODO: Explore the following JS Bin example:
 	//  https://jsbin.com/topupe/1/edit?js,output
@@ -65,7 +65,7 @@ $('#container').css('color','blue');
 	//	$('tag_name')
 
 	// TODO TOGETHER: Change the background color of all paragraph tags
-
+$('p').css('background-color','green');
 
 	// TODO: Explore the following JS Bin example:
 	//  https://jsbin.com/gayir/1/edit?js,output
@@ -81,7 +81,7 @@ $('#container').css('color','blue');
 
 
 	// TODO TOGETHER: Change the background color of id 'mystery-genre' and 'book-bundle-three' to red
-
+$('#mystery-genre,#book-bundle-one').css('background-color','red');
 
 
 	// TODO: Explore the following JS Bin example:
@@ -98,7 +98,8 @@ $('#container').css('color','blue');
 	// A common use is to put a border around every element to help see the layout of a page.
 
 	// TODO TOGETHER: Create a border around all elements
-
+$('*').css('border','1px solid yellow');
+// selects ea sep node in the DOM
 
 
 	// TODO: Explore the following JS Bin example:
