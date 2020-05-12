@@ -25,16 +25,22 @@ $(document).ready(function() {
 	// $('#some-id');
 
 	// TODO TOGETHER: Select the contents/html of the id 'book-welcome' and set equal to the variable 'contents'. Console.log the contents
-
+var contents = $('#book-welcome');
+	console.log(contents);
 
 	// TODO TOGETHER: Change the background color of the id 'book-welcome'
-
+$('#book-welcome').css('background-color','purple');
 
 	// TODO: Select the contents/html of the id 'book-bundle-one' and set equal to the variable 'bookBundle'. Console.log the contents
-
+var bookBundle = $('#book-bundle-one').html();
 
 	// TODO: Change one css property of the id 'container'
-
+$('#container').css('color','blue');
+// what if wanted to change multiple things:
+	$('#container').css( {
+		'background-color': '#000',
+		'color': '#fff'
+	});
 
 
 	/**********************************************
