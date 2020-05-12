@@ -6,18 +6,18 @@
 
 </head>
 <body>
-<h1 id="giantTitle" class="codeup">The All-New jQuery System</h1>
+<h1 id="giantTitle" class="codeup, onFire">The All-New jQuery System</h1>
 <div id="divList" class="codeup">
     <ul id="playList">Playlist
-        <li class="listItem">Thing 1</li>
-        <li class="listItem">Thing 2</li>
+        <li class="listItem, onFire">Thing 1</li>
+        <li class="listItem, onFire">Thing 2</li>
     </ul>
 </div>
 <div id="paragraphSection" class="codeup">
-    <p id="introParagraph">
+    <p id="introParagraph" class="onFire">
         Introducing:
     </p>
-    <p id="mainIdea">
+    <p id="mainIdea" class="onFire">
         Shorter coding!
     </p>
 </div>
@@ -30,6 +30,15 @@
 
     $(document).ready(function() {
         alert( 'The DOM has finished loading!' );
+
+    $('li').css('font-size','20px');
+
+    var remind = $('h1').html();
+    alert(remind);
+
+    $('.onFire').css('color','orange');
+
+    $('.codeup, .onFire').css('background-color','grey');
     });
 
 
