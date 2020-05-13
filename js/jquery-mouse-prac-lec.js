@@ -1,5 +1,8 @@
 "use strict";
 
+//FILES:
+    // jquery_exercises.html
+
 // MOUSE EVENTS
 // seen html style in jquery
 
@@ -99,6 +102,9 @@ $('submit').click(function (event) {
 // EX:
 
     // use previous file, comment out previous stuff, make changes, do the hover task
+    // FILE: jquery_exercises.html
+
+    // walkthrough: see FILE
 
 
 

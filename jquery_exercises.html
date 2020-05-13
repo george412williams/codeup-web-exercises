@@ -30,7 +30,7 @@
     $(document).ready(function() {
         alert( 'The DOM has finished loading!' );
 
-// PREVIOUS EXERCISE
+// PREVIOUS EXERCISES
 
     // $('li').css('font-size','20px');
     //
@@ -43,13 +43,16 @@
 
 // EXERCISE MOUSE EVENTS
 
-    $('#giantTitle').click(function () {
+    $('h1').click(function () {
         $(this).css('background','yellow');
     });
+            // greenish yellow hex: #ef0; he likes this one, has memorized, like a highlighter
 
     $('p').dblclick(function () {
         $(this).css('font-size','18px');
     });
+            // debated with prev class about if all 'p's are affected on dblclick
+            // David posits that its the one that you dblclick
 
     $('li').hover(function () {
         $(this).css('color','red');
