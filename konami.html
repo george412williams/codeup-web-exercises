@@ -71,7 +71,10 @@
     // uncomment to view alignment
     //$('*').css('border','1px solid black');
 
-    $('header').css('width','100vw');
+    $('header').css({
+        'width': '100vw',
+        'text-align': 'center'
+    });
 
     // TODO Add images to the manual
     $('.manual').hover(function () {
@@ -80,15 +83,26 @@
         $(this).css('background-image','url(img/page2.jpg)');
     });
 
-    $('#inputToComputer').keyup(function () {
-
-    });
 
     $('#lifeSupport').click(function () {
         $('#lifeSupportCircuit').css('background-color','green')
     });
 
+    $('#circuitBoard').css('width','160px');
 
+    // function othername() {
+    //     var bucket = $("#inputToComputer").value;
+    //     console.log(othername());
+    // };
+
+// TODO look at lec code again:
+
+    $('#inputToComputer').keypress(function (event) {
+        if (bucket.join(',') === keyCode) {
+            $('#mainScreen')
+        }
+
+    });
 
 
 

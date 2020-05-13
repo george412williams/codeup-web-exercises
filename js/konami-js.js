@@ -1,11 +1,10 @@
 "use strict";
 
+// KEYCODE
 
-// FUTURE CONDITIONAL VARIABLES
-
-var powerOn = true;
-
-var powerOff = false;
+var keyCode = "42x42";
+//[form array of values of the code, sep by commas
+//[52,50,88,52,50]
 
 // GENERAL VARIABLES
 
@@ -30,5 +29,15 @@ var initiateLockUnlock = ['keypress1','keypress2'];
 
 var bucket = [];
 
+
+
 //bucket.push(event.keycode);
 //if(bucket)
+
+
+
+// FUTURE CONDITIONAL VARIABLES
+
+var powerOn = true;
+
+var powerOff = false;
