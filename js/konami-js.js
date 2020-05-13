@@ -2,7 +2,8 @@
 
 // KEYCODE
 
-var keyCode = "42x42";
+var keyCode = [52,50,88,52,50];
+    //"42x42";
 //[form array of values of the code, sep by commas
 //[52,50,88,52,50]
 

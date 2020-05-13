@@ -41,8 +41,9 @@
         <div id="navigation">
             Navigation:
             Input Coordinates
-        <form action="">
-            <input type="text" id="inputToComputer">
+        <form action="" method="post">
+            <label for="inputToComputer">Input Coordinates</label>
+            <input type="text" id="inputToComputer" name="inputToComputer">
         </form>
         </div>
     </div>
@@ -97,9 +98,10 @@
 
 // TODO look at lec code again:
 
-    $('#inputToComputer').keypress(function (event) {
+    $('#inputToComputer').keyup(function (event) {
+        bucket.push(event.keyCode);
         if (bucket.join(',') === keyCode) {
-            $('#mainScreen')
+            $('#mainScreen').css('background-color','blue');
         }
 
     });
