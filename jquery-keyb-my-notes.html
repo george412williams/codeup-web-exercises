@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Keyboard Events</title>
+</head>
+<body>
+<h1 id="giantTitle" class="codeup onFire">The All-New jQuery System</h1>
+<div id="divList" class="codeup">
+    <ul id="playList">Playlist
+        <li class="listItem onFire">Thing 1</li>
+        <li class="listItem onFire">Thing 2</li>
+    </ul>
+</div>
+<div id="paragraphSection" class="codeup">
+    <p id="introParagraph" class="onFire">
+        Introducing:
+    </p>
+    <p id="mainIdea" class="onFire">
+        Shorter coding!
+    </p>
+</div>
+
+<div id="container">EVENTS</div>
+<textarea id="content">
+
+</textarea>
+
+<script src="js/jquery-2.2.4.js"></script>​
+<!--<script src="js/jquery-keyb-prac-lec.js"></script>-->
+<script>
+    "use strict";
+
+    $(document).ready(function() {
+        alert( 'The DOM has finished loading!' );
+
+    $('#ted').keydown(function () {
+        $('#content').append("Key was pressed");
+    });
+
+    // append adds to the end inside of the element
+    // will repeat with every key press within doc itself
+    // the referred to area will be added to
+    // he held key down and kept repeating mult times
+    // registers on key being down, which is why it kept repeating on the hold
+    // will respond to arrows, backspace, etc
+
+    $('#ted').keypress(function () {
+        $('#content').append("Key was pressed");
+    });
+
+    // should perform just once upon the release,
+    // not respond to arrow keys, backspace etc
+
+    // keyup is here
+
+    // e: refers back to the event that triggers
+    $('body').keyup(function (e) {
+    // e here is:
+        if (e.key === "f") {
+            $(this).css({
+                "background": "#343",
+                "color": "antique"
+            });
+        }
+    });
+    // key event on body, if f change it this way
+    // google keycode js  keycode.info
+    // for event.which old way for which key pressed, degraded so go to keycode.info
+    // for simultaneous alpha: array of them...check it out
+
+    $('#ted').on("keydown",function () {
+        $('#content').append("<span>Key was pressed</span>");
+    });
+
+    // used span to create a highlight click
+    // more fxality for .on later
+    // with click: .on("click", function() {...
+    // he did a series of ons offs in a hover
+        // turn off mouse enter from earlier and txts 'back from the dead'
+    // to content.append spanh1 was clickedspan
+
+    // $('h1').hover(function () {
+    //     $('#content').append("<span>Key was pressed</span>");
+    // });
+    // added a back and forth with a click end then...
+
+    // turned off in the click event at the end which turned off all fxality
+        // so can turn off anything at once by not giving it an arguement, or
+        // specifiy ones to off sep'd by a comma and in quotes
+        // remember if you have a hover you may have to address the in and out of it
+        // though he could not address it properly to turn off
+
+    $('#content').on('click','span', function () {
+        $(this).css('background','#efO');
+    });
+    //when click on a span, doesn't change background of the container, only for the span that is clicked
+    // which was created from a keypress event which can then be highlight from this event
+
+    // so now we play in the space
+
+    // EX, uncomment to see it not change the bgd color
+
+    $('.banana').click(function () {
+        $(this).css('background','grey');
+    });
+    // bc he added the event to the DOC, not necessarily to the entire doc, but
+        // to ea indiv node on page load, means on page load do i ever
+        // have the class of banana on the page, but when fired off, then creates
+        // the banana span, so bc of that added dynamically, the event has not been added
+        // with the .click method
+        // earlier, with .on method, it did beh as expected
+        // so happens with the more durable/actionable .on method, doc knows to look
+        // for that class being clicked
+        // idea is if ever have event created on dynamically created event, use .on and not
+            // not .click(for stuff statically made on the doc/
+            // .on for things newly create the new fxality
+
+    // EXERCISE
+
+        // KONAMI CODE: contra code!! updownupdownababselectstart...
+        // in web dev, nerds and fun, website easter eggs
+        // KONAMI code on websites
+
+            // type in sequence on David's web site
+            // input updownupdown etc.
+            // also made the other cheat code inputs, donkey kong country
+
+                // went to keycode.info to find the keycode string for the keys
+
+        // exercise gives starter code, can change property to be the code or key
+            // so take note of what value to check forhte key
+            // can be one big long concat str and see if it is rep'd from users typing on page
+            // David did different arrays and it sequence matched arrays,
+                // and has diff var to represent different position in the code
+                // a var that looks at konami vs sega code...
+                // had list of vars with arrays to be matched up
+
+
+
+
+        // JS IFEE END
+    });
+</script>
+
+</body>
+</html>
