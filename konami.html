@@ -8,21 +8,52 @@
     <header>
         <h1>Project Starship</h1>
     </header>
+
     <div id="circuitBoard">
         <h3>CIRCUITS</h3>
+        <div id="mainPowerCircuit" class="circuit">
+            ][
+        </div>
+        <div id="comPowerCircuit" class="circuit">
+            ][
+        </div>
+        <div id="lifeSupportCircuit" class="circuit">
+            ][
+        </div>
     </div>
+
     <main id="mainScreen">
         <h4>main screen</h4>
     </main>
+
     <div id="manual">
         <h3>MANUAL</h3>
     </div>
+
     <div id="controlPanel1">
         <h4>controlPanel1</h4>
+        <div id="powerSequence">
+            Initiate Engine Power Sequence
+        </div>
+        <div id="lifeSupport">
+            Initiate Life Support
+        </div>
+        <div id="navigation">
+            Navigation:
+            Input Coordinates
+        <form action="">
+            <input type="text" id="inputToComputer">
+        </form>
+        </div>
     </div>
+
     <div id="controlPanel2">
         <h4>controlPanel2</h4>
+        <button>
+            Communications Power
+        </button>
     </div>
+
     <footer id="consolePanel">
 
     </footer>
@@ -35,7 +66,30 @@
 <script>
     "use strict";
     $(document).ready(function() {
-        alert('Good Luck on your Mission!');
+        alert('Engage Main Power');
+
+    // uncomment to view alignment
+    //$('*').css('border','1px solid black');
+
+    $('header').css('width','100vw');
+
+    // TODO Add images to the manual
+    $('.manual').hover(function () {
+        $(this).css('background-image', 'url(img/page1.jpg)');
+    }, function () {
+        $(this).css('background-image','url(img/page2.jpg)');
+    });
+
+    $('#inputToComputer').keyup(function () {
+
+    });
+
+    $('#lifeSupport').click(function () {
+        $('#lifeSupportCircuit').css('background-color','green')
+    });
+
+
+
 
 
 
