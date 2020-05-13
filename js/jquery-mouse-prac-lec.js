@@ -87,7 +87,18 @@ $('submit').click(function (event) {
         // David is looking into it, but you can initially just .off and sustain the default behavior
             // mainly for my understanding of how these things can act as switches
 
+// recommends doing coffee project with vanilla js as we go back to things
+    // depending on where you work, may require to work with only vanilla
+// q: why faster for jquery? better to make use of the library
+    // dav's msg from instr: memory is cheap, not like it used to be,
+        // so more performace with vanilla JS and not overloading with extra stuff, one way to do:
+            // when you have an event, good to turn it off after it fires, so it's not on standby throughout
+// q: he was working in master, (nothing tracked by git yet), he'll take files and manip em and then checkout to branch and save it, but can get in trouble if you just send it to the master
+    // SHOULD: create branch up front to know from getgo that master is clean
 
+// EX:
+
+    // use previous file, comment out previous stuff, make changes, do the hover task
 
 
 
