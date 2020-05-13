@@ -2,6 +2,15 @@
 
 var cargo = {
     inventory: ["box1", "box2"],
-    status: "intact"
+    disposition: "loaded",
+    damage: "intact"
 };
 
+var hermaticSeal = {
+    status: "engaged",
+    damage: "intact"
+};
+
+function damageReport() {
+
+};
