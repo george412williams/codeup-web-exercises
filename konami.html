@@ -41,10 +41,11 @@
         <div id="navigation">
             Navigation:
             Input Coordinates
-        <form action="" method="post">
-            <label for="inputToComputer">Input Coordinates</label>
-            <input type="text" id="inputToComputer" name="inputToComputer">
-        </form>
+<!--        <form action="" method="post">-->
+<!--            <label for="inputToComputer">Input Coordinates</label>-->
+<!--            <input type="text" id="inputToComputer" name="inputToComputer">-->
+<!--        </form>-->
+            <textarea id="inputToComputer"></textarea>
         </div>
     </div>
 
@@ -91,15 +92,15 @@
 
     $('#circuitBoard').css('width','160px');
 
-    // function othername() {
+    // function grabInput() {
     //     var bucket = $("#inputToComputer").value;
-    //     console.log(othername());
+    //
     // };
 
 // TODO look at lec code again:
 
     $('#inputToComputer').keyup(function (event) {
-        bucket.push(event.keyCode);
+        bucket.push(event.keyCode).value;
         if (bucket.join(',') === keyCode) {
             $('#mainScreen').css('background-color','blue');
         }

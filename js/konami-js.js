@@ -2,7 +2,8 @@
 
 // KEYCODE
 
-var keyCode = [52,50,88,52,50];
+var keyCode = [4];
+    //[52,50,88,52,50];
     //"42x42";
 //[form array of values of the code, sep by commas
 //[52,50,88,52,50]
@@ -28,7 +29,7 @@ var initiateBurn = ['x','y'];
 
 var initiateLockUnlock = ['keypress1','keypress2'];
 
-var bucket = [];
+var bucket = $("#inputToComputer").value;
 
 
 
