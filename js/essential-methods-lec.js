@@ -58,14 +58,40 @@ $(document).ready(function() {
 
     // TODO TOGETHER: When the 'Houses' button is clicked, add the class 'house' to anything with a class of 'house-name'
     // adding/removing classes using jquery, bc of using prebuilt styles in css, jquery can be dynamically added/rem'd
-    // me: adding class of emergency procedure to divs that change during an event
+    // me: adding class of emergency procedure to divs that change during an event and using toggleClass to change slews of diff damage states
     // click on button with this id
 
     $('#highlight-houses').click(function(){
         // target  // you give a string bc addClass takes a string and turns into a class, don't want to make a class out of a class
-        $('.house-name').addClass('house');
+        //$('.house-name').addClass('house');
+        //$('.house-name').removeClass('house');  // to remove
+        $('.house-name').toggleClass('house');  // i would toggle in the class .houses-highlighted calling it the result of the function
     });
+    // console: shows add realtime with a space separator
+    // want to find out what happens when you add classes with conflicting values...
+    // if want to add id this way, but not necessary, add html with the id tags included...
 
+    // just realized that the syntax and referencing of ea framework is like kids with their specific behs
+
+    // to lock in a certain group of people, or can toggle to say unlock to lock, but wants the house title to turn red and
+
+    //css:
+    //.gryffindor{ background-color....red
+
+    //js:
+    //$('#lock-g').click(function() { $('#gryffindor-house').toggleClass('gryffindor');
+        //interacts with the other toggle as well and added unlock part next
+        // uses
+
+        //if($('#gryffndor-house').hasClass('gryffindor')){
+            //$(this).text('unlock');
+                //this refers to the element that triggers the event listener, the parent reference up top
+        //}else{
+            //$(this).text('lock-in');
+        // }
+        //});
+
+            // on click when turns red, button turns to unlock, and back on click: where?...
 
     // TODO: Comment out the code above. Add the class of 'house' to all the 'house-names'
     //  Write the event listener to remove the class instead
