@@ -17,7 +17,7 @@
 
 <h2>National Parks FAQs</h2>
 
-<h3>Toggle Descriptions</h3>
+<h3>Show\Hide Descriptions</h3>
 
 <dl>
     <dt>Park FAQ 1</dt>
@@ -51,6 +51,34 @@
     <dd class="invisible">Description</dd>
 </dl>
 
+<button id="importantFact">
+    Most Important!
+</button>
+
+<h3>National Park Name</h3>
+<ul id="parkFacts1" class="parkFacts">
+    <li>fact</li>
+    <li>fact</li>
+    <li>fact</li>
+    <li>fact</li>
+</ul>
+
+<h3>National Park Name</h3>
+<ul id="parkFacts2" class="parkFacts">
+    <li>fact</li>
+    <li>fact</li>
+    <li>fact</li>
+    <li>fact</li>
+</ul>
+
+<h3>National Park Name</h3>
+<ul id="parkFacts3" class="parkFacts">
+    <li>fact</li>
+    <li>fact</li>
+    <li>fact</li>
+    <li>fact</li>
+</ul>
+
 
 <script src="js/jquery-2.2.4.js"></script>​
 <script>
@@ -58,21 +86,48 @@
     $(document).ready(function() {
         console.log('js loaded');
 
+// ATTRIB AND CSS EXERCISE
 
-    $('h3').click(function (event) {
-        //console.log('clicked');
-        $('dd').toggleClass('invisible');
-    });
-
-    $('dt').click(function () {
-        $(this).toggleClass('dtHighlighted');
-    });
+    // $('h3').click(function (event) {
+    //     //console.log('clicked');
+    //     $('dd').toggleClass('invisible');
+    // });
+    //
+    // $('dt').click(function () {
+    //     $(this).toggleClass('dtHighlighted');
+    // });
 
     // $('.invisible').css('visibility','hidden');
     // $('.visible').css('visibility','visible');
 
         // Noticed the diff beh in how and where the
         // class were defined: head vs body-script
+
+// TRAVERSING EXERCISE
+
+    //$('#importantFact').click(function () {
+        $('#importantFact').click(function () {
+            $('ul').each(function () {
+                $(this).children().last().css('background-color','orange');
+            });
+        });
+
+        $('h3').click(function () {
+            $('ul').children().css('font-weight','bold');
+        });
+
+        $('li').click(function () {
+            $(this).parent().css('color','blue');
+        });
+
+
+
+        //     .each(function() {
+        // $(this).css('background-color','orange');
+        // });
+
+    //});
+
 
 // JS IFEE END
 });
