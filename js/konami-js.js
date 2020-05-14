@@ -2,11 +2,25 @@
 
 // KEYCODE
 
-var keyCode = [4];
-    //[52,50,88,52,50];
-    //"42x42";
-//[form array of values of the code, sep by commas
-//[52,50,88,52,50]
+var keyCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown'];
+var bucket = 0;
+var keyHandler = function (event) {
+    // If the key isn't in the pattern, or isn't the current key in the pattern, reset
+    if (keyCode.indexOf(event.key) < 0 || event.key !== keyCode[bucket]) {
+        bucket = 0;
+        return;
+    }
+// Update how much of the pattern is complete
+    bucket++;
+    // If complete, alert and reset
+    if (keyCode.length === bucket) {
+        bucket = 0;
+        window.alert('Coordinates Accepted');
+        $('#mainScreen').css('background-color','blue');
+    }
+};
+// Listen for keydown events
+document.addEventListener('keydown', keyHandler, false);
 
 // GENERAL VARIABLES
 
@@ -23,23 +37,25 @@ var hermaticSeal = {
 
 function damageReport() {
 
-};
+}
 
 var initiateBurn = ['x','y'];
 
 var initiateLockUnlock = ['keypress1','keypress2'];
 
-var bucket = $("#inputToComputer").value;
 
+// FUTURE CONDITIONAL VARIABLES
 
+// var powerOn = true;
+//
+// var powerOff = false;
 
 //bucket.push(event.keycode);
 //if(bucket)
 
+//[52,50,88,52,50];
+//"42x42";
+//[form array of values of the code, sep by commas
+//[52,50,88,52,50]
 
-
-// FUTURE CONDITIONAL VARIABLES
-
-var powerOn = true;
-
-var powerOff = false;
+// var bucket = $("#inputToComputer").value;
