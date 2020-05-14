@@ -58,20 +58,18 @@
     $(document).ready(function() {
         console.log('js loaded');
 
-    $('.invisible').css('visibility','visible');
+    $('.invisible').css('visibility','invisible');
 
-    $('.visible').css('visibility','visible');
-
-    //$('.');
-    $('h3').click(function () {
-        console.log('clicked');
-        $('.invisible').toggleClass(this);
+    $('h3').click(function (event) {
+        //console.log('clicked');
+        $('dd').toggleClass('invisible');
     });
 
     $('dt').click(function () {
         $(this).toggleClass('dtHighlighted');
     });
 
+    // $('.visible').css('visibility','visible');
 
 
 // JS IFEE END
