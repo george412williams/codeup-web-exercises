@@ -8,6 +8,8 @@
 
 <h2>National Parks FAQs</h2>
 
+<h3>Display Descriptions</h3>
+
 <dl>
     <dt>Park FAQ 1</dt>
     <dd class="invisible">Description 1</dd>
@@ -40,5 +42,24 @@
     <dd class="invisible">Description</dd>
 </dl>
 
+
+<script src="js/jquery-2.2.4.js"></script>​
+<script>
+    "use strict";
+    $(document).ready(function() {
+        console.log('js loaded');
+
+    $('.invisible').css('visibility','hidden');
+
+    $('h3').click(function () {
+        console.log('clicked');
+        $('dd').toggleClass('invisible');
+    });
+
+
+
+// JS IFEE END
+});
+</script>
 </body>
 </html>
