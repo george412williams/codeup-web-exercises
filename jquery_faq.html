@@ -5,9 +5,9 @@
     <title>jQuery FAQ</title>
 </head>
 <style>
-    /*.visible{*/
-    /*    visibility: visible;*/
-    /*}*/
+    .invisible{
+        visibility: hidden;
+    }
 
     .dtHighlighted{
         background-color: yellow;
@@ -17,7 +17,7 @@
 
 <h2>National Parks FAQs</h2>
 
-<h3>Display Descriptions</h3>
+<h3>Toggle Descriptions</h3>
 
 <dl>
     <dt>Park FAQ 1</dt>
@@ -58,7 +58,6 @@
     $(document).ready(function() {
         console.log('js loaded');
 
-    $('.invisible').css('visibility','invisible');
 
     $('h3').click(function (event) {
         //console.log('clicked');
@@ -69,6 +68,7 @@
         $(this).toggleClass('dtHighlighted');
     });
 
+    // $('.invisible').css('visibility','hidden');
     // $('.visible').css('visibility','visible');
 
 
