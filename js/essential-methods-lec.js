@@ -151,6 +151,10 @@ $(document).ready(function() {
         $(this).next().css('background-color','blue');
     });
     //or could use the .addClass
+    //$(this).next().toggleClass('ravenclaw');
+
+    //debugging, req'd hard refresh
+
 
 
 
