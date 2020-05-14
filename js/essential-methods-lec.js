@@ -104,15 +104,53 @@ $(document).ready(function() {
 
     // TODO TOGETHER: console log each list element's text
 
+    $('#gryffindor').children();
+    //$('#josh).next();  console's nothing because was last in that list
+    var numbers =  [1,2,3,4,5];
+    numbers.forEach(function (numbers) {
+        console.log(number);
+    });
+
+    console.log('li');
+    //in order to console log on each line of the console:
+    $('li').each(function () {
+        //similar to click events...
+        console.log($(this).html())
+    });
+
+    // you can chain these methods
+    console.log($('li').first().html());
+
     // TODO TOGETHER: select all list elements and console log the first match
+
+
+    console.log($('li').last().html());
 
     // TODO TOGETHER: select all list elements and console log the last match
 
+    console.log($('li').last().html());
+
     // TODO TOGETHER: When I click on a list element, highlight its parent
 
-    // TODO TOGETHER: When I click into a <ul>, console log last child in that group
+    $('li').click(function () {
+        //use a class or css method:
+        $(this).parent().css('background-color','yellow');
+    });
 
-    // TODO TOGETHER: When I click on any list element, console log the next element
+    // TODO TOGETHER: When I click into a <ul>, console log last child in that group
+    //good method chaining ex
+
+    $('ul').click(function () {
+        console.log($(this).children().last().html());
+    });
+    //console log to check
+
+    // TODO TOGETHER: When I click on Ravenclaw(any list) element, console log the next element
+
+    $('#r-heading').click(function () {
+        $(this).next().css('background-color','blue');
+    });
+    //or could use the .addClass
 
 
 
