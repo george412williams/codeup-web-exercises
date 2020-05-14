@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <title>jQuery FAQ</title>
 </head>
+<style>
+    /*.visible{*/
+    /*    visibility: visible;*/
+    /*}*/
+
+    .dtHighlighted{
+        background-color: yellow;
+    }
+</style>
 <body>
 
 <h2>National Parks FAQs</h2>
@@ -49,11 +58,18 @@
     $(document).ready(function() {
         console.log('js loaded');
 
-    $('.invisible').css('visibility','hidden');
+    $('.invisible').css('visibility','visible');
 
+    $('.visible').css('visibility','visible');
+
+    //$('.');
     $('h3').click(function () {
         console.log('clicked');
-        $('dd').toggleClass('invisible');
+        $('.invisible').toggleClass(this);
+    });
+
+    $('dt').click(function () {
+        $(this).toggleClass('dtHighlighted');
     });
 
 
