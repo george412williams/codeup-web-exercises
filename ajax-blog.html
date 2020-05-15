@@ -18,16 +18,16 @@
 "use strict";
 
     $.get('data/blog.json').done(function (info) {
-        // $.each(info, function (index, blogEntry) {
-        //     var add = "<div>";
-        //     add += info.title;
-        //     add += info.content;
-        //     add += info.categories;
-        //     add += info.date;
-        //     add += "</div>";
-        //     $('#posts').append(add);
-        // })
-        console.log(info);
+        $.each(info, function (str, index) {
+            var add = "<div>";
+            add += index.title;
+            add += index.content;
+            add += index.categories;
+            add += index.date;
+            $('#posts').append(add);
+        })
+
+
     });
 
 
