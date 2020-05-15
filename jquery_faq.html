@@ -124,19 +124,21 @@
         });
 
         $('h3').click(function () {
-            $(this).next().css('font-weight','bold');
+            $(this).next().children().css('font-weight','bold');
+        //added .children to be more versatile in case of html change, c/o David
         });
 
         $('li').click(function () {
             $(this).parent().children().first().css('color','blue');
+            //hokey pokey, helps establish the target relative to the
+            //action and not all of that tag/id/class
         });
 
 
-
+        //Jay also started this way
         //     .each(function() {
         // $(this).css('background-color','orange');
         // });
-
     //});
 
 
