@@ -48,5 +48,23 @@
         "sharp"
     ],
     "price": 5
-    }
+    }, {
+    "title": "Chainsaw",
+    "quantity": 20,
+    "categories": [
+        "tool",
+        "outdoor",
+        "sharp"
+    ],
+    "price": 5
+}, {
+    "title": "Horn",
+    "quantity": 20,
+    "categories": [
+        "tool",
+        "outdoor",
+        "sharp"
+    ],
+    "price": 5
+}
 ]
