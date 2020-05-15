@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <title>KonamiNot Presents A Simulator</title>
     <style>
+    .circuit {
+        display: flex;
+        align-items: center;
+
+    }
+
+    #circuitBoard {
+        display: flex;
+        border: 2px solid black;
+        border-radius: 30px;
+        width: 160px;
+        align-items: center;
+    }
+    header {
+        text-align: center;
+        width: 100vw;
+    }
 
     </style>
 </head>
@@ -79,10 +96,10 @@
     // uncomment to view alignment
     //$('*').css('border','1px solid black');
 
-    $('header').css({
-        'width': '100vw',
-        'text-align': 'center'
-    });
+    // $('header').css({
+    //     'width': '100vw',
+    //     'text-align': 'center'
+    // });
 
     // TODO Add images to the manual
     $('.manual').hover(function () {
@@ -97,6 +114,16 @@
     });
 
     $('#circuitBoard').css('width','160px');
+
+    $('#powerSequence').click(function () {
+        $('#mainPowerCircuit').css({
+            'transition-duration': '2s',
+            'transition-timing-function': 'ease-in-out',
+            'transition-delay': '2s',
+            'background-color': 'blue',
+            'color': 'red'
+        });
+    });
 
     // function grabInput() {
     //     var bucket = $("#inputToComputer").value;
