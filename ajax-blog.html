@@ -5,24 +5,29 @@
     <title>AJAX Blog</title>
 </head>
 <body>
+<h1>Welcome to the BlogShow</h1>
     <div id="posts">
 
     </div>
 
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
 (function() {
 "use strict";
 
     $.get('data/blog.json').done(function (info) {
-        $.each(info, function (index, blogEntry) {
-            var add = "<div>";
-            add += info.title;
-            add += info.content;
-            add += info.categories;
-            add += info.date;
-            add += "</div>";
-            $('#posts').append(add);
-        })
+        // $.each(info, function (index, blogEntry) {
+        //     var add = "<div>";
+        //     add += info.title;
+        //     add += info.content;
+        //     add += info.categories;
+        //     add += info.date;
+        //     add += "</div>";
+        //     $('#posts').append(add);
+        // })
+        console.log(info);
     });
 
 
