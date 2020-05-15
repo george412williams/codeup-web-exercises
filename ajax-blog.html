@@ -13,13 +13,21 @@
 (function() {
 "use strict";
 
-    $.ajax('data/blog.json').done(function (info) {
-
+    $.get('data/blog.json').done(function (info) {
+        $.each(info, function (index, blogEntry) {
+            var add = "<div>";
+            add += info.title;
+            add += info.content;
+            add += info.categories;
+            add += info.date;
+            add += "</div>";
+            $('#posts').append(add);
+        })
     });
 
 
 
-    })();
+})();
 </script>
 </body>
 </html>
