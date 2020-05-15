@@ -79,6 +79,12 @@
     <li>fact</li>
 </ul>
 
+<div></div>
+<button>Switch</button>
+<div></div>
+<button>Switch</button>
+<div></div>
+<button>Switch</button>
 
 <script src="js/jquery-2.2.4.js"></script>​
 <script>
@@ -108,16 +114,21 @@
     //$('#importantFact').click(function () {
         $('#importantFact').click(function () {
             $('ul').each(function () {
+            //$('li').each(function(index) {
+                //if(index === 3 || index === 7 || === 11) {
+                //$(this).css('background-color','yellow");
+                //do get desired output, not versatile enough
+                //go through ul here preferred
                 $(this).children().last().css('background-color','orange');
             });
         });
 
         $('h3').click(function () {
-            $('.parkFacts').next().css('font-weight','bold');
+            $(this).next().css('font-weight','bold');
         });
 
         $('li').click(function () {
-            $(this).parent().css('color','blue');
+            $(this).parent().children().first().css('color','blue');
         });
 
 
