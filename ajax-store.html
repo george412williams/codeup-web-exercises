@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Online Store</title>
 </head>
 <body>
@@ -18,6 +19,9 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
+<button id="refreshTable">
+    Refresh
+</button>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
@@ -26,10 +30,37 @@
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
 
+$.ajax('data/inventory.json').done(function (info) {
+    // console.log($('#insertProducts').html(data));
+    // $('#insertProducts').append(data.title);
+
+});
+
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+
+    $.get('data/inventory.json').done(function (resp) {
+        $.each(resp, function (index, tool) {   // index is just a placeholder
+            var tableAdd = "<tr>";
+            tableAdd += "<td>" + tool.title + "</td>";
+            tableAdd += "<td>" + tool.quantity + "</td>";
+            tableAdd += "<td>" + tool.price + "</td>";
+            tableAdd += "<td>" + tool.categories + "</td>";
+            //close it out
+            tableAdd += "</tr>";
+            //1 get request stored as resp, each to iterate over ea resp
+            //2 recreate html by js
+            $('#insertProducts').append(tableAdd);
+        })
+    });
+
+    $('#refreshTable').click(function () {
+        location.reload(true);
+    });
+
+
 })();
 </script>
 

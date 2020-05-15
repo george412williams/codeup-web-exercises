@@ -30,5 +30,23 @@
             "tool"
         ],
         "price": 10
+    }, {
+    "title": "Bolt-cutter",
+    "quantity": 2,
+    "categories": [
+        "tool",
+        "outdoor",
+        "sharp"
+    ],
+    "price": 35
+    }, {
+    "title": "Saw",
+    "quantity": 20,
+    "categories": [
+        "tool",
+        "outdoor",
+        "sharp"
+    ],
+    "price": 5
     }
 ]
