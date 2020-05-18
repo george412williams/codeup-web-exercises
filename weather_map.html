@@ -7,13 +7,76 @@
 </head>
 <body>
 
+<header>
+
+</header>
+
+<div>
+
+</div>
 
 
 
 
+<script src="js/jquery-2.2.4.js"></script>​
+<script src="js/keys.js"></script>
+<script>
+    "use strict";
+    $(document).ready(function() {
+
+        var weatherUrl = 'https://api.openweathermap.org/data/2.5/onecall';
+        var weatherOptions = {
+            //we need to define some options
+            lat: 29.4241,     //san antonio coords
+            lon: -98.4936,
+            //now need to define appid, wo it will be denied the info
+            appid: OPEN_WEATHER_APPID,
+            exclude: 'minutely, current, hourly'
+            //returns info for 8 day forecast
+        };
+        //have not sent request yet, just setting up vars
+        //site to req data from
+        //second is the info we want, don't need at all
+        //bc you can define it in the url as a written out query string
 
 
 
+        //can pass two arguments, url and an obj w props that will be converted
+        $.get(weatherUrl, weatherOptions).done(function (data) {
+            console.log(data);
+            //you see weather properties from SA, tons of info with minute by minute forecast
+            //so we need to whiddle this down.
+            //so we can add an exclude to the options
+            //want humidity of daily day 1, index 0
+            console.log(data.daily[0].humidity);
+            console.log(data.daily[0].temp.max);
+            //dug down in the object, down levels of daily to get temp.max
+            //start project and console out specific pieces of info
+            //in weather api documentation:
+            //parameter for the api, more to the weatherOptions object
+            //and cutomize the units of measurement, in documentation under daily,
+            //how to change units format, shows need to add keyvalue pair under exclude add units: 'impirial'
+            //date is in unix timestamp so change the prop of dt
+            //new Date(293482734 * 1000).toDateString();   the numbers are in the obj property in 'dt'
 
+            //display the unix timestapm as a human readable date:
+            //in steps: get to the daily dt prop
+            var todayDate = new Date(data.daily.dt[0] * 1000);  //1000 bc time given in miliseconds, so we convert here
+
+            console.log(todayDate.toLocaleDateString());
+
+
+        });
+
+
+        //option from a stu q
+        //add after the vars
+        // function parseDate(timestamp) {
+        //     return new Date(timestamp * 1000).toLocaleDateString();
+        // }
+
+    // JS IFEE END
+    });
+</script>
 </body>
 </html>
