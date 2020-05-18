@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <title>Online Store</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
 
+    h1 {
+        font-family: "Roboto", sans-serif;
+    }
+
+    .table {
+
+    }
+
+    #refreshTable {
+        margin-left: 8em;
+    }
+
+    </style>
 </head>
 <body>
 
-<h1>My Tool Store</h1>
+<h1 class="text-center">My Tool Store</h1>
 
-<table id="products">
+<table id="products" class="table container">
     <thead>
         <tr>
             <th>Title</th>
@@ -21,14 +35,14 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
-<button id="refreshTable">
+<button id="refreshTable" class="btn-primary">
     Refresh
 </button>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
-<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
-<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>-->
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 <script>
 (function() {
@@ -47,29 +61,33 @@ $.ajax('data/inventory.json').done(function (info) {
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
 
-    $.get('data/inventory.json').done(function (resp) {
-        $.each(resp, function (index, tool) {   // index is just a placeholder
-            var tableAdd = "<tr>";
-            tableAdd += "<td>" + tool.title + "</td>";
-            tableAdd += "<td>" + tool.quantity + "</td>";
-            tableAdd += "<td>" + tool.price + "</td>";
-            tableAdd += "<td>" + tool.categories + "</td>";
-            //close it out
-            tableAdd += "</tr>";
-            //1 get request stored as resp, each to iterate over ea resp
-            //2 recreate html by js
-            $('#insertProducts').append(tableAdd);
-        })
-    });
+    //function refreshT() {
 
-    $('#refreshTable').click(function () {
-        location.reload(true);
-        //var html = "";
-        //refresh();
-    });
+        $.get('data/inventory.json').done(function (resp) {
+            $.each(resp, function (index, tool) {   // index is just a placeholder
+                var tableAdd = "<tr>";
+                tableAdd += "<td>" + tool.title + "</td>";
+                tableAdd += "<td>" + tool.quantity + "</td>";
+                tableAdd += "<td>" + tool.price + "</td>";
+                tableAdd += "<td>" + tool.categories + "</td>";
+                //close it out
+                tableAdd += "</tr>";
+                //1 get request stored as resp, each to iterate over ea resp
+                //2 recreate html by js
+                $('#insertProducts').append(tableAdd);
+            })
+        });
+
+        $('#refreshTable').click(function () {
+            location.reload(true);
+            //var preData = '';
+            //$('#insertProducts').html('');  //prevents double stacking
+            //refreshT();
+            //
+        });
 
 //above get
-    //function refreshTable() {
+        //function refreshT() {
 
         //wrap the whole thing, leave this brace here and uncomment 66/7
     //}
