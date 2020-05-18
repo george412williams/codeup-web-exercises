@@ -50,4 +50,5 @@ function reverseGeocode(coordinates, token) {
         .then(function(data) {
             return data.features[0].place_name;
         });
+    //returns coordinate
 }

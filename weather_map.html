@@ -3,26 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather Map Project</title>
-
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
 
 <header>
-
+    <h2>Weather App</h2>
 </header>
 
-<div>
+<div id="bonusLater"></div>
+
+<div id="forecastData" class="container">
+
+</div>
+
+<div id="map" style="width: 100vw; height: 400px;">
 
 </div>
 
 
-
-
 <script src="js/jquery-2.2.4.js"></script>​
 <script src="js/keys.js"></script>
+<script src="js/mapbox-geocode.js"></script>
 <script>
     "use strict";
     $(document).ready(function() {
+
+        mapboxgl.accessToken = MAPBOX_KEY;
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v9'
+
+        });
+
 
         var weatherUrl = 'https://api.openweathermap.org/data/2.5/onecall';
         var weatherOptions = {
@@ -44,30 +58,28 @@
         //can pass two arguments, url and an obj w props that will be converted
         $.get(weatherUrl, weatherOptions).done(function (data) {
             console.log(data);
-            //you see weather properties from SA, tons of info with minute by minute forecast
-            //so we need to whiddle this down.
-            //so we can add an exclude to the options
-            //want humidity of daily day 1, index 0
-            console.log(data.daily[0].humidity);
-            console.log(data.daily[0].temp.max);
-            //dug down in the object, down levels of daily to get temp.max
-            //start project and console out specific pieces of info
-            //in weather api documentation:
-            //parameter for the api, more to the weatherOptions object
-            //and cutomize the units of measurement, in documentation under daily,
-            //how to change units format, shows need to add keyvalue pair under exclude add units: 'impirial'
-            //date is in unix timestamp so change the prop of dt
-            //new Date(293482734 * 1000).toDateString();   the numbers are in the obj property in 'dt'
+            $.each(data, function (index, daysWeather) {
+                var forecast5 = "<div class='dayEntry'>";
+                forecast5 += daysWeather.dialy.temp.day;
 
-            //display the unix timestapm as a human readable date:
-            //in steps: get to the daily dt prop
-            var todayDate = new Date(data.daily.dt[0] * 1000);  //1000 bc time given in miliseconds, so we convert here
-
-            console.log(todayDate.toLocaleDateString());
-
+            });
 
         });
 
+        reverseGeocode({
+            lat: 29.4241,
+            lon: -98.4936
+        }, MAPBOX_KEY).then(function(result) {
+            console.log(result);
+            map.setCenter(result);
+            map.setZoom(10);
+        });
+
+        // geocode("San Antonio, TX", MAPBOX_KEY).done(function(result) {
+        //     console.log(result);
+        //     map.setCenter(result);
+        //     map.setZoom(10);
+        // });
 
         //option from a stu q
         //add after the vars
