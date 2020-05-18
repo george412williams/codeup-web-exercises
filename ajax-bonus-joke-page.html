@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Joke And Quote Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://www.icndb.com/api/"></script>
     <style>
         body {
             display: inline-block;
@@ -64,13 +65,18 @@ Quote
         console.log('js loaded');
 
     $.ajax('http://www.icndb.com/api/').done(function (resp) {
-        $('#joke').click(function () {
-            $('#displayArea').append(resp);
+        type: "success";
+
         });
 
+
+
+    $('#joke').click(function () {
+        var textDisplay = '';
+
+        $('#displayArea').append(resp);
+
     });
-
-
 
 
 
