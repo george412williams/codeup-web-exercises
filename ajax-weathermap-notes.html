@@ -45,6 +45,9 @@ WEATHER MAP
     </p>
     </p>
 </div>
+<div id="weatherBox">
+
+</div>
 <!--    jquery setup
 keys for mapbox and openweather-->
 <!--...exclude={part}...refers to that we only need daily forecast
@@ -74,9 +77,9 @@ we need to specify a few things to apply-->
 
 
         //option from a stu q
-        function parseDate(timestamp) {
-            return new Date(timestamp * 1000).toLocaleDateString();
-        }
+        // function parseDate(timestamp) {
+        //     return new Date(timestamp * 1000).toLocaleDateString();
+        //}
 
         //can pass two arguments, url and an obj w props that will be converted
         $.get(weatherUrl, weatherOptions).done(function (data) {
@@ -98,9 +101,10 @@ we need to specify a few things to apply-->
 
             //display the unix timestapm as a human readable date:
             //in steps: get to the daily dt prop
-            var todayDate = new Date(data.daily.dt[0] * 1000);  //1000 bc time given in miliseconds, so we convert here
+            // var todayDate = new Date(data.daily.dt[0] * 1000);  //1000 bc time given in miliseconds, so we convert here
+            //
+            // console.log(todayDate.toLocaleDateString());
 
-            console.log(todayDate.toLocaleDateString());
         });
 
 

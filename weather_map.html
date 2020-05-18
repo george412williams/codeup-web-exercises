@@ -5,6 +5,19 @@
     <title>Weather Map Project</title>
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+
+        #forecastData {
+            border: solid 1px black;
+            border-radius: 10px;
+            height: 80px;
+            width: 100px;
+            /*width: fit-content;*/
+        }
+
+    </style>
+
+
 </head>
 <body>
 
@@ -34,39 +47,32 @@
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v9'
-
         });
-
 
         var weatherUrl = 'https://api.openweathermap.org/data/2.5/onecall';
         var weatherOptions = {
-            //we need to define some options
-            lat: 29.4241,     //san antonio coords
+            lat: 29.4241,
             lon: -98.4936,
-            //now need to define appid, wo it will be denied the info
             appid: OPEN_WEATHER_APPID,
-            exclude: 'minutely, current, hourly'
-            //returns info for 8 day forecast
+            exclude: 'minutely, current, hourly',
+            units: 'imperial'
         };
-        //have not sent request yet, just setting up vars
-        //site to req data from
-        //second is the info we want, don't need at all
-        //bc you can define it in the url as a written out query string
 
-
-
-        //can pass two arguments, url and an obj w props that will be converted
         $.get(weatherUrl, weatherOptions).done(function (data) {
             console.log(data);
             $.each(data, function (index, daysWeather) {
                 var forecast5 = "<div class='dayEntry'>";
                 forecast5 += daysWeather.dialy.temp.day;
-
+                // forecast5 += daysWeather.dialy[1].temp.day;
+                // forecast5 += daysWeather.dialy[2].temp.day;
+                // forecast5 += daysWeather.dialy[3].temp.day;
+                // forecast5 += daysWeather.dialy[4].temp.day;
+                $('#forecastData').append(forecast5);
             });
 
         });
 
-        reverseGeocode({
+        geocode({
             lat: 29.4241,
             lon: -98.4936
         }, MAPBOX_KEY).then(function(result) {
@@ -75,17 +81,22 @@
             map.setZoom(10);
         });
 
-        // geocode("San Antonio, TX", MAPBOX_KEY).done(function(result) {
+        // reverseGeocode({
+        //     lat: 29.4241,
+        //     lon: -98.4936
+        // }, MAPBOX_KEY).then(function(result) {
         //     console.log(result);
-        //     map.setCenter(result);
-        //     map.setZoom(10);
+        //     // map.setCenter(result);
+        //     // map.setZoom(10);
         // });
+
 
         //option from a stu q
         //add after the vars
         // function parseDate(timestamp) {
         //     return new Date(timestamp * 1000).toLocaleDateString();
         // }
+
 
     // JS IFEE END
     });
