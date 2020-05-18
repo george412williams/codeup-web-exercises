@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Weather Map Notes</title>
+</head>
+<body>
+
+
+<div class="container">
+    <h4>Weather Map API</h4>
+    <p>using simpler code names that do stuff under the hood
+    using api's like the map use
+    <p>web api's
+        commonly restful api's can get info for url request
+        info back in a data transmission language
+        previously using JSON, allowing us to communicate back and forth
+        now can leverage thousands of api's to flech out extra fx
+        mapbox is a web api
+        so can pull in data from other sources as well
+            ex pokemon, star wars' api, weather global api
+        restful api's - a service request to and pull data
+    </p>
+    <p>
+WEATHER MAP
+
+    Will bring in mapbox plus forecast info (curric ex)
+    will take much experimenting
+
+    Weather API
+
+        openweather provides several different api's
+        [going over the site, pricing free, api's
+    </p>
+    <p>
+    Curric note:
+
+        has evolved to adapt to api's, darksky api was bought out and
+        phasing out, so had to go back to openweather
+
+        using One Call API
+
+        take curric w grain of salt, ex's a good, but our endpoint
+        will be diff such as 'weather' vs the One Call API
+    </p>
+    </p>
+</div>
+<!--    jquery setup
+keys for mapbox and openweather-->
+<!--...exclude={part}...refers to that we only need daily forecast
+as opposed to hourly etc
+we need to specify a few things to apply-->
+<script src="js/jquery-2.2.4.js"></script>​
+<script src="js/keys.js"></script>
+<script>
+    "use strict";
+    $(document).ready(function() {
+
+        //make a definition
+        var weatherUrl = 'https://api.openweathermap.org/data/2.5/onecall';
+        var weatherOptions = {
+            //we need to define some options
+            lat: 29.4241,     //san antonio coords
+            lon: -98.4936,
+            //now need to define appid, wo it will be denied the info
+            appid: OPEN_WEATHER_APPID,
+            exclude: 'minutely, current, hourly'
+            //returns info for 8 day forecast
+        };
+        //have not sent request yet, just setting up vars
+            //site to req data from
+            //second is the info we want, don't need at all
+            //bc you can define it in the url as a written out query string
+
+
+        //can pass two arguments, url and an obj w props that will be converted
+        $.get(weatherUrl, weatherOptions).done(function (data) {
+            console.log(data);
+            //you see weather properties from SA, tons of info with minute by minute forecast
+            //so we need to whiddle this down.
+            //so we can add an exclude to the options
+        });
+
+
+
+
+
+
+
+
+    // JS IFEE END
+    });
+</script>
+
+</body>
+</html>

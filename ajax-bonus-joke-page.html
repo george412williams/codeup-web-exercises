@@ -64,7 +64,7 @@ Quote
     $(document).ready(function() {
         console.log('js loaded');
 
-    $.ajax('http://www.icndb.com/api/').done(function (resp) {
+    $.ajax('http://www.icndb.com/api/').done(function (data) {
         type: "success";
 
         });
@@ -74,7 +74,7 @@ Quote
     $('#joke').click(function () {
         var textDisplay = '';
 
-        $('#displayArea').append(resp);
+        $('#displayArea').append(data);
 
     });
 
