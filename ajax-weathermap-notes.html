@@ -73,16 +73,38 @@ we need to specify a few things to apply-->
             //bc you can define it in the url as a written out query string
 
 
+        //option from a stu q
+        function parseDate(timestamp) {
+            return new Date(timestamp * 1000).toLocaleDateString();
+        }
+
         //can pass two arguments, url and an obj w props that will be converted
         $.get(weatherUrl, weatherOptions).done(function (data) {
             console.log(data);
             //you see weather properties from SA, tons of info with minute by minute forecast
             //so we need to whiddle this down.
             //so we can add an exclude to the options
+            //want humidity of daily day 1, index 0
+            console.log(data.daily[0].humidity);
+            console.log(data.daily[0].temp.max);
+            //dug down in the object, down levels of daily to get temp.max
+            //start project and console out specific pieces of info
+            //in weather api documentation:
+                //parameter for the api, more to the weatherOptions object
+                //and cutomize the units of measurement, in documentation under daily,
+                    //how to change units format, shows need to add keyvalue pair under exclude add units: 'impirial'
+            //date is in unix timestamp so change the prop of dt
+            //new Date(293482734 * 1000).toDateString();   the numbers are in the obj property in 'dt'
+
+            //display the unix timestapm as a human readable date:
+            //in steps: get to the daily dt prop
+            var todayDate = new Date(data.daily.dt[0] * 1000);
+
+            console.log(todayDate.toLocaleDateString());
         });
 
 
-
+//plan, have time to play with the the weather map api, then dev plan to work thru project
 
 
 
