@@ -98,7 +98,7 @@ we need to specify a few things to apply-->
 
             //display the unix timestapm as a human readable date:
             //in steps: get to the daily dt prop
-            var todayDate = new Date(data.daily.dt[0] * 1000);
+            var todayDate = new Date(data.daily.dt[0] * 1000);  //1000 bc time given in miliseconds, so we convert here
 
             console.log(todayDate.toLocaleDateString());
         });
