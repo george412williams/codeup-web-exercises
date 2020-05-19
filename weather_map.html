@@ -156,23 +156,18 @@ MAPBOX UTILS
 
     //SEARCH BAR INPUT
 
-        // $('#findBtn').click(function(){
-        //     $('#userInput').html($('#user_input').val());
-        // });
+        $('#findBtn').click(function(){
+                //SEARCH BAR INPUT
+            geocode($('#user_input').val(), MAPBOX_KEY).then(function(result) {
+                console.log(result);
+                map.setCenter(result);
+                map.setZoom(10);
+            });
+        });
 
 
     //MAP POSITIONING
 
-        geocode({
-            //SEARCH BAR INPUT
-            //#userInput
-            // lat: 29.4241,
-            // lon: -98.4936
-        }, MAPBOX_KEY).then(function(result) {
-            console.log(result);
-            map.setCenter(result);
-            map.setZoom(10);
-        });
 
         reverseGeocode({
             lat: 29.4241,
