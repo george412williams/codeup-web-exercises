@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather Map Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
     <style>
@@ -38,6 +39,7 @@
         #map {
             /*border: solid .5rem black;*/
             /*margin-right: 4rem;*/
+            width: 100vw;
         }
 
     </style>
@@ -51,7 +53,7 @@
 
 <div class="search-container">
     <form action="">Search Location
-        <input type="text" placeholder="Search.." name="search">
+        <input id="userInput" type="text" placeholder="Search.." name="search">
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
 </div>
@@ -144,6 +146,13 @@ MAPBOX UTILS
         });
 
         //reversegeo to display
+
+    //SEARCH BAR INPUT
+
+        // $('#clickme').click(function(){
+        //     $('#user_display').html($('#user_input').val());
+        // });
+
 
         //option from a stu q
         //add after the vars
