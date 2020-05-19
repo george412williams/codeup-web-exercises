@@ -100,9 +100,9 @@ MAPBOX UTILS
 
         $.get(weatherUrl, weatherOptions).done(function (data) {
             console.log(data);
-            var todayDate = new Date(data.daily[0].dt * 1000).toLocaleDateString();
 
                 for(var i = 0; i <= 4; i++) {
+                    var todayDate = new Date(data.daily[i].dt * 1000).toLocaleDateString();
                     $('#forecastData').append(
                         '<div class="card">' + todayDate + '<br>' + "Average Temperature" + '<br>' + data.daily[i].temp.day + '</div>'
                     );
