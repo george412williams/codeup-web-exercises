@@ -12,6 +12,31 @@
             box-sizing: border-box;
         }
 
+        header {
+            font-family: sans-serif;
+            background-color: darkblue;
+            height: 8rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            background-color: blue;
+            padding: .5rem;
+            color: white;
+            width: 140px;
+
+        }
+
+        h3 {
+            margin-top: .5rem;
+        }
+
+        #findBtn {
+            background-color: blue;
+            color: white;
+        }
+
         #forecastData {
             /*border: solid 1px black;*/
             /*border-radius: 10px;*/
@@ -29,16 +54,15 @@
             border: solid 3px black;
             border-radius: 10px;
             height: fit-content;
-            width: fit-content;
+            width: 170px;
             padding: .5rem;
             display: inline-flex;
+            justify-content: center;
             /*flex-wrap: nowrap;*/
             /*justify-content: center;*/
         }
 
         #map {
-            /*border: solid .5rem black;*/
-            /*margin-right: 4rem;*/
             width: 100vw;
         }
 
@@ -47,16 +71,18 @@
 
 </head>
 <body>
-    <h2>Weather App</h2>
-    <h3>Current City:  San Antonio, TX</h3>
+<header>
+    <h1>My Weather App</h1>
 </header>
 
 <div class="search-container">
     <form action="">Search Location
-        <input id="userInput" type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <input id="userInput" type="text" placeholder="Address Search..." name="search">
+        <button id="findBtn" type="submit"><i class="fa fa-search">Find</i></button>
     </form>
 </div>
+
+<h3>Current City:  San Antonio, TX</h3>
 
 <div id="bonusLater"></div>
 
@@ -90,6 +116,12 @@ MAPBOX UTILS
             center: [-98.4936, 29.4241]
         });
 
+        var marker = new mapboxgl.Marker({});
+
+        marker
+            .setLngLat([-98.35701, 29.58898])
+            .addTo(map);
+
     //OPENWEATHER ACCESS VARIABLES
 
         var weatherUrl = 'https://api.openweathermap.org/data/2.5/onecall';
@@ -111,21 +143,23 @@ MAPBOX UTILS
                 for(var i = 0; i <= 4; i++) {
                     var todayDate = new Date(data.daily[i].dt * 1000).toLocaleDateString();
                     $('#forecastData').append(
-                        '<div class="card">' + todayDate + '<br>' + "Average Temperature" + '<br>' + data.daily[i].temp.day + '</div>'
+                        '<div class="card">' + todayDate + '<br>' + "Avg Temp" + '<br>' + data.daily[i].temp.day +
+                        '<br>' + "Hi / Low" + '<br>' + data.daily[i].temp.max + " " + "/" + " " + data.daily[i].temp.min +
+                        '<br>' + "Descriptioin:" + '<br>' + data.daily[i].weather[0].description + '<br>' + "Wind" +
+                        '<br>' + data.daily[i].wind_speed + " mph" + '<br>' + "Humidity" +
+                        '</br>' + data.daily[i].humidity +
+
+                        '</div>'
                     );
                 }
             });
 
     //MAP POSITIONING
 
-        var marker = new mapboxgl.Marker({});
-
-        marker
-            .setLngLat([-98.35701, 29.58898])
-            .addTo(map);
 
         geocode({
-
+            //SEARCH BAR INPUT
+            //#userInput
             // lat: 29.4241,
             // lon: -98.4936
         }, MAPBOX_KEY).then(function(result) {
@@ -135,8 +169,6 @@ MAPBOX UTILS
         });
 
         reverseGeocode({
-            //search bar results go here
-            //$('.search-container')
             lat: 29.4241,
             lon: -98.4936
         }, MAPBOX_KEY).then(function(result) {
@@ -144,6 +176,7 @@ MAPBOX UTILS
             map.setCenter(result);
             map.setZoom(10);
         });
+
 
         //reversegeo to display
 
