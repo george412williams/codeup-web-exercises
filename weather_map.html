@@ -20,7 +20,8 @@
             display: flex;
             flex-wrap: nowrap;
             justify-content: space-around;
-            margin: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
 
         .card {
@@ -34,18 +35,22 @@
             /*justify-content: center;*/
         }
 
+        #map {
+            /*border: solid .5rem black;*/
+            /*margin-right: 4rem;*/
+        }
+
     </style>
 
 
 </head>
 <body>
-
-<header>
     <h2>Weather App</h2>
+    <h3>Current City:  San Antonio, TX</h3>
 </header>
 
 <div class="search-container">
-    <form action="">
+    <form action="">Search Location
         <input type="text" placeholder="Search.." name="search">
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
@@ -57,7 +62,7 @@
     <div id="date"></div>
 </div>
 
-<div id="map" style="width: 100vw; height: 300px; align-content: space-around">
+<div id="map" style="width: 100vw; height: 300px">
 
 </div>
 
@@ -111,7 +116,25 @@ MAPBOX UTILS
 
     //MAP POSITIONING
 
+        var marker = new mapboxgl.Marker({});
+
+        marker
+            .setLngLat([-98.35701, 29.58898])
+            .addTo(map);
+
         geocode({
+
+            // lat: 29.4241,
+            // lon: -98.4936
+        }, MAPBOX_KEY).then(function(result) {
+            console.log(result);
+            map.setCenter(result);
+            map.setZoom(10);
+        });
+
+        reverseGeocode({
+            //search bar results go here
+            //$('.search-container')
             lat: 29.4241,
             lon: -98.4936
         }, MAPBOX_KEY).then(function(result) {
@@ -120,6 +143,7 @@ MAPBOX UTILS
             map.setZoom(10);
         });
 
+        //reversegeo to display
 
         //option from a stu q
         //add after the vars

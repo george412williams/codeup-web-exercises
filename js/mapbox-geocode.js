@@ -48,7 +48,9 @@ function reverseGeocode(coordinates, token) {
         })
         // to get all the data from the request, comment out the following three lines...
         .then(function(data) {
-            return data.dialy.temp.day;
+            console.log(data);
+            return data;
         });
     //returns coordinate
+    //place_name:
 }
