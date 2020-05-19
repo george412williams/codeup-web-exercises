@@ -7,12 +7,31 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
     <style>
 
+        * {
+            box-sizing: border-box;
+        }
+
         #forecastData {
-            border: solid 1px black;
+            /*border: solid 1px black;*/
+            /*border-radius: 10px;*/
+            /*height: 80px;*/
+            /*width: 100px;*/
+            /*width: fit-content;*/
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            margin: 1rem;
+        }
+
+        .card {
+            border: solid 3px black;
             border-radius: 10px;
             height: 80px;
-            width: 100px;
-            /*width: fit-content;*/
+            width: fit-content;
+            padding: .5rem;
+            display: inline-flex;
+            flex-wrap: nowrap;
+            justify-content: center;
         }
 
     </style>
@@ -25,29 +44,46 @@
     <h2>Weather App</h2>
 </header>
 
+<div class="search-container">
+    <form action="">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+
 <div id="bonusLater"></div>
 
-<div id="forecastData" class="container">
+<div id="forecastData">
 
 </div>
 
-<div id="map" style="width: 100vw; height: 400px;">
+<div id="map" style="width: 100vw; height: 300px; align-content: space-around">
 
 </div>
 
 
 <script src="js/jquery-2.2.4.js"></script>​
 <script src="js/keys.js"></script>
+<!--
+MAPBOX UTILS
+-->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 <script src="js/mapbox-geocode.js"></script>
 <script>
     "use strict";
     $(document).ready(function() {
 
+    //MAPBOX ACCESS
+
         mapboxgl.accessToken = MAPBOX_KEY;
         var map = new mapboxgl.Map({
             container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v9'
+            style: 'mapbox://styles/mapbox/streets-v9',
+            zoom: 11,
+            center: [-98.4936, 29.4241]
         });
+
+    //OPENWEATHER ACCESS VARIABLES
 
         var weatherUrl = 'https://api.openweathermap.org/data/2.5/onecall';
         var weatherOptions = {
@@ -58,19 +94,20 @@
             units: 'imperial'
         };
 
+    //OPENWEATHER
+
         $.get(weatherUrl, weatherOptions).done(function (data) {
             console.log(data);
-            $.each(data, function (index, daysWeather) {
-                var forecast5 = "<div class='dayEntry'>";
-                forecast5 += daysWeather.dialy.temp.day;
-                // forecast5 += daysWeather.dialy[1].temp.day;
-                // forecast5 += daysWeather.dialy[2].temp.day;
-                // forecast5 += daysWeather.dialy[3].temp.day;
-                // forecast5 += daysWeather.dialy[4].temp.day;
-                $('#forecastData').append(forecast5);
+            var todayDate = new Date(data.daily[0].dt * 1000);
+                for(var i = 0; i <= 5; i++) {
+                    $('#forecastData').append(
+                        '<div class="card">' + todayDate.toLocaleDateString() +
+                        '<br>' + data.daily[0].temp.day + '</div>'
+                    );
+                }
             });
 
-        });
+    //MAP POSITIONING
 
         geocode({
             lat: 29.4241,
@@ -80,16 +117,6 @@
             map.setCenter(result);
             map.setZoom(10);
         });
-
-        // reverseGeocode({
-        //     lat: 29.4241,
-        //     lon: -98.4936
-        // }, MAPBOX_KEY).then(function(result) {
-        //     console.log(result);
-        //     // map.setCenter(result);
-        //     // map.setZoom(10);
-        // });
-
 
         //option from a stu q
         //add after the vars
