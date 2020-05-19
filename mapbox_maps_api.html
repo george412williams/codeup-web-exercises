@@ -20,7 +20,7 @@
 
     });
 
-    geocode("16216 Nacogdoches Rd, San Antonio, TX 78247", mapboxKey).then(function(result) {
+    geocode("16216 Nacogdoches Rd, San Antonio, TX 78247", MAPBOX_KEY).then(function(result) {
         console.log(result);
         map.setCenter(result);
         map.setZoom(12);

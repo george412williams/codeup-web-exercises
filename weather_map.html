@@ -14,9 +14,9 @@
         #forecastData {
             /*border: solid 1px black;*/
             /*border-radius: 10px;*/
-            /*height: 80px;*/
+            height: fit-content;
             /*width: 100px;*/
-            /*width: fit-content;*/
+            width: fit-content;
             display: flex;
             flex-wrap: nowrap;
             justify-content: space-around;
@@ -26,12 +26,12 @@
         .card {
             border: solid 3px black;
             border-radius: 10px;
-            height: 80px;
+            height: fit-content;
             width: fit-content;
             padding: .5rem;
             display: inline-flex;
-            flex-wrap: nowrap;
-            justify-content: center;
+            /*flex-wrap: nowrap;*/
+            /*justify-content: center;*/
         }
 
     </style>
@@ -54,7 +54,7 @@
 <div id="bonusLater"></div>
 
 <div id="forecastData">
-
+    <div id="date"></div>
 </div>
 
 <div id="map" style="width: 100vw; height: 300px; align-content: space-around">
@@ -94,15 +94,17 @@ MAPBOX UTILS
             units: 'imperial'
         };
 
+
+
     //OPENWEATHER
 
         $.get(weatherUrl, weatherOptions).done(function (data) {
             console.log(data);
             var todayDate = new Date(data.daily[0].dt * 1000);
+
                 for(var i = 0; i <= 5; i++) {
                     $('#forecastData').append(
-                        '<div class="card">' + todayDate.toLocaleDateString() +
-                        '<br>' + data.daily[0].temp.day + '</div>'
+                        '<div class="card">' + todayDate + '<br>' + "Average Temperature" + '<br>' + data.daily[0].temp.day + '</div>'
                     );
                 }
             });
@@ -117,6 +119,7 @@ MAPBOX UTILS
             map.setCenter(result);
             map.setZoom(10);
         });
+
 
         //option from a stu q
         //add after the vars
