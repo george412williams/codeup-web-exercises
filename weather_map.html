@@ -89,7 +89,7 @@
     </form>
 </div>
 
-<h3>Current City:  <span>San Antonio, TX</span></h3>
+<h3>Current City:  <span id="city">San Antonio, TX</span></h3>
 
 <div id="bonusLater"></div>
 
@@ -172,6 +172,7 @@ MAPBOX UTILS
                 map.setCenter(result);
                 map.setZoom(10);
             });
+            $('#city').replaceWith('#user_input').val();
         });
 
 
