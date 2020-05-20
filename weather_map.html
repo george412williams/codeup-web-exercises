@@ -10,6 +10,7 @@
 
         * {
             box-sizing: border-box;
+            font-family: sans-serif;
         }
 
         header {
@@ -51,19 +52,25 @@
         }
 
         .card {
-            border: solid 3px black;
-            border-radius: 10px;
-            height: fit-content;
+            border: solid 2px darkgrey;
+            border-radius: 6px;
+            height: 210px;
             width: 170px;
             padding: .5rem;
             display: inline-flex;
             justify-content: center;
+            align-content: center;
+            font-family: sans-serif;
             /*flex-wrap: nowrap;*/
             /*justify-content: center;*/
         }
 
         #map {
             width: 100vw;
+        }
+
+        .subHeading {
+
         }
 
     </style>
@@ -82,7 +89,7 @@
     </form>
 </div>
 
-<h3>Current City:  San Antonio, TX</h3>
+<h3>Current City:  <span>San Antonio, TX</span></h3>
 
 <div id="bonusLater"></div>
 
@@ -116,6 +123,9 @@ MAPBOX UTILS
             center: [-98.4936, 29.4241]
         });
 
+        //to fix markers
+        //https://docs.mapbox.com/help/tutorials/custom-markers-gl-js/
+
         var marker = new mapboxgl.Marker({});
 
         marker
@@ -143,12 +153,11 @@ MAPBOX UTILS
                 for(var i = 0; i <= 4; i++) {
                     var todayDate = new Date(data.daily[i].dt * 1000).toLocaleDateString();
                     $('#forecastData').append(
-                        '<div class="card">' + todayDate + '<br>' + "Avg Temp" + '<br>' + data.daily[i].temp.day +
+                        '<div class="card">' + todayDate + '<br>' + 'Avg Temp' + '<br>' + data.daily[i].temp.day +
                         '<br>' + "Hi / Low" + '<br>' + data.daily[i].temp.max + " " + "/" + " " + data.daily[i].temp.min +
                         '<br>' + "Descriptioin:" + '<br>' + data.daily[i].weather[0].description + '<br>' + "Wind" +
                         '<br>' + data.daily[i].wind_speed + " mph" + '<br>' + "Humidity" +
                         '</br>' + data.daily[i].humidity +
-
                         '</div>'
                     );
                 }
