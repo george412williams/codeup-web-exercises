@@ -126,11 +126,16 @@ MAPBOX UTILS
         //to fix markers
         //https://docs.mapbox.com/help/tutorials/custom-markers-gl-js/
 
-        var marker = new mapboxgl.Marker({});
-
-        marker
+        var marker = new mapboxgl.Marker({
+            draggable: true,
+        })
             .setLngLat([-98.35701, 29.58898])
             .addTo(map);
+
+        //marker.setlngLat
+        //function onDragEnd() { var lngLat = Object.values(marler.getLngLat()};
+
+        //
 
     //OPENWEATHER ACCESS VARIABLES
 
@@ -143,13 +148,17 @@ MAPBOX UTILS
             units: 'imperial'
         };
 
+    //fx parseTime(timestamp){ return new Date(timstaemt * 1000).toLocaleTimeString();}
 
+    //
 
     //OPENWEATHER
 
         $.get(weatherUrl, weatherOptions).done(function (data) {
             console.log(data);
                 //add spans to style things, can also turn into list (list-style: none) to manip also
+                //may need to clear to append correctly
+                //$('thing').html() = '';
                 for(var i = 0; i <= 4; i++) {
                     var todayDate = new Date(data.daily[i].dt * 1000).toLocaleDateString();
                     $('#forecastData').append(
@@ -162,6 +171,7 @@ MAPBOX UTILS
                     );
                 }
             });
+
 
     //SEARCH BAR INPUT
 
@@ -181,6 +191,7 @@ MAPBOX UTILS
         reverseGeocode({
             lat: 29.4241,
             lon: -98.4936
+            //
         }, MAPBOX_KEY).then(function(result) {
             console.log(result);
             map.setCenter(result);
@@ -197,6 +208,8 @@ MAPBOX UTILS
         // function parseDate(timestamp) {
         //     return new Date(timestamp * 1000).toLocaleDateString();
         // }
+
+
 
 
     // JS IFEE END
