@@ -139,7 +139,7 @@ MAPBOX UTILS
 
         $.get(weatherUrl, weatherOptions).done(function (data) {
             console.log(data);
-
+                //add spans to style things, can also turn into list (list-style: none) to manip also
                 for(var i = 0; i <= 4; i++) {
                     var todayDate = new Date(data.daily[i].dt * 1000).toLocaleDateString();
                     $('#forecastData').append(
