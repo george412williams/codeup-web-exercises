@@ -39,17 +39,17 @@ $(document).ready(function() {
         }
     ];
 
-let languageHatTrick = languages.filter((language) => language.length >= 3);
+let languageHatTrick = users.filter((language) => language.length >= 3);
 
 let emailList = users.map((email) => `[${email}]`);
 
 //.reduce to get total # yrs exp, use this to find the avg
 
-
+let combinedExp = users.filter((yearsOfExperience) )
 
 //.reduce to get longest email from users list
 
-
+let longestEmail = users.reduce((longEmail, user) => `${longEmail}${users.name} has the longest email!`,"");
 
 //.reduce to get the list of user's names in a single string: 'Your instructors are: ...names...
 
