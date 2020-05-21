@@ -45,7 +45,7 @@ let emailList = users.map((email) => `[${email}]`);
 
 //.reduce to get total # yrs exp, use this to find the avg
 
-let combinedExp = users.filter((yearsOfExperience) )
+let combinedExp = users.filter((yearsExp) )
 
 //.reduce to get longest email from users list
 
