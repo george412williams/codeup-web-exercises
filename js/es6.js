@@ -112,7 +112,7 @@ for (let developer of developers) {
 
 let holdThis = document.getElementsByTagName("body")[0].innerHTML;
 
-document.getElementsByTagName(("body")[0].innerHTML = holdThis + list;)
+document.getElementsByTagName(("body")[0].innerHTML = holdThis + list);
 
 
 
