@@ -69,8 +69,29 @@ pokemonPromise.then(() => console.log("api request successful path")).catch(() =
 // BONUS: Is there a way for us to clean up our code?
 
 // Let's try working with the Star Wars API!
+    //her process
+    //looked for the diff things you can request
+
+
+var starWarsAPI = fetch("https://swapi.dev/api/planets/3/");
+//console.log(starWarsAPI);
+
 
 // TODO: Using Promises, make a fetch request to the Star Wars API
+
+// parse the response into the json
+starWarsAPI.then(response => response.json())
+    //access the results property from the json object
+    .then(jsonResponse => jsonResponse.results)
+    //lookingto get an array of objs, good to go, now to iterate thru them to access what we want
+    //wants a fx that gives movies and their name
+    .then(resultsArray => resultsArray.forEach(film => {
+        console.log(film.title + " " + film.episode_id);
+    }))
+    //pulling out, or parsing, properties we want, consoles as such
+    //in case we get an error we'll always add:
+    .catch(error => console.log(error));
+
 
 // TODO: Use Promise chaining to console log the json response
 
