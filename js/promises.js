@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 var githubAPI = fetch('https://api.github.com', {
     headers: {
-        'Authorization': 'f54ce9c697c230dbc550b985e7638b57cd0a0a7a'
+        'Authorization': `token ${TOKEN_NAME}`
         //make sure key is added as a string
     }
 });
