@@ -95,6 +95,11 @@ starWarsAPI.then(response => response.json())
 
 // TODO: Use Promise chaining to console log the json response
 
+//starWarsAPI.then(response => console.log(response.json())
+//  .then(jsonResponse => console.log(jasonResponse.count));
+//.results is an array in this obj
+//remember the console is best way to indicate you hit your mark
+
 // TODO: chain another method that iterates through the results array and console logs the names
 //  of all characters and their birth_years
 
@@ -105,28 +110,55 @@ starWarsAPI.then(response => response.json())
 // To further understand Promises, we can create our own custom Promise object
 // Let's take a look at the example from the curriculum
 
+    //typically we will be consuming promises instead of having to creat one
+
 const myPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
         if (Math.random() > 0.5) {
-            resolve();
+            resolve('this is where api data would be as an object');
         } else {
-            reject();
+            reject('your api request failed');
         }
     }, 1500);
 });
 
-myPromise.then(() => console.log('resolved!'));
-myPromise.catch(() => console.log('rejected!'));
+// fetch('fromSomeURL') -> returns promise object
+//below is saying if myPromise resolves from the coin flip Math.random 50% chance
 
 // The resolve and reject functions can also be passed a value.
 // These can then be used in our .resolve and .reject methods
 
 // TODO: pass in a message argument into the resolve and reject functions
+
+
+// myPromise.then(() => console.log(response));
+// myPromise.catch(() => console.log(error));
+
+//chained:
+myPromise.then(() => console.log(response)).catch(() => console.log(error));
+
+
+    //will get a console error with catch as well
+
 // TODO: use the passed in arguments in the callback functions
 
 // This is a simplified example of what goes on underneath the hood of a more complex fetch
 // request. The concepts we covered are similar to what you learned when using AJAX with jQuery.
 
 
+//GOING OVER .ALL AND .RACE
 
+    //using pokemonPromise and starWarsAPI, now that we have two api's here
+
+    //these return an array of object responses
+
+Promise.all([pokemonPromise, starWarsAPI])
+    .then(data => console.log(data()));
+        //or
+    //.then(data => console.log(data[1].json));
+                //for the data at this index
+Promise.race([pokemonPromise, starWarsAPI])
+    .then(data => console.log(data()));
+
+        //changing order they are requested matters not, up to the api upstream
 
