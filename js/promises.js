@@ -9,9 +9,9 @@ var githubAPI = fetch(`https://api.github.com/users/your-github-username`, {
     }
 });
 
-console.log(githubAPI);
+//console.log(githubAPI);
 
-githubAPI.then((response) => {response.json()}).catch((error) =>{
+githubAPI.then((response) => response.json()).catch((error) =>{
     console.log(error)
 })
 
