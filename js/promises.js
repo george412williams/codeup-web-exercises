@@ -64,18 +64,39 @@ function lastCommitDate(userName) {
             //the return of this fx is still a promise, so call all info first, add .then to format info (in console.log)
         });
 }
-lastCommitDate(george412williams).then(date => {
+lastCommitDate('george412williams').then(date => {
     console.log(new Date(date).toDateString());
     //logs date string properly
 });
 //events is the array of objs we have, second chain refers to promise chain already
 
+//PART 2
+
+function wait(seconds) {
+    seconds = seconds * 1000;
+    //returns a promise
+    return new Promise(resolve =>  {
+        //could create a custom message for the resolve
+        setTimeout(() => {
+            if (seconds > 1000){
+                console.log("You'll see this after " + seconds/1000 + " seconds");
+            }else {
+                console.log("You'll see this after " + seconds/1000 + " second");
+            }
+        }, seconds)
+    });
+}
+
+wait(1);
+wait(2);
+wait(3);
+//last conditional bit is for a custom message
 
 //==============================================
 
 //BONUS
 
-// let hesitate = num => {
+// let wait = num => {
 //     num = num * 1000;
 //         return ...
 // function wait(num) {
