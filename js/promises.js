@@ -13,19 +13,19 @@ var githubAPI = fetch(`https://api.github.com/users/your-github-username`, {
 
 
 
-function lastCommitDate(userName) {
-    let githubAPI = fetch(`https://api.github.com/users/${username}/events`, {
-        headers: {
-            'Authorization': `token ${GITHUB_API_KEY}`
-        }
-    })
-    githubAPI.then((response) => response.json()).catch((error) =>{
-        console.log(error)
-    })
-
-};
-
-lastCommitDate(userName, githubAPI).then(console.log);
+// function lastCommitDate(userName) {
+//     let githubAPI = fetch(`https://api.github.com/users/${username}/events`, {
+//         headers: {
+//             'Authorization': `token ${GITHUB_API_KEY}`
+//         }
+//     })
+//     githubAPI.then((response) => response.json()).catch((error) =>{
+//         console.log(error)
+//     })
+//
+// };
+//
+// lastCommitDate(userName, githubAPI).then(console.log);
 
     // .then(commitDateArray => commitDateArray.forEach(commitDate => commitDate.))
         //remember, this can be listed in key.js so they are not accessible through this file
@@ -48,6 +48,27 @@ lastCommitDate(userName, githubAPI).then(console.log);
 //github personal access token copied; first check gitignore to double check keys.js
 
 
+function lastCommitDate(userName) {
+    let githubAPI = fetch(`https://api.github.com/users/${username}/events`, {
+        headers: {
+            'Authorization': `token ${GITHUB_API_KEY}`
+        }
+    }).then(response => response.json())
+        // want to filter thru PushEvents only
+        .then(events => {
+            return events.filter(event => event.type === "PushEvent")[0].created_at;
+                //check the dot notation an location to be sure
+                    //returns array of push events, note index position
+                        //find created_at and see that the first one is most recent, [0]
+                        //logs a date, needs formatting, doDateString
+            //the return of this fx is still a promise, so call all info first, add .then to format info (in console.log)
+        });
+}
+lastCommitDate(george412williams).then(date => {
+    console.log(new Date(date).toDateString());
+    //logs date string properly
+});
+//events is the array of objs we have, second chain refers to promise chain already
 
 
 //==============================================
