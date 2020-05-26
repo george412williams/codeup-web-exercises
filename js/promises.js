@@ -1,12 +1,27 @@
 "use strict";
 
+
+var githubAPI = fetch(`https://api.github.com/users/your-github-username`, {
+//'https://api.github.com/users/your-github-username'
+    headers: {
+        'Authorization': `token ${GITHUB_API_KEY}`
+        //make sure key is added as a string
+    }
+});
+
+console.log(githubAPI);
+
+githubAPI.then((response) => {response.json()}).catch((error) =>{
+    console.log(error)
+})
+
+
 // function lastCommitDate() {
 //     var githubAPI = fetch(`https://api.github.com/users/${username}/events`, {
 //         headers: {
 //             'Authorization': `token ${GITHUB_API_KEY}`
 //         }
 //     })
-//
 //
 // };
 
@@ -25,17 +40,7 @@
 //     })
 // }
 
-var githubAPI = fetch(`https://api.github.com/users/${username}/events`, {
-    headers: {
-        'Authorization': `token ${GITHUB_API_KEY}`
-        //make sure key is added as a string
-    }
-});
-//'https://api.github.com/users/your-github-username'
-console.log(githubAPI);
-githubAPI.then((response) => {response.json()}).catch((error) =>{
-    console.log(error)
-})
+
     // .then(commitDateArray => commitDateArray.forEach(commitDate => commitDate.))
         //remember, this can be listed in key.js so they are not accessible through this file
     //in html, link js/keys.js if token is not on this page and refer: `token ${TOKEN_NAME}`
@@ -45,10 +50,6 @@ githubAPI.then((response) => {response.json()}).catch((error) =>{
 //     .then(commitLast => commitLast.get(commit))
 //     .catch(error => console.log(error));
 //
-
-
-//
-
 
 //BONUS
 
