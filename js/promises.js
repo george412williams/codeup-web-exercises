@@ -92,6 +92,19 @@ wait(2);
 wait(3);
 //last conditional bit is for a custom message
 
+// function waitVersionTwo(seconds) {
+//     seconds = seconds * 1000;
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             if (seconds > 1000){
+//                 console.log("You'll see this after " + seconds/1000 + " seconds");
+//             }else {
+//                 console.log("You'll see this after " + seconds/1000 + " second");
+//             }
+//         }, seconds)
+//     });
+// }
+
 //==============================================
 
 //BONUS
