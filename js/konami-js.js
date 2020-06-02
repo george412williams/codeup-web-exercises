@@ -43,6 +43,16 @@ var initiateBurn = ['x','y'];
 
 var initiateLockUnlock = ['keypress1','keypress2'];
 
+//comm pwr fx
+
+// function comsPowerSequence() {
+//
+// }
+
+$('.com-button').click(function() {
+    // $('h1').html(`<div class="area"><div class="mover"></div></div>`);
+    $('#comPowerCircuit').css('background-color','green');
+});
 
 // FUTURE CONDITIONAL VARIABLES
 
