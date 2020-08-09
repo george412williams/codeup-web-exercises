@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * TODO:
+ * TODOne:
  * Create a function called 'sayHello' that takes a parameter 'name'.
  * When called, the function should return a message that says hello to the passed in name.
  *
@@ -13,7 +13,7 @@ function sayHello (name) {
 }
 sayHello();
 /**
- * TODO:
+ * TODOne:
  * Call the function 'sayHello' and pass your name as a string literal argument.
  * Store the result of the function call in a variable named 'helloMessage'.
  *
@@ -29,7 +29,7 @@ console.log(helloMessage, 'Hello, George!');
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-vay myName;
+let myName = "George";
 console.log(sayHello(myName));
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -98,9 +98,17 @@ alert("Welcome to the calculate tip app!");
 
 var bill = prompt("What is your total bill?");
 var tip = prompt("How much would you like to tip? (enter 1-100 for the percent value)");
-var tipPercentage = tip / 100;
+var tipPercentage = tip * .01;
+let billTip = bill * tipPercentage;
+//let payment = bill + billTip;
+//var paymentMsg = alert("Your payment: ");
 
-alert("you will need to ftip $" + tipDollars);  //var tipDollars = calculateTip
+function payment(bill, billTip){
+    payment = bill + billTip;
+    return payment();
+}
+
+alert("you will need to tip $" + calculateTip(tipPercentage, bill) + ". Your payment comes to $" + payment + ". Thank you!");  //var tipDollars = calculateTip
 
 console.log(bill);
 console.log(tip);
