@@ -2,7 +2,7 @@
 
 // function decaration syntax
 
-fucntion say Hello() {
+function sayHello() {
     console.log ("Hello!");
 }
 
@@ -21,25 +21,25 @@ sayHello;
 
 function sayHello() {
     console.log("Hello");
-}
 
 console.log(sayHello());
 
 //needs a return, have a fnct is a preferred method that helps build big and prevents console from being written into the script
 
 return "Hello";
+}
 function sayHello() {
-    return "Hello");
+    return "Hello";
 }
 // console.log(sayHello());
 
-fucntion calculateMortgage() {
+function calculateMortgage() {
     return 2 + 2;
 }
 
-calculateMortgage() // edit html
+calculateMortgage(); // edit html
 // or
-calculateMortgage() // wrtie to a text file, store in a DB, Pass the value to another funciton
+calculateMortgage(); // wrtie to a text file, store in a DB, Pass the value to another funciton
 
 // will use console in function to check for bugs
 // return negates any other logs or returns, logs above returns will process along with the return
@@ -57,7 +57,7 @@ calculateMortgage() // wrtie to a text file, store in a DB, Pass the value to an
 
  // fucntion expression syntax
 
-var  sayHello = fucntion () {
+var  sayHello = function () {
     return "Hello";
 };
 
