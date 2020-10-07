@@ -9,41 +9,76 @@
         margin: 0;
         font-family: Arial;
     }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+    }
+
+    .tablink {
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
+    }
+
+    .tabcontent {
+        display: none;
+        padding: 100px 20px;
+        height: 100%;
+    }
+
+    #People {
+        background-color: lightyellow;
+    }
 </style>
 </head>
 <body>
-    <header>
-        <img src="img/GitHub-Mark-32px.png" alt="Github logo" style="margin-left: 2rem;">
+    <nav>
+<!--        <img src="img/GitHub-Mark-32px.png" alt="Github logo" style="margin-left: 2rem;">-->
+            <img src="img/GitHub-Mark-32px.png" alt="Github logo">
         <ul>
             <li><a href="https://www.github.com">Pull requests</a></li>
             <li><a href="https://www.github.com">Issues</a></li>
-            <li><a href="https://www.github.com">Marketplace</a></li>
+            <li><a href="https://www.github.com">Issues</a></li>
             <li><a href="https://www.github.com">Explore</a></li>
         </ul>
-    </header>
-    <nav>
-        <div class="container row">
-            <img src="img/GitHub-Mark-32px.png" alt="Github logo" style="margin-left: 2rem;">
-            <button class="tablink" onclick="openTab('"></button>
-            <a href="https://www.github.com">Pull requests</a>
-        </div>
     </nav>
-    <main>
+<!--    <nav>-->
+<!--        <div class="container">-->
+<!--            <a href="https://www.github.com" class="nav-item">Pull requests</a>-->
+<!--            <a href="https://www.github.com">Issues</a>-->
+<!--            <a href="https://www.github.com">Marketplace</a>-->
+<!--            <a href="https://www.github.com">Explore</a>-->
+<!--            <div class="nav-item">Pull Requests</div>-->
+<!--            <div class="nav-item">Issues</div>-->
+<!--            <div class="nav-item">Marketplace</div>-->
+<!--            <div class="nav-item">Explore</div>-->
+<!--        </div>-->
+<!--    </nav>-->
         <img src="img/codeupcodey.png" alt="Codeup logo" style="width: 6rem; height: 5rem"><span><strong>Codeup</strong></span>
-        <ul>
-            <li><a href="https://www.github.com">Repositoris</a> 39</li>
-            <li><a href="https://www.github.com">People</a> 15</li>
-            <li><a href="https://www.github.com">Teams</a> 7</li>
-            <li><a href="https://www.github.com">Projects</a> 0</li>
-            <li><a href="https://www.github.com">Settings</a></li>
-        </ul>
-        <button class="tablink" onclick="openTab('Respositories', this)">Repositories (39)</button>
-        <button class="tablink" onclick="openTab('Respositories', this)">Repositories (39)</button>
-        <button class="tablink" onclick="openTab('Respositories', this)">Repositories (39)</button>
-        <button class="tablink" onclick="openTab('Respositories', this)">Repositories (39)</button>
-        <button class="tablink" onclick="openTab('Respositories', this)">Repositories (39)</button>
+<main>
+<!--        <ul>-->
+<!--            <li><a href="https://www.github.com">Repositoris</a> 39</li>-->
+<!--            <li><a href="https://www.github.com">People</a> 15</li>-->
+<!--            <li><a href="https://www.github.com">Teams</a> 7</li>-->
+<!--            <li><a href="https://www.github.com">Projects</a> 0</li>-->
+<!--            <li><a href="https://www.github.com">Settings</a></li>-->
+<!--        </ul>-->
+    <button class="tablink" onclick="openTab('Respositories', this)">Repositories (39)</button>
+    <button class="tablink" onclick="openTab('People', this)" id="defaultOpen">People (15)</button>
+    <button class="tablink" onclick="openTab('Teams', this)">Teams (7)</button>
+    <button class="tablink" onclick="openTab('Projects', this)">Projects (0)</button>
+<!--    <button class="tablink" onclick="openTab('Settings', this)">Settings</button>-->
 
-
+    <div id="People" class="tabcontent">
         <p>Codeup's dev team</p>
         <img src="" alt="staff pic"><a href="https://www.github.com">Kent Beck</a>
         <p>Kent Beck</p>
@@ -57,15 +92,39 @@
         <p>Martin F</p>
         <p>Member</p>
         <p>X team members</p>
-    </main>
-    <footer>
-        <p>&copy; 2018 Github, Inc.</p>
-        <p>Terms Privacy Security Status Help</p>
-        <p>Contact API Training</p>
-    </footer>
+    </div>
+</main>
+<footer>
+    <p>&copy; 2018 Github, Inc.</p>
+    <p>Terms Privacy Security Status Help</p>
+    <p>Contact API Training</p>
+</footer>
 <script>
 "use strict";
 
+function openTab(pageName, elmnt, color) {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Remove the background color of all tablinks/buttons
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+
+    // Show the specific tab content
+    document.getElementById(pageName).style.display = "block";
+
+    // Add the specific color to the button used to open the tab content
+    elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 
 </script>
 </body>
